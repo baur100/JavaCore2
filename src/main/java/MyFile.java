@@ -1,4 +1,5 @@
 public class MyFile {
+<<<<<<< HEAD
     public static void main(String[] args) {
         System.out.println("Hello, Github");
 
@@ -39,3 +40,6 @@ public class MyFile {
         return x;
     }
 }
+=======
+}
+>>>>>>> 3bf30e2... Lesson 7
