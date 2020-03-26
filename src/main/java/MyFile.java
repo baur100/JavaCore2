@@ -11,7 +11,7 @@ public class MyFile {
         int age4=5;
         double age5=1.8;
         System.out.println("pers1="+ticketPrice(age1,price));
-        System.out.println("pers2="+ticketPrice((age2,price));
+        System.out.println("pers2="+ticketPrice(age2,price));
         System.out.println("pers3="+ticketPrice(age3,price));
         System.out.println("pers4="+ticketPrice(age4,price));
         System.out.println("pers5="+ticketPrice(age5,price));
