@@ -10,6 +10,7 @@ public class Afile {
         int age3=68;
         int age4=5;
         double age5=1.8;
-        System.out.println("pers1=");
+        System.out.println("pers1="+tPrice(age1, price));
+        System.out.println(());
     }
 }
