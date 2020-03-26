@@ -17,6 +17,8 @@ public class MyFile {
         System.out.println("pers3 = "+ ticketPrice(age3,price));
         System.out.println("pers4 = "+ ticketPrice(age4,price));
         System.out.println("pers5 = "+ ticketPrice(age5,price));
+
+        
     }
 
     public static double ticketPrice(double age, double price){
