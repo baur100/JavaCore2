@@ -1,10 +1,9 @@
 public class MyFile {
     public static void main(String[] args) {
+        System.out.println("Hello, Github");
 
-        //System.out.println("Hello, Github");
-
-        //int res = mult3(3, 3, 5);
-        //System.out.println(res);
+        int res = mult3(3, 3, 5);
+        System.out.println(res);
 
         int price = 260;
         int age1 = 32;
@@ -19,7 +18,6 @@ public class MyFile {
         System.out.println("pers4 = " + ticketPrice(age4, price));
         System.out.println("pers5 = " + ticketPrice(age5, price));
     }
-
     public static double ticketPrice(double age, double price) {
         double ticketPrice = price;
         if (age < 2) {
@@ -36,9 +34,8 @@ public class MyFile {
         }
         return ticketPrice;
     }
-
-    //public static int mult3(int a, int b, int c) {
-    //   int x = a * b * c;
-    //   return x;
-    //}
+    public static int mult3(int a, int b, int c) {
+        int x = a * b * c;
+        return x;
+    }
 }
