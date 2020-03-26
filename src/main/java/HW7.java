@@ -4,10 +4,10 @@ public class HW7 {
     public static void main(String[] args) {
         int[] intArr1 = {2, 3, 5, 6, 7, 8};
         int[] intArr2 = {3, 9, 1, 8, 4, 8, 5};
+        int[] intArr3 = {3, 9, 1, 8, 4, 8, 5};
 
         System.out.println("Sum = " + sumArr(intArr1));
         sortArr(intArr2);
-        int[] intArr3 = {3, 9, 1, 8, 4, 8, 5};
         System.out.println("Max = " + maxArr(intArr3));
     }
 
