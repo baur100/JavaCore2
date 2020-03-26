@@ -16,6 +16,7 @@ public class Work {
         System.out.println();
         // #1
         int[] arr1 = {2, 3, 5, 6, 7, 8};
+        System.out.println("Your array in exercise #1 is " + Arrays.toString(arr1));
         System.out.println("Sum of array in exercise #1 is " + sumOfArray(arr1));
         System.out.println();
         // #2
