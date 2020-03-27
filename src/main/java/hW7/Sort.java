@@ -2,21 +2,26 @@ package hW7;
 
 public class Sort {
     public static int[] sort(int[] listone) {
+        int temp;
         int[] newlist = new int[listone.length];
 
-        for(int i=0;i<listone.length;i++){
-            int temp = listone[i];
-
-            for(int j=i+1;j<listone.length;j++){
-                if (listone[j]<temp){
-                    temp=listone[j];
+        for (int j = 0; j < listone.length - 1; j++) {
+            for (int i = 0; i < listone.length - 1; i++) {
+                if (listone[i] > listone[i + 1]) {
+                    temp = listone[i];
+                    listone[i] = listone[i + 1];
+                    listone[i + 1] = temp;
+                    newlist = listone;
                 }
-
             }
-            newlist[i]=temp;
-
-
         }
+
+
         return newlist;
+
     }
 }
+
+
+
+
