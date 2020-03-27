@@ -6,6 +6,7 @@ public class Lesson5 {
 //        double v2 = CircleSquare(r2);
 //        System.out.println(v1);
 //        System.out.println(v2);
+
         System.out.println("55 ?" + isEven(56));
 
         int result1 = sum5(1, 2, 3, 4, 5);
