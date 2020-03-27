@@ -1,6 +1,8 @@
+package HW7;
+
 import java.sql.Array;
 
-public class HW7 {
+public class work {
     public static void main(String[] args) {
         int[] intArr1 = {2, 3, 5, 6, 7, 8};
         int[] intArr2 = {3, 9, 1, 8, 4, 8, 5};
