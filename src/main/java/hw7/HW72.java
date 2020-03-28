@@ -1,8 +1,15 @@
 package hw7;
 
+import java.util.Arrays;
+
 public class HW72 {
-//    public static int sort(int arr1[]){
-//
-//
-//    }
+    public static int[] sort(int[] arr){
+
+        Arrays.sort(arr);
+        return arr;
+
+
+
+
+    }
 }
