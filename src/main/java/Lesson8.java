@@ -25,7 +25,7 @@ public class Lesson8 {
 
     }
 
-    public static String sum(String a, String b, String c){
+    public static String sum(String a, String b, String c) {
         return a + b + c;
     }
 }
