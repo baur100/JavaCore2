@@ -26,7 +26,7 @@ public class hw7 {
     public static int sum(int[] arr) {
         int sum = 0;
         for (int v : arr) {
-            sum += v;
+            sum = sum + v;
         }
         return sum;
     }
