@@ -1,4 +1,4 @@
-package hW7;
+package hWA7;
 
 public class Sort {
     public static int[] sort(int[] listone) {

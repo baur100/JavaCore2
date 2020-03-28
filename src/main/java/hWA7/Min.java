@@ -1,4 +1,4 @@
-package hW7;
+package hWA7;
 
 public class Min {
     public static int min(int []listone){

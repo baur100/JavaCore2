@@ -1,9 +1,9 @@
-package hW7;
+package hWA7;
 
-import static hW7.Max.max;
-import static hW7.Min.min;
-import static hW7.Sort.sort;
-import static hW7.Sum.sum;
+import static hWA7.Max.max;
+import static hWA7.Min.min;
+import static hWA7.Sort.sort;
+import static hWA7.Sum.sum;
 
 public class Work {
     public static void main(String[]args){
