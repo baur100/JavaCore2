@@ -1,8 +1,5 @@
-package HW7;
-
-public class Work {
+public class Lesson6 {
     public static void main(String[] args) {
 
     }
-
 }
