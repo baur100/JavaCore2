@@ -23,6 +23,15 @@ public class Work {
         System.out.println("\nI am looking online to buy a "+ table.shape+ " " + table.material + " " + table.type +
                 " and which has a "+ table.color+ " color");
 
+
+            VacationPlan trip = new VacationPlan;
+            trip.country = "Italy";
+            trip.city = "Florence";
+            trip.numberOfDays = 10;
+            trip.dates = "From 1 Aug to 10 Aug";
+            trip.price
+
+
     }
 
 }
