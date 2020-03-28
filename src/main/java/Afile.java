@@ -1,7 +1,6 @@
 public class Afile {
     public static void main(String[]args){
         int price=260;
-
         int age1=32;
         int age2=30;
         int age3=68;
