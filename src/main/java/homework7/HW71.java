@@ -1,4 +1,4 @@
-package hw7;
+package homework7;
 
 public class HW71 {
 //

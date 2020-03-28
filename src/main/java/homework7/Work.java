@@ -1,9 +1,10 @@
-package hw7;
+package homework7;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-import static hw7.HW71.sumOfArray;
+import static homework7.HW71.*;
+import static homework7.HW72.sort;
 //
 //import static hw7.HW71.*;
 //import static hw7.HW72.sort;
