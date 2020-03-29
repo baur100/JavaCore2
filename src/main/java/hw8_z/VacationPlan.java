@@ -8,4 +8,9 @@ public class VacationPlan {
     public int numberOfDays;
     public double price;
 
+    public void getsCheaper(){
+    System.out.println(country+ " gets cheaper");
+    }
+
+
 }

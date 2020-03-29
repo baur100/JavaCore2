@@ -6,4 +6,10 @@ public class Furniture {
     public String material;
     public String color;
 
+    public void expand(){
+        System.out.println(type+" expands to 8 persons");
+
+
+    }
+
 }
