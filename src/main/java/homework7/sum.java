@@ -2,12 +2,22 @@ package homework7;
 
 public class sum {
     public static void main(String[] args){
-        int val = calcSum (2,3,5,6, 7, 8);
-        System.out.println(val);
+        int[] arr1= {1,4,9,9};
+
+        System.out.println(sum(arr1));
+
+        int[] arr2={55, 63, 11,11,21,231,234,121,456,789,0,3546,345,33232};
+        System.out.println(sum(arr2));
     }
-    static int calcSum(int a, int b, int c, int d, int e, int f) {
-        int sum = a + b + c + d + e + f;
-        System.out.println(sum);
+     public static int sum(int [] arr){
+        int sum = 0;
+        for(int v: arr){
+            sum=sum+v;
+            //sum=0+1 (1)
+            //sum=1+4 (5)
+            //sum=5+9 (14)
+            //sum=14+9 (23)
+        }
 
         return sum;
 
