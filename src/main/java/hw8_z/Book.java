@@ -8,10 +8,16 @@ public class Book {
     public double price;
     public int publishedYear;
 
-    public void bookInfo(){
-        System.out.println("The most popular book over the world is: " + "\n" +name +
+    public void bookInfo() {
+        System.out.println("The most popular book over the world is: " + "\n" + name +
+                "\nAuthor - " + author + "\nGenres - " + genres + "\nNumber of books - " + numberOfBooks +
+                "\nYear of publish - " + publishedYear + "\nPrice - " + price);
+
+
+        }
+    public void bookInfo2() {
+        System.out.println("The second popular book over the world is: " + "\n" +name +
                 "\nAuthor - "+ author + "\nGenres - "+ genres + "\nNumber of books - "+ numberOfBooks +
                 "\nYear of publish - " + publishedYear+ "\nPrice - "+ price);
-    }
-
+}
 }

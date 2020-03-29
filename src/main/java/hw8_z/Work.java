@@ -4,17 +4,30 @@ public class Work {
     public static void main(String[] args){
         Book book = new Book();
         book.name = "Harry Potter";
-        book.author = "J.K.Rowling";
+        book.author = "J.R.R.Tolkien";
         book.genres = "Fantasy Fiction";
         book.numberOfBooks = 7;
         book.publishedYear = 1997;
-        book.price = 25;
+        book.price = 28.9;
+
+        Book book2 = new Book();
+        book2.name = "Lord of the Rings";
+        book2.author = "J.K.Rowling";
+        book2.genres = "Fantasy Adventure";
+        book2.numberOfBooks = 6;
+        book2.publishedYear = 1954;
+        book2.price = 35.99;
 
 //        System.out.print("The most popular book over the world is: " + "\n" +book.name +
 //                "\nAuthor - "+ book.author + "\nGenres - "+ book.genres + "\nNumber of books - "+ book.numberOfBooks +
 //                "\nYear of publish - " + book.publishedYear+ "\nPrice - "+ book.price);
 
         book.bookInfo();
+        book2.bookInfo2();
+        if(book.publishedYear<book2.publishedYear) {
+            System.out.println("Harry Potter was published later");
+        }else{
+        }System.out.println("Lord of the Rings was firstly published 64 years ago");
 
         Furniture table = new Furniture();
         table.type = "table";
