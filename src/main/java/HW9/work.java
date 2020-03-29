@@ -11,6 +11,11 @@ public class work {
 
         passenger ivanov = new passenger();
         passenger anderson = new passenger();
+        // Define object from class as array example
+        passenger[] folks = new passenger[5];
+
+        folks[1].direction = "Newark";  // Create fields in object
+        folks[2].name = "Petrovich";
 
         pilot salyvan = new pilot();
         pilot abdurahman = new pilot();
@@ -47,7 +52,7 @@ public class work {
         AW120.fuel = "JetAA";
         AW120.coffee = false;
 
-        C172.type = "Pston";
+        C172.type = "Piston";
         C172.category = "Aircraft";
         C172.name = "C172";
         C172.capacity = 4;
@@ -64,10 +69,15 @@ public class work {
         anderson.age = 31;
         anderson.direction = "Clearwater";
 
+
+
+
         tampa.name = "KTPA";
         tampa.rwySize = 8900;
         tampa.fuelType = "JetAA";
         tampa.terminalCap = 10000;
+        tampa.gates[1] = 2;
+        tampa.gates[11] = 12;
 
         clearwater.name = "KCLW";
         clearwater.rwySize = 4800;
@@ -89,6 +99,7 @@ public class work {
         tampa.isAvail(A320.runwayReq, A320.fuel, A320.capacity); //check Airport availability
         System.out.print("Airport availability for "+ C172.name + " - ");
         tampa.isAvail(C172.runwayReq, C172.fuel, C172.capacity);//check Airport availability
+
         clearwater.isAvail(C172.runwayReq, C172.fuel, C172.capacity);//check Airport availability
         clearwater.isAvail(AW120.runwayReq, AW120.fuel, AW120.capacity);//check Airport availability
         clearwater.isAvail(A320.runwayReq, A320.fuel, A320.capacity);//check Airport availability

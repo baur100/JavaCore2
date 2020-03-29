@@ -6,6 +6,7 @@ public class airport {
     public int rwySize;
     public String fuelType;
     public int terminalCap;
+    public int[] gates = new int[12];
 
 
 public boolean isAvail(int runwayReq, String fuel, int capacity){
@@ -24,10 +25,10 @@ public boolean isAvail(int runwayReq, String fuel, int capacity){
 public int gate(String direction, int capacity){
     int gate;
         if (capacity >= 50) {
-            gate = 12;
+            gate = gates[11];
             System.out.println("Airplane to " + direction + " will be departed from gate " + gate);
         } else {
-            gate = 2;
+            gate = gates[2];
             System.out.println("Airplane to " + direction + " will be departed from gate " + gate);
         }
         return gate;
