@@ -35,9 +35,18 @@ public class Work {
         table.shape = "round";
         table.color = "clear";
 
+        Furniture chair = new Furniture();
+        chair.type = "chair";
+        chair.material = "wood";
+        chair.shape = "stool";
+        table.color = "light wood";
+
         System.out.println("\nI am looking online to buy a "+ table.shape+ " " + table.material + " " + table.type +
                 " and which has a "+ table.color+ " color");
         table.expand();
+        table.assembleInstruction();
+        chair.assembleInstruction2();
+        chair.feature();
 
 
             VacationPlan trip = new VacationPlan();
@@ -64,6 +73,9 @@ public class Work {
                 System.out.println("We wil go to Italy");
 
             }
+            trip2.getPopular();
+            trip.availableTours();
+            trip2.availableTours();
 
 
             PatientInfo patient1 = new PatientInfo();
@@ -85,6 +97,8 @@ public class Work {
         patient1.recovering();
         patient2.notrecovering();
 //        patient2.recovering();
+        patient1.currentStatus();
+        patient2.treatment();
 
     }
 

@@ -11,6 +11,13 @@ public class VacationPlan {
     public void getsCheaper(){
     System.out.println(country+ " gets cheaper");
     }
+    public void getPopular(){
+    System.out.println(city+" becomes popular among americans");
+    }
+    public void availableTours(){
+        System.out.println("Currently available tour is: "+ country+ ", " +city+" for "+price);
+
+    }
 
 
 }
