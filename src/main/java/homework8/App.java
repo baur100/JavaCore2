@@ -54,7 +54,7 @@ public class App {
         Shoes shoes1 = new Shoes();
         shoes1.brand = "Crocs";
         shoes1.type = "Glocs";
-        shoes1.gender = "Male";
+        shoes1.gender = "male";
         shoes1.size = 12.5;
         shoes1.color = "white";
 
@@ -99,6 +99,48 @@ public class App {
 
         System.out.println("Your order is "+doors2.type+" "+doors2.model+" door "+doors2.size+" inch. casing "+doors2.casing+
                 ", knob hole "+doors2.hole);
+
+        System.out.println();
+
+        if (doors2.size>=doors.size) {
+            System.out.println("плоская и пластиковая дверь больше");
+        }else {
+            System.out.println("деревянная дверб с дыркой для ручки больше");
+        }
+        System.out.println();
+
+        if (shoes2.gender == "male"){
+            System.out.println("Чувак классные ботинки");
+
+        }else
+            System.out.println("Чувак сними их они женские");
+
+        System.out.println();
+
+        if (waterheater1.Type=="Gas"){
+            System.out.println("Эй паря, чем это пахнет у тебя в гараже");
+
+        }else
+            System.out.println("Смотри что я придумал возьмись за эти два провода");
+
+        System.out.println();
+//      Methods
+
+        house1.casper();
+        System.out.println();
+        house2.crazyNeighour();
+        System.out.println();
+        waterheater.oldheater();
+        System.out.println();
+        waterheater1.leak();
+        System.out.println();
+        shoes1.corn();
+        System.out.println();
+        shoes2.fancy();
+        System.out.println();
+        doors.bam();
+        System.out.println();
+        doors2.creak();
 
 
     }
