@@ -1,11 +1,11 @@
 package homework8;
 
 public class Houses {
-    public String Type;
-    public int Levels;
-    public int Rooms;
-    public double Bathrooms;
-    public String Garage;
+    public String type;
+    public int levels;
+    public int rooms;
+    public double bathrooms;
+    public String garage;
 
     //      Methods
 

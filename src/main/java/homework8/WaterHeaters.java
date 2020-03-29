@@ -2,20 +2,20 @@ package homework8;
 
 public class WaterHeaters {
 
-    public String Brand;
-    public String Type;
-    public String TankCapacity;
-    public int Voltage;
-    public int Year;
-    public Double Price;
+    public String brand;
+    public String type;
+    public String tankCapacity;
+    public int voltage;
+    public int year;
+    public Double price;
 
     //      Methods
 
     public void leak(){
-        System.out.println(Brand+" делает Кап кап кап слезы из глаз Маруси капают прямо на копье");
+        System.out.println(brand+" делает Кап кап кап слезы из глаз Маруси капают прямо на копье");
     }
     public void oldheater(){
-        System.out.println("Твой хитер "+Brand+"  "+Year+" года, он слишком старый замени его");
+        System.out.println("Твой хитер "+brand+"  "+year+" года, он слишком старый замени его");
     }
 
 }
