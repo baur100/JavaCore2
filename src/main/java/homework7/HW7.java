@@ -24,10 +24,6 @@ public class HW7 {
         int sum = a + b + c + d + e + f;
         return sum;
     }
-
-
-
-
     public static int min(int a, int b, int c, int d, int e, int f, int g) {
         int[] arr = new int[]{a, b, c, d, e, f, g};
         int min = arr[0];
@@ -38,8 +34,6 @@ public class HW7 {
                    }
         return min;
     }
-
-
     public static int max(int a, int b, int c, int d, int e, int f, int g) {
         int[] arr = new int[]{a, b, c, d, e, g};
         int max = arr[0];
