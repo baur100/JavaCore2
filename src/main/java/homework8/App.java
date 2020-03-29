@@ -73,6 +73,32 @@ public class App {
         System.out.println();
         System.out.println("We have just "+shoes2.brand+" "+shoes2.type+" for "+shoes2.gender+" "+shoes2.size+
                 " size in "+shoes2.color+" color");
+        System.out.println();
+
+//      Doors
+        InteriorDoors doors = new InteriorDoors();
+        doors.type = "wood";
+        doors.model = "6 panel";
+        doors.size = 32;
+        doors.casing = "no";
+        doors.hole = "yes";
+
+
+
+        System.out.println("Your order is "+doors.type+" "+doors.model+" door "+doors.size+" inch. casing "+doors.casing+
+                ", knob hole "+doors.hole);
+
+        System.out.println();
+
+        InteriorDoors doors2 = new InteriorDoors();
+        doors2.type = "plastic";
+        doors2.model = "flat";
+        doors2.hole = "no";
+        doors2.casing = "yes";
+        doors2.size = 36;
+
+        System.out.println("Your order is "+doors2.type+" "+doors2.model+" door "+doors2.size+" inch. casing "+doors2.casing+
+                ", knob hole "+doors2.hole);
 
 
     }
