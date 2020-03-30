@@ -14,8 +14,9 @@ public class work {
         // Define object from class as array example
         passenger[] folks = new passenger[5];
 
-        folks[1].direction = "Newark";  // Create fields in object
-        folks[2].name = "Petrovich";
+        for (int i=0; i<= folks.length-1; i++){
+            folks[i]= new passenger();
+        }
 
         pilot salyvan = new pilot();
         pilot abdurahman = new pilot();
@@ -64,6 +65,14 @@ public class work {
         ivanov.name = "Ivanov";
         ivanov.age = 75;
         ivanov.direction = "Tampa";
+
+        folks[1].name = "Trumps";
+        folks[1].age = 47;
+        folks[1].direction = "Newark";
+
+        folks[2].name = "Petrovich";
+        folks[2].age = 12;
+        folks[2].direction = "Tampa";
 
         anderson.name = "Anderson";
         anderson.age = 31;
@@ -116,5 +125,8 @@ public class work {
         anderson.showDirection();
         ivanov.boarding();
         anderson.boarding();
+        folks[2].boarding();
+        folks[1].showDirection();
+
     }
 }

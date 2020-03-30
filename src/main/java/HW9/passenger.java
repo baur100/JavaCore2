@@ -19,7 +19,7 @@ public class passenger {
             System.out.println("Mr. " + name + " please proceed to " + gate + " gate");
         }
         else {
-            System.out.println("Mr. " + name + ", flight to " + direction + " cancelled");
+            System.out.println("Mr. " + name + ", flight to " + direction + " delayed");
         }
 
     }
