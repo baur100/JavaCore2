@@ -7,7 +7,7 @@ public class WaterHeaters {
     public String tankCapacity;
     public int voltage;
     public int year;
-    public Double price;
+    public double price;
 
     //      Methods
 

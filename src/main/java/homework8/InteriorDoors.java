@@ -11,6 +11,6 @@ public class InteriorDoors {
         System.out.println("Я ударился мезинцем об эту "+type+" "+model+" "+size+" inch дверь");
     }
     public void creak() {
-        System.out.println("Эта "+type+" "+model+" "+size+" inch"+" скрипит как телега");
+        System.out.println("Эта "+type+" "+model+" "+size+" inch door"+" скрипит как телега");
     }
 }

@@ -18,6 +18,9 @@ public class MyFile {
         System.out.println("pers4 = "+ ticketPrice(age4,price));
         System.out.println("pers5 = "+ ticketPrice(age5,price));
 
+        int[] x={10,2,2,2,3,6,8};
+        System.out.print(x[6]);
+
 
     }
 
