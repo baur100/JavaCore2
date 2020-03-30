@@ -43,6 +43,15 @@ public class App {
 
         diningTable.in();
 
+        Table officeTable = new Table();
+        officeTable.form = "Rectangular";
+        officeTable.material = "Plastic";
+        officeTable.color ="White";
+        officeTable.price =700;
+
+        officeTable.printInfo();
+        officeTable.out();
+
         Milk valley2 = new Milk();
         valley2.brand = "Organic Valley";
         valley2.lactoseFree = false;
@@ -65,6 +74,15 @@ public class App {
 
         toyStory.printInfo();
         toyStory.run();
+
+        Movie sunshine = new Movie();
+        sunshine.type = "Adventure";
+        sunshine.name = "Sunshine";
+        sunshine.runTime = 107;
+        sunshine.rating = 76;
+        sunshine.year = 2007;
+
+        sunshine.printInfo();
 
     }
 }
