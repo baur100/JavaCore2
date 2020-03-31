@@ -35,6 +35,7 @@ public class Coach {
         if(lastName.length()<2){
             System.out.println("wrong lastname");
             this.lastName="0";
+            return;
         }
         this.lastName = lastName;
     }
