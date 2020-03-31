@@ -1,8 +1,8 @@
-package hw7;
+package hw7_2;
 
-import static hw7.task1.sum;
-import static hw7.task2.sort;
-import static hw7.task3.minimax;
+import static hw7_2.task1.sum;
+import static hw7_2.task2.sort;
+import static hw7_2.task3.minimax;
 
 public class work {
     public static void main(String[] args) {

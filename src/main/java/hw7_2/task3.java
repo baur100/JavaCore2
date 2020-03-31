@@ -1,4 +1,4 @@
-package hw7;
+package hw7_2;
 
 public class task3 {
     public static int [] minimax (int [] list3) {

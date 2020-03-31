@@ -1,4 +1,4 @@
-package hw7;
+package hw7_2;
 
 public class task1 {
     public static int sum (int [] list1) {

@@ -1,4 +1,4 @@
-package hw7;
+package hw7_2;
 
 public class task2 {
     public static void sort(int[] list2) {
