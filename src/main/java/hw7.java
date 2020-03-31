@@ -54,5 +54,5 @@ public class hw7 {
         }
         return sum;
     }
-    
+
 }
