@@ -1,6 +1,7 @@
 package Lesson9;
 
 public class app {
+
     public static void main(String[] args) {
         var xx = new String();
         var arr = new int[10];
@@ -52,6 +53,6 @@ public class app {
 
         car.printCarInfo();
         anna.printCarInfo();
-    }
 
+    }
 }
