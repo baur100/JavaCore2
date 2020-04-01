@@ -5,7 +5,6 @@ public class app {
         var xx = new String();
         var arr = new int[10];
 
-
         Car car = new Car();
         car.brand = "Toyota";
         car.model = "Camry";

@@ -8,7 +8,7 @@ public class Person {
 
 
     public void printCarInfo() {
-        System.out.println(name + "petya " + year + " 55 " + height + " 45");
+        System.out.println(name + "Petya " + year + " 1966 " + height + " 6");
 
     }
 }
