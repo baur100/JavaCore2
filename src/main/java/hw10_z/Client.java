@@ -6,13 +6,13 @@ public class Client {
     private int age;
     private String company;
 
-    public Client(String lastName, String company) {
-        this.lastName = lastName;
-        this.company = company;
+    public Client(String lastName1, String company1) {
+        this.lastName = lastName1;
+        this.company = company1;
     }
 
-    public Client(String name, String lastName, int age, String company) {
-        this.name = name;
+    public Client(String name1, String lastName, int age, String company) {
+        this.name = name1;
         this.lastName = lastName;
         this.age = age;
         this.company = company;
@@ -20,11 +20,11 @@ public class Client {
 
     }
 
-    public String getName() {
+    public String getName1() {
         return name;
     }
 
-    public String getLastName() {
+    public String getLastName1() {
         return lastName;
     }
 
@@ -36,11 +36,11 @@ public class Client {
         return age;
     }
 
-    public void setName(String name) {
+    public void setName1(String name) {
 
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName1(String lastName) {
         this.lastName = lastName;
     }
 
