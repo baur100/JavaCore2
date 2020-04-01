@@ -1,6 +1,7 @@
 package HW7;
 
 public class Lesson1 {
+
     public static void main(String[] args) {
         int[] arr1 = {2, 3, 5, 6, 7, 8};
         System.out.println(sum(arr1));
@@ -15,6 +16,5 @@ public class Lesson1 {
             // sum = 0 + 1
         }
         return sum;
-
     }
 }
