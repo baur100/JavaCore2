@@ -1,6 +1,7 @@
 package Lesson10;
 
 public class Coach {
+
     private String name;
     private String lastName;
     private String sport;

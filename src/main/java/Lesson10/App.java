@@ -1,6 +1,7 @@
 package Lesson10;
 
 public class App {
+
     public static void main(String[] args) {
         Dog doggy = new Dog();
         doggy.age = 10;

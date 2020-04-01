@@ -1,6 +1,7 @@
 package Lesson10;
 
 public class Boat {
+
     public int lenght;
     public String name;
     public String owner;

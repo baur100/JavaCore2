@@ -1,6 +1,7 @@
 package Lesson10;
 
 public class Student {
+
     private String name;
     private String lastname;
     private int year;

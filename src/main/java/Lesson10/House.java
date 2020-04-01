@@ -1,6 +1,7 @@
 package Lesson10;
 
 public class House {
+
     public int sq;
     public int bedroom;
     public int bathrooms;

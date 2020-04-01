@@ -1,6 +1,7 @@
 package Lesson10;
 
 public class Dog {
+
     public String name;
     public String breed;
     public int age;
