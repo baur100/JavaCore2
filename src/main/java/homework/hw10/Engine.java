@@ -1,4 +1,4 @@
-package homework.hw9;
+package homework.hw10;
 
 public class Engine {
     private String make;
@@ -9,15 +9,27 @@ public class Engine {
     private boolean alternatorIsGood;
     private boolean sparkPlugsAreGood;
 
-    public Engine(){}
+    private String[] datesServiced;
 
-    public Engine(String make, double capacity, int numberOfCilinders, int waight, boolean alternatorIsGood, boolean sparkPlugsAreGood) {
+    public Engine() {
+    }
+
+    public Engine(String make, double capacity, int numberOfCilinders, int waight, boolean alternatorIsGood, boolean sparkPlugsAreGood, String[] datesServiced) {
         this.make = make;
         this.capacity = capacity;
         this.numberOfCilinders = numberOfCilinders;
         this.waight = waight;
         this.alternatorIsGood = alternatorIsGood;
         this.sparkPlugsAreGood = sparkPlugsAreGood;
+        this.datesServiced = datesServiced;
+    }
+
+    public String[] getDatesServiced() {
+        return datesServiced;
+    }
+
+    public void setDatesServiced(String[] datesServiced) {
+        this.datesServiced = datesServiced;
     }
 
     public void setMake(String make) {
@@ -60,14 +72,13 @@ public class Engine {
         return make;
     }
 
-    public boolean getAlternatorIsGood(){
+    public boolean getAlternatorIsGood() {
         return alternatorIsGood;
     }
 
-    public boolean getSparkPlugsAreGood(){
+    public boolean getSparkPlugsAreGood() {
         return sparkPlugsAreGood;
     }
-
 
 
     public void checkEngine() {
@@ -104,6 +115,7 @@ public class Engine {
         System.out.println("Engine capacity: " + this.capacity);
         System.out.println("Number of Cilinders: " + this.numberOfCilinders);
         System.out.println("weight: " + this.waight);
+        System.out.println("Last Serviced: " + datesServiced[datesServiced.length - 1]);
 
         System.out.println();
         System.out.println("Engine details:");
