@@ -1,13 +1,74 @@
 package homework.hw9;
 
 public class Engine {
-    public String make;
-    public double capacity;
-    public int numberOfCilinders;
-    public int waight;
+    private String make;
+    private double capacity;
+    private int numberOfCilinders;
+    private int waight;
 
-    public boolean alternatorIsGood;
-    public boolean sparkPlugsAreGood;
+    private boolean alternatorIsGood;
+    private boolean sparkPlugsAreGood;
+
+    public Engine(){}
+
+    public Engine(String make, double capacity, int numberOfCilinders, int waight, boolean alternatorIsGood, boolean sparkPlugsAreGood) {
+        this.make = make;
+        this.capacity = capacity;
+        this.numberOfCilinders = numberOfCilinders;
+        this.waight = waight;
+        this.alternatorIsGood = alternatorIsGood;
+        this.sparkPlugsAreGood = sparkPlugsAreGood;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public void setCapacity(double capacity) {
+        this.capacity = capacity;
+    }
+
+    public void setNumberOfCilinders(int numberOfCilinders) {
+        this.numberOfCilinders = numberOfCilinders;
+    }
+
+    public void setAlternatorIsGood(boolean alternatorIsGood) {
+        this.alternatorIsGood = alternatorIsGood;
+    }
+
+    public void setSparkPlugsAreGood(boolean sparkPlugsAreGood) {
+        this.sparkPlugsAreGood = sparkPlugsAreGood;
+    }
+
+    public void setWaight(int waight) {
+        this.waight = waight;
+    }
+
+    public double getCapacity() {
+        return capacity;
+    }
+
+    public int getNumberOfCilinders() {
+        return numberOfCilinders;
+    }
+
+    public int getWaight() {
+        return waight;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public boolean getAlternatorIsGood(){
+        return alternatorIsGood;
+    }
+
+    public boolean getSparkPlugsAreGood(){
+        return sparkPlugsAreGood;
+    }
+
+
 
     public void checkEngine() {
         if (this.alternatorIsGood == true && this.sparkPlugsAreGood == true) {
