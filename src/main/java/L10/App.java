@@ -18,18 +18,18 @@ public class App {
 //        House house = new House(900,2,1,"Colonial");
 //        house.printHouseInfo();
 
-        var boat = new Boat("John");
-        boat.printName();
-        boat.owner="xxx";
-
-        var boat1 = new Boat(50,"Beda","Vrungel");
-        boat1.printName();
-
+//        var boat = new Boat("John");
+//        boat.printName();
+//        boat.owner="xxx";
+//
+//        var boat1 = new Boat(50,"Beda","Vrungel");
+//        boat1.printName();
+//
         Student valya = new Student();
         valya.setName("Valya");
         valya.setLastname("Vetrova");
         valya.setYear(5000000);
 
-        System.out.println(valya.getName());
+//        System.out.println(valya.getName());
     }
 }

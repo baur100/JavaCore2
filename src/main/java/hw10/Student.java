@@ -9,7 +9,6 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
-
     public String getName() {
         return name;
     }
@@ -17,7 +16,6 @@ public class Student {
     public void setLastName(String ln) {
         lastName = ln;
     }
-
     public String getLastName() {
         return lastName;
     }
@@ -25,7 +23,6 @@ public class Student {
     public void setAge(int dob) {
         this.age = dob;
     }
-
     public int getAge() {
         return age;
     }
@@ -33,10 +30,10 @@ public class Student {
     public void setGrade(int grade) {
         this.grade = grade;
     }
-
     public int getGrade() {
         return grade;
     }
+
     public void printName(String name){
         this.name=name;
     }
@@ -49,18 +46,18 @@ public class Student {
         this.lastName = lastName;
             }
 
-    public Student(String name, String lastName, int grade) {
+    public Student(String name, String lastName, int grade, int age) {
         this.name = name;
         this.lastName = lastName;
         this.grade = grade;
+        this.age=age;
     }
 
-    public void printInfo(String name, String lastName, int dob, int grade) {
-        this.name = name;
-        this.lastName = lastName;
-        this.age = dob;
-        this.grade = grade;
+    public void printInfo() {
+        System.out.println("Name - "+name+"\nLast Name - "+lastName+"\nAge - "+age+"\nGrade - "+ grade);
     }
+
+
 
 
 }
