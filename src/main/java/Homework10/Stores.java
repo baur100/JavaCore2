@@ -14,10 +14,12 @@ public class Stores {
     public Stores(){}
 
     public Stores(String S){
+
         name=S;
     }
 
     public void printStores(){
+
         System.out.println(name + " sells " + producequality + " produce.");
     }
 }

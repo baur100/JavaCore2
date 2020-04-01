@@ -16,12 +16,21 @@ public class App {
         Stores StoreTwo = new Stores ("Walmart");
         StoreTwo.printStores();
 
-//        Job JobTwo = new Job();
+        System.out.println( );
 
         Job JobOne = new Job("Tester","Technology");
         JobOne.printJob();
 
         Job JobThree = new Job("Automation engineer","Technology", 50.00);
         JobThree.printJob();
+
+        System.out.println( );
+
+        BeautyRoutine mani=new BeautyRoutine( "manicure", 50.00);
+        BeautyRoutine haircut=new BeautyRoutine("Haircut", "once a month", 100.00);
+        mani.printBeautyRoutine();
+        haircut.printBeautyRoutine();
+
+
     }
 }
