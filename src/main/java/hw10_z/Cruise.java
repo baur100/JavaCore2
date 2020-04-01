@@ -35,6 +35,8 @@ public class Cruise {
         this.duration = duration;
     }
     public Cruise(){};
+    public void printClass() {
+        System.out.println("We are going to " +destination+" for "+duration+ " by "+ boatName);
 
     }
 

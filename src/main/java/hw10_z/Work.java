@@ -2,12 +2,12 @@ package hw10_z;
 
 public class Work {
     public static void main(String[] args) {
-    Cruise cruise = new Cruise();
-    cruise.setDestination("Dominican Republic");
-    cruise.setduration(7);
-    cruise.setboatName("Aurora");
+        Cruise cruise = new Cruise();
+        cruise.setDestination("Dominican Republic");
+        cruise.setDuration(7);
+        cruise.setBoatName("Aurora");
 
-    Cruise cruise1 = new Cruise();
+        Cruise cruise1 = new Cruise();
 
 
 //    Movie movie = new Movie("Inception",1,2010,"Christopher Nolan");
@@ -19,10 +19,8 @@ public class Work {
         a.getAge();
         a.setCompany("Amazon");
 
-        Client b = new Client("Riley","Thomas",55,"Google");
+        Client b = new Client("Riley", "Thomas", 55, "Google");
         System.out.println(a.getName());
-
-
 
 
     }

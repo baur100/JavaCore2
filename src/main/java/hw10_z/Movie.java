@@ -16,19 +16,12 @@ public class Movie {
     public int getParts() {
         return parts;
     }
-    public int setParts() {
-        this.parts=parts;{
 
-        }
-
-                 }
-
-
-        }
-
-
+    public void setParts(int parts) {
+        this.parts = parts;
     }
-    public Movie(String n,int p, int y,String fm){
+
+    public Movie(String n, int p, int y, String fm){
         name = n;
         parts = p;
         year = y;
