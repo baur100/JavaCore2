@@ -31,6 +31,16 @@ public class Car {
         System.out.println("Brand : "+brand+"\nModel : "+model+"\nEngine : "+engine+"\nColor : " +color+"\n Price :  $"+price);
     }
 
+
+
+    public void whatBrand(String color, String brand){
+        if(brand=="Audi"&&color=="white"){
+            this.brand=brand;
+            System.out.println("Audi in stock");
+            return;
+        }
+        System.out.println("out of stock");
+    }
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -57,13 +67,4 @@ public class Car {
         this.color = color;
     }
     public String getColor(){return color; }
-
-    public void whatBrand(String color, String brand){
-        if(brand=="Audi"&&color=="white"){
-            this.brand=brand;
-            System.out.println("Audi in stock");
-            return;
-        }
-        System.out.println("out of stock");
-    }
 }

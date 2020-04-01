@@ -5,22 +5,6 @@ public class Camera {
     private String model;
     private int price;
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-    public String getBrand(){return brand;};
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-    public String getModel(){return model;}
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-    public int getPrice() {
-        return price;
-    }
 
     public  Camera(){};
 
@@ -40,6 +24,22 @@ public class Camera {
             return ;
         }
         System.out.println("Sorry , we out of stock");
+    }
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+    public String getBrand(){return brand;};
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+    public String getModel(){return model;}
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+    public int getPrice() {
+        return price;
     }
 
 
