@@ -24,13 +24,23 @@ public class App {
         Job JobThree = new Job("Automation engineer","Technology", 50.00);
         JobThree.printJob();
 
+
         System.out.println( );
 
-        BeautyRoutine mani=new BeautyRoutine( "manicure", 50.00);
+        BeautyRoutine mani=new BeautyRoutine("manicure", 50.00);
         BeautyRoutine haircut=new BeautyRoutine("Haircut", "once a month", 100.00);
         mani.printBeautyRoutine();
         haircut.printBeautyRoutine();
 
+        System.out.println( );
+
+        BeautyRoutine mass=new BeautyRoutine();
+            mass.setName("Massage");
+            mass.setPeriodicity("once a week");
+            mass.setPrice(50.00);
+            mass.printBeautyRoutine();
+        }
+
 
     }
-}
+
