@@ -1,6 +1,7 @@
 package HW9;
 
 public class Cat {
+
     public String hairiness;
     public String breed;
     public int age;

@@ -1,6 +1,7 @@
 package HW9;
 
 public class Cock {
+
     public String color;
     public String speed;
     public String size;
