@@ -11,10 +11,15 @@ public class CarShop {
         Battery battery2 = new Battery("Bosch", 100, 20);
 
         Wheels wheels1 = new Wheels(18, "GoodYear", false);
-        Wheels wheels2 = new Wheels(16, "GoodYear", true);
+        Wheels wheels2 = new Wheels();
+        wheels2.setRadius(16);
+        wheels2.setTireMake("GoodYear");
+        wheels2.setTireGood(true);
 
         Body body1 = new Body(2, "white");
-        Body body2 = new Body(4, "red");
+        Body body2 = new Body();
+        body2.setNumberOfDoors(4);
+        body2.setColor("red");
 
 
         System.out.println("\u001B[31m__________________Current state:__________________ \u001B[0m");
