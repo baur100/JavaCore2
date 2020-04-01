@@ -4,14 +4,26 @@ public class Theatre {
     private String name;
     private int seats;
     private String location;
+    private String [] performance;
 
     public Theatre() {
     }
 
-    public Theatre(String name, int seats, String location) {
+
+    public Theatre(String name, int seats, String location, String [] performance) {
         this.name = name;
         this.seats = seats;
         this.location = location;
+        this.performance = performance;
+
+    }
+
+    public String[] getPerformance() {
+        return performance;
+    }
+
+    public void setPerformance(String[] performance) {
+        this.performance = performance;
     }
 
     public String getName() {
