@@ -1,5 +1,7 @@
 package hw11;
 
+import java.util.SortedMap;
+
 public class CustomBuild {
     private CPU cpu;
     private Motherboard motherboard;
@@ -52,5 +54,33 @@ public class CustomBuild {
 
     public Mouse getMouse() {
         return mouse;
+    }
+
+    public double totalPrice(double cpu, double motherboard, double gpu, double disk, double ram, double monitor,
+                             double keyboard, double mouse) {
+        double total = getCpu().getPrice() + getMotherboard().getPrice() + getGpu().getPrice() + getDisk().getPrice() +
+                getRam().getPrice() + getMonitor().getPrice() + getKeyboard().getPrice() + getMouse().getPrice();
+        return total;
+    }
+
+    public void printInfo() {
+        System.out.println();
+        System.out.println();
+        System.out.println("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv");
+        System.out.println("THE CUSTOM BUILD BELOW BASED ON " + getCpu().getBrand() + " " + getCpu().getModel());
+        System.out.println("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv");
+        cpu.printInfo();
+        motherboard.printInfo();
+        gpu.printInfo();
+        disk.printInfo();
+        ram.printInfo();
+        monitor.printInfo();
+        keyboard.printInfo();
+        mouse.printInfo();
+        System.out.println("============================================");
+        System.out.println("TOTAL PRICE FOR THIS CUSTOM BUILD IS " + totalPrice(getCpu().getPrice(),
+                getMotherboard().getPrice(), getGpu().getPrice(), getDisk().getPrice(), getRam().getPrice(),
+                getMonitor().getPrice(), getKeyboard().getPrice(), getMouse().getPrice()));
+        System.out.println("============================================");
     }
 }

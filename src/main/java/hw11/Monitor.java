@@ -13,6 +13,22 @@ public class Monitor {
         this.price = price;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public void printInfo() {
         System.out.println();
         System.out.println("Monitor Brand - " + this.brand +

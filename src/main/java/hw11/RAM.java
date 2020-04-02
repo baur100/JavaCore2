@@ -21,4 +21,20 @@ public class RAM {
                 "\nRAM Price - $" + this.price);
 
     }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }

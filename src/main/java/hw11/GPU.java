@@ -13,6 +13,22 @@ public class GPU {
         this.price = price;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getRAM() {
+        return RAM;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public GPU() {
     }
 

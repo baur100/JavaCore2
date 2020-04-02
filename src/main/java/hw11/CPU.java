@@ -21,6 +21,30 @@ public class CPU {
         this.price = price;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public double getBaseFrequency() {
+        return baseFrequency;
+    }
+
+    public int getCores() {
+        return cores;
+    }
+
+    public int getThreads() {
+        return threads;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public void printInfo() {
         System.out.println();
         System.out.println("CPU Brand - " + this.brand +

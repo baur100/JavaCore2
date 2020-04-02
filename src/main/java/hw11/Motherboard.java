@@ -16,6 +16,22 @@ public class Motherboard {
         this.price = price;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getChipset() {
+        return chipset;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public void printInfo() {
         System.out.println();
         System.out.println("Motherboard Brand - " + this.brand +

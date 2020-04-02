@@ -16,6 +16,22 @@ public class Disk {
     public Disk() {
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public void printInfo() {
         System.out.println();
         System.out.println("Hard Drive Brand - " + this.brand +

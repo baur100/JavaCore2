@@ -18,4 +18,16 @@ public class Mouse {
                 "\nMouse Price - $" + this.price);
 
     }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }
