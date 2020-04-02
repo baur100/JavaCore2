@@ -14,9 +14,29 @@ public class Work {
         cruise.printClass();
         cruise1.printClass();
 
+        Movie film1 = new Movie();
+        film1.setName("Jumanji");
+        film1.setParts(1);
+        film1.setYear(2002);
+        film1.setFilmmaker("Martin Scorseze");
 
-//    Movie movie = new Movie("Inception",1,2010,"Christopher Nolan");
-//    movie.printMovieInfo();
+        Movie film2 =new Movie("Inception",1,2010,"Christopher Nolan");
+
+    film1.printMovieInfo();
+    film2.printMovieInfo();
+
+//    }
+//    public Movie(String n){
+//        this.name=n;
+//    }
+//    public void printName(){
+//        if(name == null){
+//            System.out.println("no name defined");
+//            return;
+//        }
+//        System.out.println(name);
+//    }
+
 
         Client a = new Client();
         a.setName1("Peter");
@@ -26,10 +46,11 @@ public class Work {
 
         Client b = new Client("Riley", "Thomas", 55, "Google");
         System.out.println(a.getName1());
-        
+
 
         a.printClass();
         b.printClass();
+        System.out.println(a.getName1());
     }
 
 }
