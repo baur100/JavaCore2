@@ -13,34 +13,35 @@ public class App {
         Store.printStores();
         StoreOne.printStores();
 
-        Stores StoreTwo = new Stores ("Walmart");
+        Stores StoreTwo = new Stores("Walmart");
         StoreTwo.printStores();
 
-        System.out.println( );
+        System.out.println();
 
-        Job JobOne = new Job("Tester","Technology");
+        Job JobOne = new Job("Tester", "Technology");
         JobOne.printJob();
 
-        Job JobThree = new Job("Automation engineer","Technology", 50.00);
+        Job JobThree = new Job("Automation engineer", "Technology", 50.00);
         JobThree.printJob();
 
 
-        System.out.println( );
+        System.out.println();
 
-        BeautyRoutine mani=new BeautyRoutine("manicure", 50.00);
-        BeautyRoutine haircut=new BeautyRoutine("Haircut", "once a month", 100.00);
+        BeautyRoutine mani = new BeautyRoutine("manicure", 50.00);
+        mani.setPeriodicity("once a month");
+        BeautyRoutine haircut = new BeautyRoutine("Haircut", "once a month", 100.00);
         mani.printBeautyRoutine();
         haircut.printBeautyRoutine();
 
-        System.out.println( );
+        System.out.println();
 
-        BeautyRoutine mass=new BeautyRoutine();
-            mass.setName("Massage");
-            mass.setPeriodicity("once a week");
-            mass.setPrice(50.00);
-            mass.printBeautyRoutine();
-        }
-
-
+        BeautyRoutine mass = new BeautyRoutine();
+        mass.setName("Massage");
+        mass.setPeriodicity("once a week");
+        mass.setPrice(50.00);
+        mass.printBeautyRoutine();
     }
+
+
+}
 
