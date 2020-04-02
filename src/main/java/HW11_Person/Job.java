@@ -13,7 +13,7 @@ public class Job {
 
     public void printJob(){
         if(hasJob) {
-            System.out.println("Occupation: " + occupation + " at " + company);
+            System.out.println("\nOccupation: " + occupation + " at " + company);
         }else{
             System.out.println("unemployed");
         }
