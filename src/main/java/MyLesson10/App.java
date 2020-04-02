@@ -16,7 +16,8 @@ public class App {
         doggy.bark();
         larry.bark();
 
-        House house = new House(900, 2, 1, "Colonial");
+        int[] xx = {1, 2, 1};
+        House house = new House(900, 2, 1, "Colonial", xx);
 
         var boat = new Boat("John");
         boat.printName();
