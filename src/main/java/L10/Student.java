@@ -33,7 +33,6 @@ public class Student {
         }
         System.out.println("wrong year");
         this.year=1900;
-
     }
 
     public int getYear() {
