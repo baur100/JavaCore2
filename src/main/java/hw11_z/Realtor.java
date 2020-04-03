@@ -29,6 +29,14 @@ public class Realtor {
     public Listening getListening() {
         return listening;
     }
+
+    public void printRealtor() {
+        String realtor = "Realtor{" + name+
+                " Last Name='" + lastName + '\'' +
+                ", cell='" + cellNumber + '\'' +" Area ="+area+
+                '}';
+        System.out.println(realtor);
+    }
 }
 
 
