@@ -28,5 +28,6 @@ public class App {
 
         Computer dell = new Computer(sys, monitor, kb, mouse);
         dell.printInfo();
+
     }
 }
