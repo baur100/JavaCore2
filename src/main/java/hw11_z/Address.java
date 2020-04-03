@@ -23,8 +23,13 @@ public class Address {
     public void printAddress() {
         String address = "Address{" + state+
                 "street='" + street + '\'' +
-                ", state='" + state + '\'' +
+                ", city='" + city + '\'' +
                 '}';
         System.out.println(address);
+        state.printListening();
+
+
     }
+
+
 }

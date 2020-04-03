@@ -32,10 +32,12 @@ public class Realtor {
 
     public void printRealtor() {
         String realtor = "Realtor{" + name+
-                " Last Name='" + lastName + '\'' +
+                " " + lastName +
                 ", cell='" + cellNumber + '\'' +" Area ="+area+
                 '}';
         System.out.println(realtor);
+//        listening.printListening();
+
     }
 }
 

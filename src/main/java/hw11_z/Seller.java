@@ -32,9 +32,11 @@ public class Seller {
     public void printSellerInfo() {
         String seller = "Seller{" +
                 "name='" + name +" "+ lastName + '\'' +
-                ", address=" + getAddress() +
-                ", property='" + getListening() + '\'' +
+                ", address=" + address +
+                ", property='" + listening + '\'' +
                 '}';
         System.out.println(seller);
+//        listening.printListening();
+
     }
 }
