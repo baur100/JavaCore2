@@ -14,6 +14,5 @@ public class Monitor {
     public void printInfo() {
         String xx = "Monitor{brand=" + brand + ", model=" + model + ", diag=" + diag + '}';
         System.out.println(xx);
-
     }
 }
