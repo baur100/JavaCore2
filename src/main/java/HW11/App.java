@@ -13,7 +13,7 @@ public class App {
         //monitor.printInfo();
 
         Processor cpu = new Processor("AMD", "4.0Hz", 8);
-        cpu.printInfo();
+        //cpu.printInfo();
 
         Motherboard mb = new Motherboard("Intel", "i7", "16Gb");
         // mb.printInfo();
