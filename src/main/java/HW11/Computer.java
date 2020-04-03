@@ -1,4 +1,4 @@
-package L11;
+package HW11;
 
 public class Computer {
     private Monitor monitor;
@@ -13,10 +13,11 @@ public class Computer {
         this.keyboard = keyboard;
     }
     public void printInfo(){
+
+        sysBlock.printInfo();
         monitor.printInfo();
         keyboard.printInfo();
         mouse.printInfo();
-//        sysBlock.printInfo();
 
     }
 
