@@ -8,8 +8,9 @@ public class Work {
 //        kb.printInfo();
         Monitor monitor = new Monitor("Samsung", "XX-20",32);
 //        monitor.printInfo();
-        SysBlock sys = new SysBlock("Intel", "AMD Ryzen 3,7 GHz 8-Core", 16);
-
+        Motherboard motherboard = new Motherboard("ASUS", "Z-370");
+        Processor processor = new Processor("AMD", "Ryzor 7", 4.3);
+        SysBlock sys = new SysBlock(motherboard, processor);
         Computer dell = new Computer(monitor,sys,mouse,kb);
         dell.printInfo();
 
