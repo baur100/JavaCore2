@@ -26,17 +26,17 @@ public class App {
 //        Student maria = new Student("Maria", "Shi", studentAddress,154154154,"Math");
 
         Mouse mouse = new Mouse("Logitech");
-//        mouse.printInfo();
+        mouse.printInfo();
         Keyboard kb = new Keyboard("Microsoft");
-//        kb.printInfo();
+        kb.printInfo();
         Monitor monitor = new Monitor("Samsung", "XX-20",32);
-//        monitor.printInfo();
+        monitor.printInfo();
         // TODO Create class Motherboard and Processor and add them to SysBlock, add to constructor
         SysBlock sys = new SysBlock();
-
-        Computer dell = new Computer(monitor,sys,mouse,kb);
-        dell.printInfo();
-        String xx = new String("gg");
+//
+//        Computer dell = new Computer(monitor,sys,mouse,kb);
+//        dell.printInfo();
+//        String xx = new String("gg");
 
 
     }

@@ -1,6 +1,4 @@
-package homework7;
-
-import javax.swing.*;
+package hw7;
 
 public class HW7 {
     public static void main(String[] args) {
