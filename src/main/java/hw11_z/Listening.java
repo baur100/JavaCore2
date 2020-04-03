@@ -1,43 +1,28 @@
 package hw11_z;
 
 public class Listening {
-    private String state;
-    private String name;
-    private String type;
-    private int zip;
-    private String status;
+    private Seller seller;
+    private Realtor realtor;
+    private Address address;
 
-    public Listening(String state, String name, String type, int zip, String status) {
-        this.state = state;
-        this.name = name;
-        this.type = type;
-        this.zip = zip;
-        this.status = status;
+    public Listening(Seller seller, Realtor realtor, Address address) {
+        this.seller = seller;
+        this.realtor = realtor;
+        this.address = address;
     }
 
-    public String getName() { return name;
+    public Address getAddress() { return address;
     }
 
-    public String getState() { return state;
+    public Realtor getRealtor() { return realtor;
     }
 
-    public String getStatus() { return status;
+    public Seller getSeller() { return seller;
     }
-
-    public String getType() { return type;
-    }
-
-    public int getZip() {
-        return zip;
-    }
-
-    public void printListening() {
-        String listening = "Listening{"+ name + ", State= "+state+'\'' +
-                ", type='" + type + '\'' +
-                ", zip=" + zip +
-                ", status='" + status + '\'' +
-                '}';
-        System.out.println(listening);
+    public void ListeningInfo(){
+        address.printAddress1();
+        realtor.printRealtor();
+        seller.printSeller();
 
     }
 

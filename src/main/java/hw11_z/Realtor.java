@@ -1,44 +1,39 @@
 package hw11_z;
 
 public class Realtor {
-    private String name;
-    private String lastName;
+    private String name1;
+    private String lastName1;
     private long cellNumber;
-    private String license;
-    private String area;
-    private Listening listening;
+    private Address address;
+    private int price;
 
-
-    public Realtor(String name, String lastName, long cellNumber, String license, String area, Listening listening) {
-        this.name = name;
-        this.lastName = lastName;
+    public Realtor(String name1, String lastName1, long cellNumber, Address address, int price) {
+        this.name1 = name1;
+        this.lastName1 = lastName1;
         this.cellNumber = cellNumber;
-        this.license = license;
-        this.area = area;
-        this.listening = listening;
+        this.address = address;
+        this.price = price;
     }
 
-    public String getName() {
-        return name;
+    public long getCellNumber() {      return cellNumber;
     }
 
-    public String getLastName() {
-        return lastName;
+    public Address getAddress() {        return address;
     }
 
-    public Listening getListening() {
-        return listening;
+    public int getPrice() {        return price;
     }
 
-    public void printRealtor() {
-        String realtor = "Realtor{" + name+
-                " " + lastName +
-                ", cell='" + cellNumber + '\'' +" Area ="+area+
-                '}';
-        System.out.println(realtor);
-//        listening.printListening();
+    public String getLastName1() {        return lastName1;
+    }
 
+    public String getName1() {        return name1;
+    }
+    public void printRealtor(){
+        System.out.println("Realtor name = "+ name1+" "+lastName1+", cell "+cellNumber+" price: "+price);
+        address.printAddress1();
     }
 }
+
 
 

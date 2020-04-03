@@ -1,35 +1,49 @@
 package hw11_z;
 
 public class Address {
-    private Listening state;
-    private String city;
-    private String street;
+    public String state;
+    public String city;
+    public String str;
+    public int zip;
 
-    public Address(Listening state, String city, String street) {
+    public Address(String state, String city, String str, int zip) {
         this.state = state;
         this.city = city;
-        this.street = street;
+        this.str = str;
+        this.zip = zip;
     }
 
-    public String getCity() { return city;
+    public String getCity() {
+        return city;
     }
 
-    public Listening getState() { return state;
+    public int getZip() {
+        return zip;
     }
 
-    public String getStreet() { return street;
+    public String getState() {
+        return state;
     }
 
-    public void printAddress() {
-        String address = "Address{" + state+
-                "street='" + street + '\'' +
-                ", city='" + city + '\'' +
-                '}';
-        System.out.println(address);
-        state.printListening();
+    public String getStr() {
+        return str;
+    }
+
+    public void printAddress1() {
+        System.out.println("We are selling a house in " + state + " " + city + " " + str + "zip" + zip);
 
 
     }
 
+    public void printAddress2() {
+        System.out.println("We are owning a house in " + state + " " + city + " " + str + ", zip " + zip);
+    }
 
+    public void printAddress3() {
+        System.out.println("We are living in " + state + " , " + city + " " + str + ", zip " + zip);
+    }
 }
+
+
+
+
