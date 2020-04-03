@@ -32,7 +32,7 @@ public class App {
         Monitor monitor = new Monitor("Samsung", "XX-20",32);
         monitor.printInfo();
         // TODO Create class Motherboard and Processor and add them to SysBlock, add to constructor
-        SysBlock sys = new SysBlock();
+//        SysBlock sys = new SysBlock();
 //
 //        Computer dell = new Computer(monitor,sys,mouse,kb);
 //        dell.printInfo();

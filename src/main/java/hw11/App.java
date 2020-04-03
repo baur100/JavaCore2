@@ -4,8 +4,6 @@ import L11.SysBlock;
 
 public class App {
     public static void main(String[] args) {
-
-
         Keyboard keyboard = new Keyboard("Dell", "KM15");
         keyboard.printInfo();
         Monitor monitor = new Monitor("Asus", "SD22", 27);
@@ -22,10 +20,8 @@ public class App {
 
 
 
+
         Computer dell=new Computer(sysBlock,keyboard,monitor,mouse);
         dell.printInfo();
-
-
-        }
     }
-
+}
