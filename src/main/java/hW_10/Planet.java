@@ -1,4 +1,4 @@
-package HW_10;
+package hW_10;
 
 public class Planet {
 
