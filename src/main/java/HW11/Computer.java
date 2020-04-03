@@ -8,7 +8,7 @@ public class Computer {
     private Mouse mouse;
     private PowerSupply powersupply;
 
-    public Computer(SysBlock sysBlock, Motherboard motherboard, Monitor monitor, Keyboard keyboard, Mouse mouse,
+    public Computer( SysBlock sysBlock, Motherboard motherboard, Monitor monitor, Keyboard keyboard, Mouse mouse,
                     PowerSupply powersupply) {
         this.sysBlock = sysBlock;
         this.motherboard = motherboard;
