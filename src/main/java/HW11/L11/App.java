@@ -12,8 +12,11 @@ public class App {
 //        kb.printInfo();
         Monitor monitor = new Monitor("Samsung", "XX-20",32);
 //        monitor.printInfo();
+        Processor pr = new Processor("Intel","iPro8");
+//        pr.printInfo();
+        Motherboard mb = new Motherboard("MSI","1089");
 
-        SysBlock sys = new SysBlock("Intel iPro7","MSI", 1024);
+        SysBlock sys = new SysBlock(pr,mb);
 //        sys.printInfo();
 
         Computer dell = new Computer(monitor,sys,mouse,kb);

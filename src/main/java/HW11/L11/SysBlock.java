@@ -1,16 +1,16 @@
 package HW11.L11;
 
 public class SysBlock {
-    private String processor;
-    private String motherboard;
-    private int ram;
+    private Processor processor;
+    private Motherboard motherboard;
 
-    public SysBlock(String processor, String motherboard, int ram) {
+    public SysBlock(Processor processor, Motherboard motherboard) {
         this.processor = processor;
         this.motherboard = motherboard;
-        this.ram = ram;
     }
+
     public void printInfo(){
-        System.out.println("SysBlock: processor = "+processor+", motherboard = "+motherboard+", RAM = "+ram);
+       processor.printInfo();
+       motherboard.printInfo();
     }
 }
