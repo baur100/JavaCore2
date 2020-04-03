@@ -10,7 +10,6 @@ public class Motherboard {
         this.chipset = chipset;
         this.ram = ram;
     }
-
     public void printInfo() {
         String xx = "Motherboard{brand=" + brand + ", chipset=" + chipset + ", ram=" + ram + '}';
         System.out.println(xx);

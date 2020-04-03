@@ -10,10 +10,8 @@ public class PowerSupply {
         this.current = current;
         this.volt = volt;
     }
-
     public void printInfo() {
         String xx = "PowerSupply{power=" + power + ", current=" + current + ", volt=" + volt + '}';
         System.out.println(xx);
     }
-
 }

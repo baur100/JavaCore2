@@ -10,7 +10,6 @@ public class Monitor {
         this.model = model;
         this.diag = diag;
     }
-
     public void printInfo() {
         String xx = "Monitor{brand=" + brand + ", model=" + model + ", diag=" + diag + '}';
         System.out.println(xx);

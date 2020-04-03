@@ -13,7 +13,7 @@ public class App {
         //monitor.printInfo();
 
         Processor cpu = new Processor("AMD", "4.0Hz", 8);
-        cpu.printInfo();
+        //cpu.printInfo();
 
         Motherboard mb = new Motherboard("Intel", "i7", "16Gb");
         // mb.printInfo();
@@ -22,11 +22,11 @@ public class App {
         //ps.printInfo();
 
         SysBlock sys = new SysBlock(mb, cpu, ps);
-        // mb.printInfo();
-        // cpu.printInfo();
-        // ps.printInfo();
+        //mb.printInfo();
+        //cpu.printInfo();
+        //ps.printInfo();
 
-        Computer dell = new Computer(sys, mb, monitor, kb, mouse, ps);
+        Computer dell = new Computer(sys, monitor, kb, mouse);
         dell.printInfo();
     }
 }

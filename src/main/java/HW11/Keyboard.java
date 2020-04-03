@@ -6,7 +6,6 @@ public class Keyboard {
     public Keyboard(String brand) {
         this.brand = brand;
     }
-
     public void printInfo() {
         String xx = "Keyboard brand=" + brand;
         System.out.println(xx);
