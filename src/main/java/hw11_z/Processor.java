@@ -1,13 +1,14 @@
 package hw11_z;
 
 public class Processor {
-    private String name;
+    private String brand;
     private String cpu;
 
-    public Processor(String name, String cpu) {
-        this.name = name;
+    public Processor(String brand, String cpu) {
+        this.brand = brand;
         this.cpu = cpu;
     }
+
 
 //}
 //    public void printInfo(){
@@ -15,11 +16,16 @@ public class Processor {
 //        System.out.println(processor);
 //    }
 
-    public String getName() {
-        return name;
+
+    public String getBrand() {
+        return brand;
     }
+
 
     public String getCpu() {
         return cpu;
+    }
+    public void printInfo(){
+        System.out.println("Processor = "+brand + ", CPU = "+cpu);
     }
 }

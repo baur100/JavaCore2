@@ -5,24 +5,26 @@ public class SysBlock {
     private Processor processor;
     private Motherboard motherboard;
 
-
-
-
-    public Motherboard getMotherboard() {
-        return motherboard;
+    public SysBlock(String name, Processor processor, Motherboard motherboard) {
+        this.name = name;
+        this.processor = processor;
+        this.motherboard = motherboard;
     }
 
-    public Processor getProcessor() {
-        return processor;
+    public Motherboard getMotherboard() { return motherboard;
     }
 
+    public Processor getProcessor() { return processor;
+    }
 
-    public void printInfo() {
-        String sysBlock = "SysBlock{" +
-                "processor=" + processor +
-                ", motherboard=" + motherboard +
-                '}';
-        System.out.println(sysBlock);
+    public String getName() { return name;
+    }
+
+    public void printInfo(){
+        String sa = name;
+        System.out.println("Brand name = "+ sa);
+        processor.printInfo();
+        motherboard.printInfo();
     }
 }
 

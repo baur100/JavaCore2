@@ -12,12 +12,16 @@ public class Computer {
         this.mouse = mouse;
         this.keyboard = kb;
     }
+    public SysBlock getSysBlock() { return sysBlock;
+    }
     public void printInfo(){
         monitor.printInfo();
         keyboard.printInfo();
         mouse.printInfo();
-//        sysBlock.printInfo();
+        sysBlock.printInfo();
 
 
     }
+
+
 }

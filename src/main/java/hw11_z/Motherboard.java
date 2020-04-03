@@ -1,23 +1,23 @@
 package hw11_z;
 
 public class Motherboard {
-    private String ram;
-    private String processorSocket;
+    private String brand;
 
-    public Motherboard(String ram, String processorSocket) {
-        this.ram = ram;
-        this.processorSocket = processorSocket;
+    public Motherboard(String brand) {
+        this.brand = brand;
     }
+
 //    public void printInfo(){
 //        String motherboard= "RAM = " + ram + ", Processor Socket = " + processorSocket+'}';
 //        System.out.println(motherboard);
 //    }
 
-    public String getProcessorSocket() {
-        return processorSocket;
+
+    public String getBrand() { return brand;
+    }
+    public void printInfo(){
+        System.out.println("Motherboard = "+brand);
     }
 
-    public String getRam() {
-        return ram;
-    }
+
 }
