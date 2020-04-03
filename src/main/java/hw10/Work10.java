@@ -6,17 +6,25 @@ public class Work10 {
         huffy.setBrand("Huffy");
         huffy.setColor("red");
         huffy.setPrice(119.99);
-        Bicycle aero = new Bicycle("Aero", "black", 239.19);
+        int[]z={10,20,30};
+        Bicycle aero = new Bicycle();
+        aero.setBrand("Aero");
+        aero.setColor("black");
+        aero.setPrice(239.19);
+        aero.setSize(z);
+
         System.out.println(aero.getBrand());
         System.out.println(huffy.getPrice());
 
         huffy.ride();
         aero.ride();
-
-        Doctor alex =new Doctor("Alex","cardiolog",35);
-        Doctor oleg = new Doctor("Oleg","surgeon",40);
+        int[] f1={2,3,5};
+        Doctor alex =new Doctor("Alex","cardiolog",35,f1);
+        int[]f2={2,8,5,4};
+        Doctor oleg = new Doctor("Oleg","surgeon",40,f2);
         alex.printDoctorInfo();
         oleg.printDoctorInfo();
+        alex.setFloor(f1);
 
         var tree=new Tree("Maple",0.0,200);
         tree.printHeight();

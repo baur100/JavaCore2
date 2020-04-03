@@ -4,12 +4,14 @@ public class Bicycle {
     private String brand;
     private String color;
     private double price;
+    private int[] size;
 
 
-    public Bicycle(String brand1, String color1, double price1) {
+    public Bicycle(String brand1, String color1, double price1,int[]size1) {
         brand = brand1;
         color = color1;
         price = price1;
+        size=size1;
     }
 
     public Bicycle() {
@@ -32,6 +34,10 @@ public class Bicycle {
         return price;
     }
 
+    public int[] getSize() {
+        return size;
+    }
+
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -46,5 +52,9 @@ public class Bicycle {
             this.price=1;
         }
         this.price = price;
+    }
+
+    public void setSize(int[] size) {
+        this.size = size;
     }
 }
