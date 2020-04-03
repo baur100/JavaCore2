@@ -5,16 +5,15 @@ public class SysBlock {
     private Motherboard motherboard;
     private Processor processor;
 
-    public SysBlock(Motherboard motherboard, Processor processor) {
-        this.motherboard = motherboard;
-        this.processor = processor;
-    }
 
     public SysBlock() {
 
     }
 
+    public SysBlock(String htp, String gg) {
+    }
+
     public void printInfo(){
-        System.out.println();
+        System.out.println("SysBlock details: " + motherboard + " " + processor);
     }
 }

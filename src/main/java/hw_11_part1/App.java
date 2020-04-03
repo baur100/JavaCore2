@@ -10,11 +10,11 @@ public class App {
         kb.printInfo();
         Monitor monitor = new Monitor("HP", "LLC", 18);
         monitor.printInfo();
-        SysBlock sys = new SysBlock();
+        SysBlock sys = new SysBlock("HTP","GG");
+        sys.printInfo();
 
-
-        //Computer dell = new Computer(monitor,sys,mouse, kb);
-        //dell.printInfo();
+        Computer dell = new Computer(monitor,sys,mouse, kb);
+        dell.printInfo();
 
     }
 }

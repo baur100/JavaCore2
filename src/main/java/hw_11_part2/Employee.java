@@ -1,40 +1,30 @@
 package hw_11_part2;
 
 public class Employee {
-    private String workAddress;
-    private String workHours;
-    private double salary;
+    private String name;
+    private int ID;
 
     public Employee(){}
 
-    public Employee(String workAddress, String workHours, double salary) {
-        this.workAddress = workAddress;
-        this.workHours = workHours;
-        this.salary = salary;
+    public void Employee (String name, int ID) {
+        this.name = name;
+        this.ID = ID;
     }
 
-    public double getSalary() {
-        return salary;
+    public String getName() {
+        return name;
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public int getID() {
+        return ID;
     }
 
-    public String getWorkAddress() {
-        return workAddress;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setWorkAddress(String workAddress) {
-        this.workAddress = workAddress;
-    }
-
-    public String getWorkHours() {
-        return workHours;
-    }
-
-    public void setWorkHours(String workHours) {
-        this.workHours = workHours;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public void printInfo(){

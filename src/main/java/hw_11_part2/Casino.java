@@ -1,54 +1,51 @@
 package hw_11_part2;
 
 public class Casino {
+
     private String name;
-    private String slotMachines;
-    private int employees;
-    private String address;
+    private Address address;
+    private Employee employee;
 
-    public Casino(){}
 
-    public Casino(String name, String slotMachines, int employees, String address) {
-        this.name = name;
-        this.slotMachines = slotMachines;
-        this.employees = employees;
-        this.address = address;
+
+    public Casino (){}
+
+
+    public void Casino ( String name, Address address, Employee employee){
+        this.name=name;
+        this.address =address;
+        this.employee = employee;
+
     }
 
     public String getName() {
         return name;
     }
 
+    public Address getAddress() {
+
+        return address;
+    }
+
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(int employees) {
-        this.employees = employees;
-    }
-
-    public String getSlotMachines() {
-        return slotMachines;
-    }
-
-    public void setSlotMachines(String slotMachines) {
-        this.slotMachines = slotMachines;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
-    public void printInfo(){
-        System.out.println("Casino details: " + name + ";" + slotMachines + ";" + employees + ";" + address);
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
+    public void printInfo() {
+        System.out.println();
+
+    }
 }
