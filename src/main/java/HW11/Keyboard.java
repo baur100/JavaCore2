@@ -8,7 +8,7 @@ public class Keyboard {
     }
 
     public void printInfo() {
-        String xx = "Keyboard brand = " + brand;
+        String xx = "Keyboard brand=" + brand;
         System.out.println(xx);
     }
 }

@@ -8,7 +8,7 @@ public class Mouse {
     }
 
     public void printInfo() {
-        String xx = "Mouse =" + brand;
+        String xx = "Mouse=" + brand;
         System.out.println(xx);
     }
 }

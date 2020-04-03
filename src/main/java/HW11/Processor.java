@@ -2,10 +2,10 @@ package HW11;
 
 public class Processor {
     private String brand;
-    private double frequency;
+    private String frequency;
     private int multicore;
 
-    public Processor(String brand, double frequency, int multicore) {
+    public Processor(String brand, String frequency, int multicore) {
         this.brand = brand;
         this.frequency = frequency;
         this.multicore = multicore;

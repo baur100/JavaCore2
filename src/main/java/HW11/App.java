@@ -12,17 +12,21 @@ public class App {
         Monitor monitor = new Monitor("Samsung", "XX-20", 32);
         //monitor.printInfo();
 
-        Processor cpu = new Processor("Intel", 4.0, 8);
-        //cpu.printInfo();
+        Processor cpu = new Processor("AMD", "4.0Hz", 8);
+        cpu.printInfo();
 
-        Motherboard mb = new Motherboard("Sony", "i7", 16);
+        Motherboard mb = new Motherboard("Intel", "i7", "16Gb");
         // mb.printInfo();
 
-        SysBlock sys = new SysBlock(mb, cpu);
+        PowerSupply ps = new PowerSupply("500W", "5A", "120V");
+        //ps.printInfo();
+
+        SysBlock sys = new SysBlock(mb, cpu, ps);
         // mb.printInfo();
         // cpu.printInfo();
+        // ps.printInfo();
 
-        Computer dell = new Computer(sys, mb, monitor, kb, mouse);
+        Computer dell = new Computer(sys, mb, monitor, kb, mouse, ps);
         dell.printInfo();
     }
 }
