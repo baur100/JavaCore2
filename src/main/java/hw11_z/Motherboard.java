@@ -8,10 +8,10 @@ public class Motherboard {
         this.ram = ram;
         this.processorSocket = processorSocket;
     }
-    public void printInfo(){
-        String motherboard= "RAM = " + ram + ", Processor Socket = " + processorSocket+'}';
-        System.out.println(motherboard);
-    }
+//    public void printInfo(){
+//        String motherboard= "RAM = " + ram + ", Processor Socket = " + processorSocket+'}';
+//        System.out.println(motherboard);
+//    }
 
     public String getProcessorSocket() {
         return processorSocket;

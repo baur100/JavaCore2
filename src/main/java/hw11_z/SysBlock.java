@@ -1,17 +1,11 @@
 package hw11_z;
 
 public class SysBlock {
+    private String name;
     private Processor processor;
     private Motherboard motherboard;
 
-    public SysBlock(Processor processor) {
-        this.processor = processor;
-    }
 
-    public SysBlock(Motherboard motherboard) {
-        this.motherboard = motherboard;
-
-    }
 
 
     public Motherboard getMotherboard() {

@@ -8,10 +8,12 @@ public class Processor {
         this.name = name;
         this.cpu = cpu;
     }
-    public void printInfo(){
-        String processor= "Processor = " + name + ", CPU = " + cpu+'}';
-        System.out.println(processor);
-    }
+
+//}
+//    public void printInfo(){
+//        String processor= "Processor = " + name + ", CPU = " + cpu+'}';
+//        System.out.println(processor);
+//    }
 
     public String getName() {
         return name;
