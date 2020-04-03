@@ -22,6 +22,7 @@ public class Work {
 
         shop1.printInfo();
         shop1.crash();
+        
 
         System.out.println();
 

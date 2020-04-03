@@ -30,6 +30,7 @@ public class Shop {
 
     public void setGate(int[] gate) {
         this.gate = gate;
+
     }
 
     public void setService(String serv) {
@@ -42,20 +43,21 @@ public class Shop {
     }
 
     public int[] getGate() {
-        int[] gate = this.gate;
         return gate;
+
     }
 
     public String getService() {
         return service;
     }
 
-//    public void setGate(int[] ints) {
-//    }
+
 
     public void printInfo(){
         System.out.println("Adress is "+getAdress()+" Gate is "+getGate()+" service is "+getService());
     }
+
+
 
 
 
@@ -67,8 +69,14 @@ public class Shop {
         System.out.println(getAdress()+" "+
                 getService()+" "+
                 getGate());
+
     }
 
-
+//
+//    public void printClass(){
+//        System.out.print("Array elements ");
+//        for (String v:products) {
+//            System.out.print(" " + v);
+//        }
 
 }
