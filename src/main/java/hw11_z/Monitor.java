@@ -13,7 +13,7 @@ public class Monitor {
 
 
     public void printInfo() {
-        String xx= "Monitor{brand='" + brand + ", model='" + model + ", dimensions=" + dimensions+'}';
+        String xx= "Monitor brand = " + brand + ", model = " + model + ", dimensions=" + dimensions+'}';
         System.out.println(xx);
     }
 }

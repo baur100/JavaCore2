@@ -7,7 +7,7 @@ public class Keyboard {
         this.brand = brand;
     }
     public void printInfo(){
-        System.out.println("keyboard brand= "+ brand);
+        System.out.println("Keyboard brand = "+ brand);
 
     }
 }

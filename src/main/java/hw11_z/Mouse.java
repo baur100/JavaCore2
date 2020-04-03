@@ -7,6 +7,6 @@ public class Mouse {
         this.brand = brand;
     }
     public void printInfo(){
-        System.out.println("mouse = "+brand);
+        System.out.println("Mouse = "+brand);
     }
 }
