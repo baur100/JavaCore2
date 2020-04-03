@@ -10,7 +10,7 @@ public class Mouse {
     }
 
     public void printInfo() {
-        System.out.println("Brand" + brand);
+        System.out.println("Mouse: Brand" + brand);
     }
 
 }

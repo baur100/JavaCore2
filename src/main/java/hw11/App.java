@@ -1,6 +1,6 @@
 package hw11;
 
-import L11.SysBlock;
+
 
 public class App {
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class App {
         Memory memory = new Memory("Crucial",64);
         Processor processor=new Processor("AMD","Ryzen 9 3900X",5,105,2019);
 
-        SysBlock sysBlock = new SysBlock(motherboard,harddrive,memory,processor);
+        SysBlock sysBlock = new SysBlock(motherboard, memory, processor, harddrive);
 
 
 
