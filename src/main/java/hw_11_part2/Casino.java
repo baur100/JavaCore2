@@ -6,12 +6,9 @@ public class Casino {
     private Address address;
     private Employee employee;
 
-
-
     public Casino (){}
 
-
-    public void Casino ( String name, Address address, Employee employee){
+    public Casino ( String name, Address address, Employee employee){
         this.name=name;
         this.address =address;
         this.employee = employee;

@@ -4,9 +4,9 @@ public class Employee {
     private String name;
     private int ID;
 
-    public Employee(){}
-
-    public void Employee (String name, int ID) {
+    public Employee() {
+    }
+    public Employee (String name, int ID) {
         this.name = name;
         this.ID = ID;
     }
