@@ -10,15 +10,17 @@ public class SysBlock {
 
     }
 
-    public SysBlock(String htp, String agg) {
+    public Processor getProcessor() {
+        return processor;
+    }
 
+    public Motherboard getMotherboard() {
+        return motherboard;
     }
 
     public SysBlock() {
 
     }
-
-
     public void printInfo() {
         System.out.println("SysBlock = " + processor + " + " + motherboard);
     }

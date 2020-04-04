@@ -38,7 +38,15 @@ public class Motherboard {
         this.serial = serial;
     }
 
-    public void printInfo() {
-        System.out.println("MotherBoard = " + type + "RAM - " + ram + "serial NO SSN " + serial);
+    @Override
+    public String toString() {
+        return "Motherboard{" +
+                "type='" + type + '\'' +
+                ", ram=" + ram +
+                ", serial=" + serial +
+                '}';
     }
-}
+//    public void printInfo() {
+//        System.out.println("MotherBoard = " + type + "RAM - " + ram + "serial NO SSN " + serial);
+    }
+

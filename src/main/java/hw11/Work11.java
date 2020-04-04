@@ -16,10 +16,20 @@ public class Work11 {
         Processor pro = new Processor("Core", 4.0, " VNX");
 
 
+        var sysb=sys.getProcessor().getStorage();
+        System.out.println(sysb);
+
+        var pros=sys.getMotherboard().getType();
+        System.out.println(pros);
+
+        
+
+
 
         Computer dell = new Computer(monitor, sys, mouse, kb);
         dell.printInfo();
-        String xx = new String("gg");
+
+
 
 
     }

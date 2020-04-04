@@ -13,8 +13,30 @@ public class Processor {
     }
     public Processor(){
 
+
     }
-    public void printInfo() {
-        System.out.println("Processor = " + type+ "speed - " + speed + "storage -  "+storage );
+
+    public String getType() {
+        return type;
     }
+
+    public double getSpeed() {
+        return speed;
+    }
+
+    public String getStorage() {
+        return storage;
+    }
+
+    @Override
+    public String toString() {
+        return "Processor{" +
+                "type='" + type + '\'' +
+                ", speed=" + speed +
+                ", storage='" + storage + '\'' +
+                '}';
+    }
+    //    public void printInfo() {
+//       String xx = "Processor{"Processor = " + type+ "speed - " + speed + "storage -  "+storage '}'
+//    }
 }
