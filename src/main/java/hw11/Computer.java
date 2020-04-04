@@ -18,6 +18,9 @@ public class Computer {
         this.monitor = monitor;
         this.mouse = mouse;
     }
+
+
+
     public void printInfo(){
         System.out.println("My computer:");
         sysBlock.printInfo();
