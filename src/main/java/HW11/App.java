@@ -1,5 +1,7 @@
 package HW11;
 
+import Types.Plane;
+
 public class App {
     public static void main(String[] args) {
 
@@ -22,9 +24,9 @@ public class App {
         //ps.printInfo();
 
         SysBlock sys = new SysBlock(mb, cpu, ps);
-        //mb.printInfo();
-        //cpu.printInfo();
-        //ps.printInfo();
+        mb.printInfo();
+        cpu.printInfo();
+        ps.printInfo();
 
         Computer dell = new Computer(sys, monitor, kb, mouse);
         dell.printInfo();

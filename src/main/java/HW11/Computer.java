@@ -17,6 +17,6 @@ public class Computer {
         monitor.printInfo();
         keyboard.printInfo();
         mouse.printInfo();
-        sysBlock.printInfo();
+        //sysBlock.printInfo();
     }
 }
