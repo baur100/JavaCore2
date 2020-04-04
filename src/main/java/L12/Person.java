@@ -1,6 +1,6 @@
 package L12;
 
-public class Person {
+public class Person{
     protected String name;
     protected String lastName;
     protected int year;
@@ -15,6 +15,10 @@ public class Person {
         this.year = year;
         this.gender = gender;
         this.address = address;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getName() {
