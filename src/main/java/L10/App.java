@@ -15,14 +15,15 @@ public class App {
 //        Dog alice = new Dog("Alisa");
 //        alice.bark();
 
-//        House house = new House(900,2,1,"Colonial");
-//        house.printHouseInfo();
+        int[] xx={1,2,1};
+        House house = new House(900,2,1,"Colonial", xx);
+        house.printHouseInfo();
 
         var boat = new Boat("John");
         boat.printName();
-        boat.owner="xxx";
+        boat.owner = "xxx";
 
-        var boat1 = new Boat(50,"Beda","Vrungel");
+        var boat1 = new Boat(50, "Beda", "Vrungel");
         boat1.printName();
 
         Student valya = new Student();
