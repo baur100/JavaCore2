@@ -43,6 +43,10 @@ public class App {
         customBuild3.printInfo();
         customBuild4.printInfo();
 
+        System.out.println(customBuild1.getMotherboard().getChipset());
+        System.out.println(customBuild1.getKeyboard().getPrice());
+        System.out.println(customBuild2.getCpu().getBrand());
+
 
     }
 }

@@ -20,5 +20,6 @@ public class App {
 
         System.out.println("Population of " + anaheimCounty.state + " is " + city.population);
 
+
     }
 }
