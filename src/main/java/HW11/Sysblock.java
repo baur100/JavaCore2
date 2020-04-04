@@ -12,7 +12,7 @@ public class Sysblock {
     }
     public Sysblock (){};
     public void SysblockprintInfo () {
-        System.out.println("Processor: " + processor + "\nMotherBlock: " + motherBlock + "\n RAM: " + ram);
+        System.out.println("Sysblock : \n Processor: " + processor + "\nMotherBlock: " + motherBlock + "\n RAM: " + ram);
     }
 
     public String getProcessor() {

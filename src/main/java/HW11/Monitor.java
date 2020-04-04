@@ -12,7 +12,7 @@ public class Monitor {
     }
     public Monitor (){};
 
-    public void MonitorprintInfo() {String xx = ("Brand: "  + brand + "Model: " + model + "Diagonal: " + d);
+    public void MonitorprintInfo() {String xx = ("Monitor brand: "  + brand + "\nMonitor model: " + model + "\nMonitor diagonal: " + d);
            System.out.println(xx);
     };
 

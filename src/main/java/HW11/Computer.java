@@ -12,7 +12,9 @@ public class Computer {
     }
     public Computer () {};
 
-    public void ComputerprintInfo(){String yy =("Monitor: " + monitor + "\nSysblock: " + sysblock + "\nMouse: " +mouse);
+
+
+    public void ComputerprintInfo(){String yy =("Computer: \nMonitor: " + monitor + "\nSysblock: " + sysblock + "\nMouse: " +mouse);
         System.out.println(yy);}
 
 

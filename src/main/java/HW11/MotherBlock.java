@@ -10,7 +10,7 @@ public class MotherBlock {
     }
     public MotherBlock (){};
     public void MotherBlockprintInfo (){
-        System.out.println("Brand: " + brand + "\nModel: " + model);
+        System.out.println("MotherBlock brand: " + brand + "\nMotherBlock model: " + model);
     }
 
     public String getBrand() {
