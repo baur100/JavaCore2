@@ -20,5 +20,11 @@ public class App {
         Chau prince = new Chau("prince",50);
         prince.bark();
 
+        Person person2 = new Person();
+        person2.setName("Igor");
+
+        Dog dog = poppy;
+
+
     }
 }
