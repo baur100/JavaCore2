@@ -38,6 +38,5 @@ public class App {
         System.out.println(soldier.getAge());
         System.out.println(soldier.getIq());
         System.out.println(soldier.getMilitaryID());
-
     }
 }
