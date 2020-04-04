@@ -1,7 +1,5 @@
 package HW11;
 
-import Types.Plane;
-
 public class App {
     public static void main(String[] args) {
 
