@@ -1,4 +1,4 @@
-package L13;
+package Lesson13;
 
 public interface PowerSocket {
     public void standardUsSocket();

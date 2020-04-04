@@ -1,4 +1,4 @@
-package L13;
+package Lesson13;
 
 public class DeskLight implements PowerSocket, Bulb {
     protected int price;
