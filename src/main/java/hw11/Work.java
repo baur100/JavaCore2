@@ -13,7 +13,6 @@ public class Work {
         SysBlock sys = new SysBlock(motherboard, processor);
         Computer dell = new Computer(monitor,sys,mouse,kb);
         dell.printInfo();
-
         System.out.println();
 
         Dress dress = new Dress("coctail", "red", 4, 80);
