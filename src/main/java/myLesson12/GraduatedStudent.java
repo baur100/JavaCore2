@@ -1,4 +1,4 @@
-package MyLesson12;
+package myLesson12;
 
 public class GraduatedStudent extends Student {
     public GraduatedStudent(String name, String lastName, int year,

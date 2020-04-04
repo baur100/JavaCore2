@@ -1,4 +1,4 @@
-package MyLesson12;
+package myLesson12;
 
 public class Chau extends Dog {
     private int heigth;

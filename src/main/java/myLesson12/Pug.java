@@ -1,4 +1,4 @@
-package MyLesson12;
+package myLesson12;
 
 public class Pug extends Dog {
     private String color;
