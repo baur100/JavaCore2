@@ -19,6 +19,5 @@ public class App {
 
         chau.bark();
         colly.bark();
-
     }
 }
