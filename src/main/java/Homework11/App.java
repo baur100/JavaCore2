@@ -19,6 +19,15 @@ public class App {
 
         adam.printPerson();
         System.out.println(adam.getPet().toString());
+
+        Mouse mouse = new Mouse("Logitech");
+        Speakers speakers= new Speakers("Logitech", 10);
+        Keyboard kboard= new Keyboard("'Logithech", "english");
+        Monitor monitor=new Monitor("Dell", "XT23",21 );
+        Systemblock sblock= new Systemblock("Dell", "Intel Core i5", 16);
+
+        Computer dell = new Computer(monitor, sblock, kboard, mouse, speakers);
+        dell.printInfo();
         }
     }
 

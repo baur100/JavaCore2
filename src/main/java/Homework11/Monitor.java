@@ -1,0 +1,18 @@
+package Homework11;
+
+public class Monitor {
+    private String brand;
+    private String model;
+    private int diag;
+
+    public Monitor(String brand, String model, int diag) {
+        this.brand = brand;
+        this.model = model;
+        this.diag = diag;
+    }
+
+    public void printInfo() {
+        String xx = "Monitor: brand - " + brand + ", model- " + model + ", diagonal - " + diag + ".";
+        System.out.println(xx);
+    }
+}
