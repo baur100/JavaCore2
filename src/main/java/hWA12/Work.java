@@ -10,5 +10,9 @@ public class Work {
         System.out.println(myPlane.toString());
         System.out.println(myPlane.getPrice());
 
+        Boat myBoat = new Boat(1200000,"leasure","GAS","super spead rodster");
+        System.out.println(myBoat.toString());
+        System.out.println("it s a "+myBoat.getType()+" boat");
+
     }
 }
