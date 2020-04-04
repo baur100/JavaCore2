@@ -10,6 +10,7 @@ public class Sysblock {
         this.motherboard = motherboard;
         this.color = color;
     }
+
     public Processor getProcessor() {
         return processor;
     }
@@ -23,5 +24,14 @@ public class Sysblock {
         processor.printInfo();
         motherboard.printInfo();
         color.printInfo();
+    }
+
+    @Override
+    public String toString() {
+        return "Sysblock{" +
+                "processor=" + processor +
+                ", motherboard=" + motherboard +
+                ", color=" + color +
+                '}';
     }
 }

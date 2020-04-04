@@ -35,5 +35,12 @@ public class App {
 
         Person brian = new Person("Brian","Kukurov",hb);
         System.out.println(brian.getAddress().toString());
+        Sysblock sys = new Sysblock(pr,mb,cl);
+        System.out.println();
+        Computer comp = new Computer(monitor,sysblock,mouse,kbd);
+        comp.printInfo();
+        System.out.println();
+        System.out.println("try");
+
     }
 }

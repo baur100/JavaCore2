@@ -9,4 +9,8 @@ public class ProcessorM {
     public void printInfo(){
         System.out.println("Processor => "+number);
     }
+
+    public String getNumber() {
+        return number;
+    }
 }

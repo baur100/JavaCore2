@@ -13,8 +13,20 @@ public class Computer {
         this.keyboard = keyboard;
     }
 
+    public Monitor getMonitor() {
+        return monitor;
+    }
+
     public Sysblock getSysblock() {
         return sysblock;
+    }
+
+    public Mouse getMouse() {
+        return mouse;
+    }
+
+    public Keyboard getKeyboard() {
+        return keyboard;
     }
 
     public void printInfo(){
