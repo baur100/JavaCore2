@@ -11,12 +11,13 @@ public class Work {
         Sysblock sys1 = new Sysblock(processor1, motherboard1);
 
 
-        Computer dell = new Computer(sys1,mouse,);
+        Computer dell = new Computer(sys1, mouse, monitor, keyboard1);
+        dell.printInfo();
 
     }
 
 
 
-    Computer dell = new Computer(sys1,mouse1,);
+
 
 }

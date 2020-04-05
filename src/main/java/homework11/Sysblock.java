@@ -16,6 +16,8 @@ public class Sysblock {
 
 
     public void printInfo(){
-        System.out.println("Sysblock with "+processor+" processor and "+mothboard+" motherboard");
+        mothboard.printInfo();
+        processor.printInfo();
+//        System.out.println("Sysblock with "+processor+" processor and "+mothboard+" motherboard");
     }
 }
