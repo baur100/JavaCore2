@@ -34,6 +34,9 @@ public class Family {
         mother.printMother();
         children.infoChildren();
         address.printAddress3();
+        lastname.getLastName();
+
+
 
     }
 
