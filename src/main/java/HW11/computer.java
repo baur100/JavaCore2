@@ -1,12 +1,12 @@
 package HW11;
 
-public class Computer {
-    private Monitor monitor;
-    private SysBlock sysBlock;
-    private Mouse mouse;
-    private Keyboard keyboard;
+public class computer {
+    private HW11.monitor monitor;
+    private HW11.sysBlock sysBlock;
+    private HW11.mouse mouse;
+    private HW11.keyboard keyboard;
 
-    public Computer(Monitor monitor, SysBlock sysBlock, Mouse mouse, Keyboard keyboard) {
+    public computer(HW11.monitor monitor, HW11.sysBlock sysBlock, HW11.mouse mouse, HW11.keyboard keyboard) {
         this.monitor = monitor;
         this.sysBlock = sysBlock;
         this.mouse = mouse;

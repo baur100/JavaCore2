@@ -1,18 +1,18 @@
 package HW11;
 
-public class Processor {
+public class processor {
     private brands brand;
     private String socketName;
     private int socketNum;
     private String cache;
 
-    public Processor(brands brand, String socketName, int socketNum, String cache) {
+    public processor(brands brand, String socketName, int socketNum, String cache) {
         this.brand = brand;
         this.socketName = socketName;
         this.socketNum = socketNum;
         this.cache = cache;
     }
-    public Processor(){}
+    public processor(){}
 
     public void setBrand(brands brand) {
         this.brand = brand;

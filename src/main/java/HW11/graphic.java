@@ -1,18 +1,18 @@
 package HW11;
 
-public class Graphic {
+public class graphic {
     private brands brand;
     private String ramType;
     private int ram;
     private trims trim;
 
-    public Graphic(brands brand, String ramType, int ram, trims trim) {
+    public graphic(brands brand, String ramType, int ram, trims trim) {
         this.brand = brand;
         this.ramType = ramType;
         this.ram = ram;
         this.trim = trim;
     }
-    public Graphic(){}
+    public graphic(){}
 
     public void setBrand(String brands) {
         this.brand = brand;

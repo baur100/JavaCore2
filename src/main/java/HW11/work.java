@@ -14,24 +14,24 @@ public class work {
         trims trimN = new trims("office", "not so awesome", 47);
         trims trimA = new trims("Game", "AWESOME!", 100);
         //Devices
-        Mouse mouse = new Mouse(brandDevice);
-        Keyboard kb = new Keyboard(brandDevice);
-        Monitor monitor = new Monitor(brandComponent, "LLDH32", 42);
+        mouse mouse = new mouse(brandDevice);
+        keyboard kb = new keyboard(brandDevice);
+        monitor monitor = new monitor(brandComponent, "LLDH32", 42);
         //System
-        MotherBoard MB = new MotherBoard(brandMB,"LGA ", 4, 775, trimA);
-        Processor processor = new Processor(branddProc, "LPG", 775, "8MB");
+        motherBoard MB = new motherBoard(brandMB,"LGA ", 4, 775, trimA);
+        processor processor = new processor(branddProc, "LPG", 775, "8MB");
         RAM ram = new RAM(brandComponent, "DDR4", 64, trimA);
-        Graphic graphic = new Graphic(brandMB, "DDR5", 8, trimA);
+        graphic graphic = new graphic(brandMB, "DDR5", 8, trimA);
         HDD hdd = new HDD(brandComponent, "SSD", 1000);
         //Computer dell = new Computer(monitor,sys,mouse,kb);
         if (MB.getTrim().getName() == "Game" && graphic.getTrim().getName() == "Game"){
-            SysBlock sys = new SysBlock(MB, processor, hdd, ram, graphic, trimA);
-            Computer dell = new Computer(monitor,sys,mouse,kb);
+            sysBlock sys = new sysBlock(MB, processor, hdd, ram, graphic, trimA);
+            computer dell = new computer(monitor,sys,mouse,kb);
             System.out.println("Trim is " + trimA.getType());
             dell.printInfo();
         } else {
-            SysBlock sys = new SysBlock(MB, processor, hdd, ram, graphic, trimN);
-            Computer dell = new Computer(monitor,sys,mouse,kb);
+            sysBlock sys = new sysBlock(MB, processor, hdd, ram, graphic, trimN);
+            computer dell = new computer(monitor,sys,mouse,kb);
             System.out.println("Trim is " + trimN.getType());
             dell.printInfo();
         }

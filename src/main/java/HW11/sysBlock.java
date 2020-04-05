@@ -1,14 +1,14 @@
 package HW11;
 
-public class SysBlock {
-    private MotherBoard MB;
-    private Processor processor;
+public class sysBlock {
+    private motherBoard MB;
+    private HW11.processor processor;
     private HDD hdd;
     private RAM ram;
-    private Graphic graphic;
+    private HW11.graphic graphic;
     private trims trim;
 
-    public SysBlock(MotherBoard MB, Processor processor, HDD hdd, RAM ram, Graphic graphic, trims trim) {
+    public sysBlock(motherBoard MB, HW11.processor processor, HDD hdd, RAM ram, HW11.graphic graphic, trims trim) {
         this.MB = MB;
         this.processor = processor;
         this.hdd = hdd;
@@ -17,14 +17,14 @@ public class SysBlock {
         this.trim = trim;
     }
 
-    public SysBlock() {
+    public sysBlock() {
     }
 
-    public void setMB(MotherBoard MB) {
+    public void setMB(motherBoard MB) {
         this.MB = MB;
     }
 
-    public void setProcessor(Processor processor) {
+    public void setProcessor(HW11.processor processor) {
         this.processor = processor;
     }
 
@@ -36,7 +36,7 @@ public class SysBlock {
         this.ram = ram;
     }
 
-    public void setGraphic(Graphic graphic) {
+    public void setGraphic(HW11.graphic graphic) {
         this.graphic = graphic;
     }
 
@@ -44,11 +44,11 @@ public class SysBlock {
         this.trim = trim;
     }
 
-    public MotherBoard getMB() {
+    public motherBoard getMB() {
         return MB;
     }
 
-    public Processor getProcessor() {
+    public HW11.processor getProcessor() {
         return processor;
     }
 
@@ -60,7 +60,7 @@ public class SysBlock {
         return ram;
     }
 
-    public Graphic getGraphic() {
+    public HW11.graphic getGraphic() {
         return graphic;
     }
 

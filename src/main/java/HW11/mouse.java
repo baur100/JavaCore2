@@ -1,13 +1,13 @@
 package HW11;
 
-public class Mouse {
+public class mouse {
     private brands brand;
 
-    public Mouse(brands brand) {
+    public mouse(brands brand) {
         this.brand = brand;
     }
 
-    public Mouse() {
+    public mouse() {
     }
 
     public void setBrand(brands brand) {

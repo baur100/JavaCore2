@@ -1,20 +1,20 @@
 package HW11;
 
-public class MotherBoard {
+public class motherBoard {
     private brands brand;
     private String socketName;
     private int ramGB;
     private int socketNum;
     private trims trim;
 
-    public MotherBoard(brands brand, String socketName, int ramGB, int socketNum, trims trim) {
+    public motherBoard(brands brand, String socketName, int ramGB, int socketNum, trims trim) {
         this.brand = brand;
         this.socketName = socketName;
         this.ramGB = ramGB;
         this.socketNum = socketNum;
         this.trim = trim;
     }
-    public MotherBoard(){}
+    public motherBoard(){}
 
     public void setBrand(brands brand) {
         this.brand = brand;

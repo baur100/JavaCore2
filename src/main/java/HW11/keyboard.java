@@ -1,13 +1,13 @@
 package HW11;
 
-public class Keyboard {
+public class keyboard {
     private brands brand;
 
-    public Keyboard(brands brand) {
+    public keyboard(brands brand) {
         this.brand = brand;
     }
 
-    public Keyboard() {
+    public keyboard() {
     }
 
     public void printInfo(){
