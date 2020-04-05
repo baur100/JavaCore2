@@ -10,7 +10,7 @@ public class Processor {
     }
     public Processor (){};
     public void ProcessorprintInfo (){
-        System.out.println("Processor name: " + name + "\nProcessor number: " + number);
+        System.out.println("Processor name: " + getName() + "\nProcessor number: " + getNumber());
     }
 
     public String getName() {

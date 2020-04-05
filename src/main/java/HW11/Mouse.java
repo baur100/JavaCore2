@@ -9,7 +9,7 @@ public class Mouse {
         this.color = color;
     }
     public void mouseprintInfo () {
-        System.out.println("Mouse brand: " + brand + "\nMouse color: " + color);
+        System.out.println("Mouse brand: " + getBrand() + "\nMouse color: " + getColor());
     }
 
 

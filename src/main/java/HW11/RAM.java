@@ -8,7 +8,7 @@ public class RAM {
     }
     public RAM (){};
     public void RAMprintInfo (){
-        System.out.println("RAM Capacity: " + capacity);
+        System.out.println("RAM Capacity: " + getCapacity());
     }
 
     public double getCapacity() {

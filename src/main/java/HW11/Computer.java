@@ -14,7 +14,7 @@ public class Computer {
 
 
 
-    public void ComputerprintInfo(){String yy =("Computer: \nMonitor: " + monitor + "\nSysblock: " + sysblock + "\nMouse: " +mouse);
+    public void ComputerprintInfo(){String yy =("Computer: \nMonitor: " + getMonitor() + "\nSysblock: " + getSysblock() + "\nMouse: " + getMouse());
         System.out.println(yy);}
 
 
