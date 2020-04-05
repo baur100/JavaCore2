@@ -1,4 +1,4 @@
-package homework14;
+package homework12;
 
 public class Furniture {  //superclass
     protected String origin; //USA, China, Malasia

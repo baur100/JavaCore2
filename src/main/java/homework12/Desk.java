@@ -1,4 +1,4 @@
-package homework14;
+package homework12;
 
 public class Desk extends Furniture {
     private String material; //wood, plastic, glass

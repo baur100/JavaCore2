@@ -1,4 +1,4 @@
-package homework14;
+package homework12;
 
 public class Sofa extends Furniture {
     private String type;//sleeper sofa/ daybed/ futon /recliner
