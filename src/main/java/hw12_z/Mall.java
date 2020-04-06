@@ -1,8 +1,8 @@
 package hw12_z;
 
 public class Mall extends Construction {
-    private int capacity;
-    private int sq;
+    protected int capacity;
+    protected int sq;
 
     public Mall(String type, int yearOfBuild, String style, Architect architect, int capacity, int sq) {
         super(type, yearOfBuild, style, architect);

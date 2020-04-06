@@ -13,6 +13,7 @@ public class App {
         mall.constracting();
         house.constracting();
         building.constracting();
+        sc.constracting();
     }
 
 
