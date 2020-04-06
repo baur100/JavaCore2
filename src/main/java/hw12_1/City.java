@@ -1,4 +1,4 @@
-package hw12;
+package hw12_1;
 
 public class City extends State {
     protected String metropolia;
