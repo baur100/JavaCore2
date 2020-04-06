@@ -5,4 +5,13 @@ public class House extends Construction {
         super(type, yearOfBuild, style, architect);
     }
 
+    @Override
+    public String toString() {
+        return "House{" +
+                "type='" + type + '\'' +
+                ", yearOfBuild=" + yearOfBuild +
+                ", style='" + style + '\'' +
+                ", architect=" + architect +
+                '}';
+    }
 }

@@ -28,4 +28,7 @@ public class Construction {
     public Architect getArchitect() {
         return architect;
     }
+    public void constracting(){
+        System.out.println(type+" is under construction");
+    }
 }

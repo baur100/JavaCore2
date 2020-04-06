@@ -12,4 +12,5 @@ public class Building extends Construction{
     public int getFloors() {
         return floors;
     }
+
 }
