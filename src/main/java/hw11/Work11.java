@@ -22,7 +22,7 @@ public class Work11 {
         var pros=sys.getMotherboard().getType();
         System.out.println(pros);
 
-        
+
 
 
 
