@@ -1,4 +1,4 @@
-package HW15;
+package hw15;
 
 import java.util.*;
 
