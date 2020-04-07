@@ -18,8 +18,10 @@ package hWA14;
         return haveLegs;
     }
 
-    public void myMeals(){
-        System.out.println(" my favorite meals is: ");
-    };
+    public abstract void myMeals();
+
+     public void longOfHair(){
+         System.out.println(" i have hairs");
+     };
 
 }

@@ -6,10 +6,10 @@ public class Work {
         lion.breath();
         lion.live();
         lion.reproduction();
+        lion.
         lion.canMove();
         lion.myNervousSystem();
         lion.howIMove();
-        lion.longOfHair();
         lion.myMeals();
         System.out.println(lion.toString());
 

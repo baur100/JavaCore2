@@ -59,6 +59,6 @@ public class Lion extends Carnivores {
 
     }
     public String toString(){
-        return "i am a "+name+ " My habitate is "+habitat+"\nI have legs "+haveLegs;
+        return "i am a "+name+ " My habitat is "+habitat+"\nI have legs "+haveLegs;
     }
 }
