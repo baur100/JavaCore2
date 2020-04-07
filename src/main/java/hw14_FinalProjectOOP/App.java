@@ -6,5 +6,8 @@ public class App {
     public static void main(String[] args) {
         Life lion = new Lion();
         lion.breathe();
+        lion.dead();
+        lion.eat();
+        lion.reproduce();
     }
 }
