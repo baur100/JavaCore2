@@ -13,6 +13,7 @@ public class App {
         System.out.println(tv2.getName());
         System.out.println(tv3.getSize());
         System.out.println(tv4.getBlurayBrand());
+        System.out.println(tv3.getName());
 
         System.out.println();
 
