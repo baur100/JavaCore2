@@ -14,7 +14,9 @@ public class Person {
         student.add(4, "Xromov");
         student.set(3, "Kobunko");
         student.remove("Petrov");
+
         System.out.println(student.get(3));
+        System.out.println(student.size());
         System.out.println(student);
 
         for (String v : student) {
@@ -22,6 +24,5 @@ public class Person {
         }
         student.forEach(x -> System.out.println(x));
         student.forEach(System.out::println);
-
     }
 }
