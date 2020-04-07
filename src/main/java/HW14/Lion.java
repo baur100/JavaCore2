@@ -39,12 +39,12 @@ public class Lion extends Carnivores {
 
     @Override
     public void brain() {
-
+        System.out.println("I have big brain");
     }
 
     @Override
     public void nerves() {
-
+        System.out.println("Im nervnyj");
     }
 
     @Override
@@ -59,7 +59,7 @@ public class Lion extends Carnivores {
 
     @Override
     public void death() {
-
+        System.out.println("I feel im daying");
     }
 
     @Override
