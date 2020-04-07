@@ -1,6 +1,7 @@
 package l14;
 
-public enum Fruits {
+public enum
+Fruits {
     APPLE,
     PEACH,
     PINEAPPLE,
