@@ -1,7 +1,5 @@
 package hw15;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Outfit {
     private Shirt shirt;
     private Pants pants;

@@ -1,7 +1,5 @@
 package hw15;
 
-import java.sql.SQLOutput;
-
 public class Shoes {
     private String color;
     private String type;
