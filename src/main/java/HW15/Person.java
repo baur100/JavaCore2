@@ -13,9 +13,8 @@ public class Person {
 
         student.add(4, "Xromov");
         student.set(3, "Kobunko");
-        student.get(2);
         student.remove("Petrov");
-        System.out.println(student.get(0));
+        System.out.println(student.get(3));
         System.out.println(student);
 
         for (String v : student) {

@@ -13,9 +13,8 @@ public class Digital {
 
         numberd.add(4, 5.5);
         numberd.set(3, 6.6);
-        numberd.get(2);
         numberd.remove(2.2);
-        System.out.println(numberd.get(0));
+        System.out.println(numberd.get(3));
         System.out.println(numberd);
 
         for (Double v : numberd) {
