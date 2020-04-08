@@ -55,6 +55,7 @@ public class App {
         s1.add("Flats");
         s1.add("Heels");
         s1.add("Flip-flops");
+        System.out.println("List of shoes: "+s1);
 
         System.out.println(shoes);
         System.out.println(s1);
@@ -65,6 +66,7 @@ public class App {
         System.out.println(s1);
         for (String shoes1 : s1) {
             System.out.println("I am printing this via using foreach: " + s1);
+
 
         }
     }
