@@ -1,3 +1,5 @@
 package finalProject;
 
-public interface Vertebrates extends Animals {}
+public interface Vertebrates extends Animals {
+    public void haveBackbone();
+}

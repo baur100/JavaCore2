@@ -1,3 +1,5 @@
 package finalProject;
 
-public interface Fish extends Vertebrates {}
+public interface Fish extends Vertebrates {
+    public void livesInWater();
+}
