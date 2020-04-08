@@ -1,4 +1,4 @@
-package hv13;
+package hw13;
 
 public class BoatTraller extends Traller{
     private int numberOfWeels;

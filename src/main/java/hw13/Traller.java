@@ -1,4 +1,4 @@
-package hv13;
+package hw13;
 
 public class Traller implements Hitch,Electric {
     protected int lenght;
