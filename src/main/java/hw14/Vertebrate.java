@@ -1,5 +1,5 @@
 package hw14;
 
-public interface Invertebrates extends Animals {
+public interface Vertebrate extends Animal {
     public void hasSkeletalStructure();
 }

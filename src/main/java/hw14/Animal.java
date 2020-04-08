@@ -1,5 +1,5 @@
 package hw14;
 
-public interface Animals extends Life {
+public interface Animal extends Life {
     public void isHeterotroph();
 }
