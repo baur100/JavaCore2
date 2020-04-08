@@ -20,4 +20,19 @@ public class Wolf extends Carnivores {
     public void somthingElse() {
 
     }
+
+    @Override
+    public void brestFitting() {
+
+    }
+
+    @Override
+    public void hasPozvonochnic() {
+
+    }
+
+    @Override
+    public void Geterofob() {
+
+    }
 }
