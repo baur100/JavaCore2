@@ -1,10 +1,12 @@
 package HW14;
 
 public interface Life {
-    public void canBreath();
+    public void breathe();
 
+    public void death();
 
-    public void canEat();
+    public void breed();
 
-    public void canDeath();
+    public void eat();
+
 }
