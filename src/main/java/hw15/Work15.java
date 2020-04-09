@@ -26,7 +26,7 @@ public class Work15<levelESL> {
             System.out.println(book.remove(1));
 
 
-        ArrayList<Integer> levelEsl = new ArrayList<>();
+        List<Integer> levelEsl = new ArrayList<>();
         levelEsl.add(1);
         levelEsl.add(2);
         levelEsl.add(3);
@@ -50,13 +50,13 @@ public class Work15<levelESL> {
         var p2=new Produce("Carrots",1,"Walmart");
         var p3=new Produce("Oil",1,"Walmart");
 
-        ArrayList<Produce> produce= new ArrayList<>();
+        List<Produce> produce= new ArrayList<>();
         produce.add(p1);
         produce.add(p2);
         produce.add(p3);
         for (Produce p:produce) {
             System.out.println(" Plov included : "+p.getName());
-            produce.set(0,p1);
+            produce.set(0,p2);
             System.out.println(produce);
 
 
