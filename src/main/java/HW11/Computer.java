@@ -1,45 +1,32 @@
 package HW11;
 
 public class Computer {
-    private String monitor;
-    private String sysblock;
-    private int mouse;
+    private Monitor monitor;
+    private Sysblock sysblock;
+    private Mouse mouse;
+    private Keyboard keyboard;
 
-    public Computer(String monitor, String sysblock, int mouse) {
+    public Computer(Monitor monitor, Sysblock sysblock, Mouse mouse, Keyboard keyboard) {
         this.monitor = monitor;
         this.sysblock = sysblock;
         this.mouse = mouse;
-    }
-    public Computer () {};
-
-
-
-    public void ComputerprintInfo(){String yy =("Computer: \nMonitor: " + getMonitor() + "\nSysblock: " + getSysblock() + "\nMouse: " + getMouse());
-        System.out.println(yy);}
-
-
-
-    public String getMonitor() {
-        return monitor;
+        this.keyboard = keyboard;
     }
 
-    public String getSysblock() {
-        return sysblock;
+    public Computer() {
     }
 
-    public int getMouse() {
-        return mouse;
+    public void printInfo () {
+       monitor.printInfo();
+       sysblock.printInfo();
+       mouse.printInfo();
+       keyboard.printInfo();
     }
 
-    public void setMonitor(String monitor) {
-        this.monitor = monitor;
-    }
-
-    public void setSysblock(String sysblock) {
-        this.sysblock = sysblock;
-    }
-
-    public void setMouse (int mouse) {
-        this.mouse = mouse;
-    }
 }
+
+
+
+
+
+

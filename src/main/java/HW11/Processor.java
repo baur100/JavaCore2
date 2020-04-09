@@ -9,9 +9,11 @@ public class Processor {
         this.number = number;
     }
     public Processor (){};
-    public void ProcessorprintInfo (){
-        System.out.println("Processor name: " + getName() + "\nProcessor number: " + getNumber());
+
+    public void printInfo(){String yy =("SysBlock includes: processor, mother block, RAM.\nProcessor name: " + name + "\nProcessor number: " + number);
+        System.out.println(yy);
     }
+
 
     public String getName() {
         return name;

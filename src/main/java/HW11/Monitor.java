@@ -3,18 +3,23 @@ package HW11;
 public class Monitor {
     private String brand;
     private String model;
-    private int d;
+    private int diagonal;
 
-    public Monitor(String brand, String model, int d) {
+    public Monitor(String brand, String model, int diagonal) {
         this.brand = brand;
         this.model = model;
-        this.d = d;
+        this.diagonal = diagonal;
     }
-    public Monitor (){};
 
-    public void MonitorprintInfo() {String xx = ("Monitor brand: "  + getBrand() + "\nMonitor model: " + getModel() + "\nMonitor diagonal: " + getD());
-           System.out.println(xx);
-    };
+    public Monitor() {
+    }
+
+
+    public void printInfo() {
+        String xx = ("Computer DELL includes: monitor, system block, mouse, keyboard. \nMonitor brand: " + brand + "\nMonitor model: " + model + "\nMonitor diagonal: " + diagonal);
+        System.out.println(xx);
+    }
+
 
     public String getBrand() {
         return brand;
@@ -24,19 +29,9 @@ public class Monitor {
         return model;
     }
 
-    public int getD() {
-        return d;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public void setD(int d) {
-        this.d = d;
+    public int getDiagonal() {
+        return diagonal;
     }
 }
+
+
