@@ -2,6 +2,7 @@ package hw16;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Callable;
 
 public class Work {
     public static void main(String[] args) {
@@ -46,22 +47,31 @@ public class Work {
         System.out.println(names);
 
         // Class1, Class2
-        Map<String, String> map= new HashMap<>();
-        map.put("California","Sacramento");
-        map.put("New York","Albany");
-        map.put("Texas","Austin");
-        map.put("Arizona","Phoenix");
-        System.out.println(map);
-        System.out.println(map.size());
-        map.replace("Arizona","Tuscon");
-        System.out.println(map);
-        map.put("Oregon","Salem");
-        System.out.println(map);
-        System.out.println(map.size());
-        System.out.println(map.get("California"));
-        map.remove("Arizona");
-        System.out.println(map);
+        Capital capital = new Capital("Sacramento");
+        Capital capital1 = new Capital("Albany");
+        Capital capital2 = new Capital("Austin");
+        Capital capital3 = new Capital("Phoenix");
+        Capital capital4 = new Capital("Salem");
 
+        State state = new State("California");
+        State state1 = new State("New York");
+        State state2 = new State("Texas");
+        State state3 = new State("Arizona");
+
+        State state4 = new State("Oregon");
+
+
+        Map<State, Capital> map= new HashMap<>();
+        map.put(state,capital);
+        map.put(state1, capital);
+        map.put(state2, capital2);
+        map.put(state3,capital3);
+
+
+        System.out.println(map.size());
+        System.out.println(map.get(state).getCapital());
+        map.replace(state2,capital3);
+        System.out.println(map.get(state2).getCapital());
 
 
 
