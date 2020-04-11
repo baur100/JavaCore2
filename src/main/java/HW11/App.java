@@ -43,4 +43,7 @@ public class App {
         System.out.println("try");
 
     }
+    public void printInfoDoctors(){
+
+    }
 }
