@@ -7,9 +7,9 @@ public class App {
     public static void main(String[] args) {
         Address address = new Address("2435", "Sacramento", "CA", 95821);
 
-        Doctor vanya = new Doctor("Ivan", "Ivanov", Position.CARDIOLOGY);
+        Doctor vanya =  new Doctor("Ivan","Ivanov", Position.CARDIOLOGY);
         Doctor petr = new Doctor("Petr", "Petrov", Position.PHYSICIAN);
-        Doctor vycheslav = new Doctor("Slava", "Sidorov", Position.DENTAL);
+        Doctor vycheslav = new Doctor("Slava","Sidorov", Position.DENTAL);
         Doctor elena = new Doctor("Elena", "Ivanovich", Position.SURGERY);
         Doctor nikolay = new Doctor("Nick", "Nikolaenko", Position.PHLEBOTOMY);
 
@@ -21,11 +21,11 @@ public class App {
         doctors.add(nikolay);
 
         HashMap<Integer, String> rooms = new HashMap<>();
-        rooms.put(100, "Cardiology");
-        rooms.put(200, "Phlebotomy");
-        rooms.put(300, "Surgery");
-        rooms.put(400, "Dental");
-        rooms.put(500, "Physician");
+        rooms.put(100,"Gastroenterology");
+        rooms.put(200,"Phlebotomy");
+        rooms.put(300,"Surgeon");
+        rooms.put(400,"Pediatrician");
+        rooms.put(500,"Physician");
 
         ArrayList<InsuranceCompanies> insuranceList = new ArrayList<>();
         insuranceList.add(InsuranceCompanies.UNITEDHEALTHCARE);
