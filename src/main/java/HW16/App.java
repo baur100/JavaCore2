@@ -21,10 +21,10 @@ public class App {
         doctors.add(nikolay);
 
         HashMap<Integer, String> rooms = new HashMap<>();
-        rooms.put(100,"Gastroenterology");
+        rooms.put(100,"Cardiology");
         rooms.put(200,"Phlebotomy");
-        rooms.put(300,"Surgeon");
-        rooms.put(400,"Pediatrician");
+        rooms.put(300,"Surgery");
+        rooms.put(400,"Dental");
         rooms.put(500,"Physician");
 
         ArrayList<InsuranceCompanies> insuranceList = new ArrayList<>();
