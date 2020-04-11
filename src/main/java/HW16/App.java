@@ -5,7 +5,6 @@ import java.util.HashMap;
 
 public class App {
     public static void main(String[] args) {
-
         Address address = new Address("2435", "Sacramento", "CA", 95821);
 
         Doctor vanya =  new Doctor("Ivan","Ivanov", Position.CARDIOLOGY);
