@@ -51,6 +51,23 @@ public class App {
         System.out.println("----------------------------");
         classes.forEach((x, y) -> System.out.println(x + " " + y));
 
+        System.out.println("----------------------------");
+        Map<String, Integer> stockBalances = new HashMap<>();
+        stockBalances.put("Apple", 45);
+        stockBalances.put("Peach", 33);
+        stockBalances.put("Milk", 0);
+        stockBalances.put("Bread", 42);
+        stockBalances.put("Water", 80);
+        stockBalances.forEach((x, y) -> System.out.println(x + " " + y));
+        System.out.println("----------------------------");
+        stockBalances.remove("Milk");
+        stockBalances.forEach((x, y) -> System.out.println(x + " " + y));
+        System.out.println("----------------------------");
+        stockBalances.replace("Bread", 38);
+        stockBalances.forEach((x, y) -> System.out.println(x + " " + y));
+        System.out.println("----------------------------");
+        System.out.println(stockBalances.get("Apple"));
+
 
     }
 }
