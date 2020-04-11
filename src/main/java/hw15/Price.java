@@ -1,17 +1,9 @@
 package hw15;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Price {
-    public Double price;
+    List<Price> prices = new ArrayList<Price>();
 
-    public Price(Double price) {
-        this.price = price;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
 }

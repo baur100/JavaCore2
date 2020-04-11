@@ -1,17 +1,10 @@
 package hw15;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Numbers {
-    public Integer numbers;
+    List<Numbers> numbers = new ArrayList<Numbers>();
 
-    public Numbers(Integer numbers) {
-        this.numbers = numbers;
-    }
+      }
 
-    public Integer getNumbers() {
-        return numbers;
-    }
-
-    public void setNumbers(Integer numbers) {
-        this.numbers = numbers;
-    }
-}
