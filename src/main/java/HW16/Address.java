@@ -15,12 +15,7 @@ public class Address {
     }
 
     public String printAddress() {
-        return "Address{" +
-                "streetAddress='" + streetAddress + '\'' +
-                ", town='" + town + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                '}';
+        return (streetAddress + " " + town + " " + state + " " + zip);
 
     }
 }

@@ -12,11 +12,7 @@ public class Doctor {
     }
 
     public String printDoctor() {
-        return "Doctor{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", position=" + position +
-                '}';
+        return (name + " " + lastName + ", " + position);
 
     }
 }

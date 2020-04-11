@@ -27,6 +27,7 @@ public class Hospital {
     public void printDoctorsList() {
         System.out.println("Our Doctors: ");
         doctors.forEach(x -> System.out.println(x.printDoctor()));
+
     }
 
     public void printCabs() {
