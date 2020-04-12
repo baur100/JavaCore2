@@ -1,10 +1,26 @@
 package hw15;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Fruits {
-    List <Fruits> fruits = new ArrayList<Fruits>();
+    String name, supermarket;
+    int itemCode, amount;
+
+    public Fruits(String name, String supermarket, int itemCode, int amount) {
+        this.name = name;
+        this.supermarket = supermarket;
+        this.itemCode = itemCode;
+        this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return "Fruits{" +
+                "name='" + name + '\'' +
+                ", supermarket='" + supermarket + '\'' +
+                ", itemCode=" + itemCode +
+                ", amount=" + amount +
+                '}';
+    }
 }
 
 
