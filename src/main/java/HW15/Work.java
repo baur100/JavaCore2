@@ -3,11 +3,22 @@ package HW15;
 import java.util.ArrayList;
 import java.util.List;
 
-public class work {
+public class Work {
     public static void main(String[] args) {
         List<String> cars = new ArrayList<String>();
         List<Double> rowList = new ArrayList<Double>();
         List<Integer> intNumbers = new ArrayList<Integer>();
+        List<Starships> starships = new ArrayList<Starships>();
+
+        starships.add(new Starships("Millennium falcon", "Star Wars", 62));
+        starships.add(new Starships("USS Enterprise", "Star Track", 490));
+        starships.add(new Starships("Empire Star Destroyer", "Star Wars", 5900));
+        Starships voyager = new Starships("Voyager 1", "NASA", 12);
+        starships.add(voyager);
+        starships.forEach((a) -> System.out.println(a.getName()+", "+a.getLocation()+", "+a.getSize()));
+        starships.remove(2);
+        System.out.println("");
+
 
         cars.add(0, "Honda");
         cars.add(1, "Mazda");
@@ -31,9 +42,11 @@ public class work {
         System.out.println(intNumbers);
         intNumbers.forEach((x)-> print(x.compareTo(20)));
 
+
+
     }
 
     public static void print(int x){
-        System.out.println("Here is separately exp results:  " + x);
+        System.out.println("Here is comparison results:  " + x);
     }
 }
