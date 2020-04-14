@@ -24,30 +24,32 @@ public class App {
       hospital.printInfo();
         System.out.println();
 
-//        Doctor d1 = new Doctor("aa", "ss",Position.ENDOCRYNOLOGYST);
-//        Doctor d2 = new Doctor("zz","xx",Position.ONCOLOGIST);
-//        Doctor d3 = new Doctor("qq","ww", Position.PHISICIAN);
-//        Doctor d4 = new Doctor("rr","tt", Position.SURGERY);
-//        Doctor d5 = new Doctor("ss","dd",Position.TERAPIST);
+        Doctor d1 = new Doctor("aa", "ss",Position.ENDOCRYNOLOGYST);
+        Doctor d2 = new Doctor("zz","xx",Position.ONCOLOGIST);
+        Doctor d3 = new Doctor("qq","ww", Position.PHISICIAN);
+        Doctor d4 = new Doctor("rr","tt", Position.SURGERY);
+        Doctor d5 = new Doctor("ss","dd",Position.TERAPIST);
+
+        List<Doctor> doctors = new ArrayList<>();
+        doctors.add(0,d1);
+        doctors.add(1,d2);
+        doctors.add(2,d3);
+        doctors.add(4,d5);
+
+       for(Doctor x:doctors){
+           System.out.println(x.printInfo());
+       }
+
+//        System.out.println("****************************");
 //
-//        List<Doctor> doctors = new ArrayList<>();
-//        doctors.add(0,d1);
-//        doctors.add(1,d2);
-//        doctors.add(2,d3);
-//        doctors.add(4,d5);
-
-//       hospital.printDoctors();
-
-        System.out.println("****************************");
-
-        Map<Integer, String> rooms=new HashMap<>();
-         rooms.put(11,"Endocrinologist");
-         rooms.put(22, "oncologist");
-         rooms.put(33,"phisitian");
-         rooms.put(44," surgery");
-         rooms.put(55, "terapy");
-
-       hospital.printRoom();
+//        Map<Integer, String> rooms=new HashMap<>();
+//         rooms.put(11,"Endocrinologist");
+//         rooms.put(22, "oncologist");
+//         rooms.put(33,"phisitian");
+//         rooms.put(44," surgery");
+//         rooms.put(55, "terapy");
+//
+//       hospital.printRoom();
 
 
 

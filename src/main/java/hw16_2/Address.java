@@ -12,9 +12,13 @@ public class Address {
 		this.state = state;
 		this.zip = zip;
 	}
-	public void printInfo(){
-		System.out.println("Adress :"+ streetAddress+" "+town+" "+state+" "+zip);
+	public String printInfo() {
+		return "Adress :" + streetAddress + " " + town + " " + state + " " + zip;
 	}
+
+
+
+
 
 	public String getStreetAddress() {
 		return streetAddress;

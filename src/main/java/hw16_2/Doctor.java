@@ -10,8 +10,8 @@ public class Doctor {
         this.lastName = lastName;
         this.position = position;
     }
-    public void printDoctor(){
-        System.out.println("Doctor : "+name+" "+lastName+" "+position);
+    public String printInfo()    {
+        return"Doctor : "+name+" "+lastName+" "+position;
     }
 
     public String getName() {

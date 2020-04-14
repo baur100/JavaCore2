@@ -51,7 +51,25 @@ public class App {
         temp.remove(33.7);
         System.out.println(temp);
         System.out.println(temp.size());
-        
+
+        System.out.println("*****************************");
+         Car car1= new Car("Toyota","White","Gas");
+         Car car2 =new Car("Opel","Red","Diesel");
+         Car car3=new Car("MB", "Grey", "Diesel");
+
+        List<Car>model1= new ArrayList<Car>();
+        System.out.println(model1.size());
+        model1.add(0,car1);
+        model1.add(1,car2);
+        System.out.println(model1.size());
+        for (Car v: model1){
+            System.out.println(v.getBrand());
+        }
+        model1.add(2,car3);
+        model1.set(1,car3);
+        System.out.println(model1);
+
+
 
 
 
