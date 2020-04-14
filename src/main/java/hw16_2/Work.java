@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class Work {
     public static void main(String[] args) {
-        HashMap<Integer,String> rooms = new HashMap<>();
+        HashMap<Integer,String> rooms = new HashMap<Integer, String>();
         rooms.put(5, "General Practice");
         rooms.put(7, "Surgery");
         rooms.put(9, "Pulmonology");
