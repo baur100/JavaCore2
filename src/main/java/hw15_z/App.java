@@ -56,10 +56,10 @@ public class App {
         List<Shoes> shoes = new ArrayList<>();
         Shoes shoes1 = new Shoes("Espadrilles");
 
-        shoes1.addShoes(new Shoes("Flats"));
-        shoes1.addShoes("Heels");
-        shoes1.addShoes("Flip-flops");
-        shoes1.getShoes();
+//        shoes1.addShoes(new Shoes("Flats"));
+//        shoes1.addShoes("Heels");
+//        shoes1.addShoes("Flip-flops");
+//        shoes1.getShoes();
 
 //        List<Shoes> shoes = new ArrayList<>();
 //        var Shoes =new Shoes();
