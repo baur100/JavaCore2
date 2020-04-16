@@ -4,25 +4,46 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class SimpleTestSelenium {
-    @Test
-    public void googleSearch_openGooglePage_SearchPageOpened() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
-        WebDriver driver = new ChromeDriver();
+    private WebDriver driver;
 
-        driver.get("http://google.com");
-        WebElement searchField = driver.findElement(By.xpath("//*[@name='q']"));
-        searchField.sendKeys("selenium");
-        searchField.sendKeys(Keys.RETURN);
+    @BeforeMethod
+    public void startUp() {
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        driver = new ChromeDriver();
 
-//        WebElement searchButton = driver.findElement(By.xpath("//*[@name='btnK']"));
-//        searchButton.click();
+        driver.get("https://google.com");
+    }
 
-//        Assert.assertEquals(driver.getTitle(),"selenium - Google Search");
-
+    @AfterMethod
+    public void tearDown() throws InterruptedException {
         Thread.sleep(5000);
         driver.quit();
+    }
+
+    @Test
+    public void googleSearch_SearchForSelenium_SearchPageOpened() throws InterruptedException {
+        WebElement searchField = driver.findElement(By.xpath("//*[@name='q']"));
+        searchField.sendKeys("selenium");
+        searchField.sendKeys(Keys.ENTER);
+
+        Thread.sleep(2000);
+        WebElement images = driver.findElement(By.xpath("//*[text()='Images']"));
+        images.click();
+
+        Assert.assertEquals(driver.getTitle(), "selenium - Google Search");
+    }
+
+    @Test
+    public void googleSearch_SearchForJava_SearchPageOpened() {
+        WebElement searchField = driver.findElement(By.xpath("//*[@name='q']"));
+        searchField.sendKeys("Java");
+        searchField.sendKeys(Keys.RETURN);
+
+        Assert.assertEquals(driver.getTitle(), "Java - Google Search");
     }
 }
