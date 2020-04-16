@@ -9,7 +9,7 @@ public class SimpleTestSelenium {
     @Test
     public void googleSearch_OpenGooglePage_SearchPageOpened() throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://google.com");
@@ -17,10 +17,12 @@ public class SimpleTestSelenium {
         WebElement searchField = driver.findElement(By.xpath("//*[@name='q']"));
         searchField.sendKeys("selenium");
 
+        Thread.sleep(5000);
+
         WebElement searchButton = driver.findElement(By.xpath("//*[@name='btnK']"));
         searchButton.click();
 
-        Assert.assertEquals(driver.getTitle(),"selenium - Google Search");
+        Assert.assertEquals(driver.getTitle(),"selenium - Поиск в Google");
 
         Thread.sleep(5000);
         driver.quit();
