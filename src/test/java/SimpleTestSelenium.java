@@ -16,7 +16,7 @@ public class SimpleTestSelenium {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
 
-        driver.get("https://google.com");
+        driver.get("https://udemy.com");
     }
 
     @AfterMethod
@@ -25,20 +25,20 @@ public class SimpleTestSelenium {
         driver.quit();
     }
 
-    @Test
+    @Test(enabled=false)
     public void googleSearch_SearchForSelenium_SearchPageOpened() throws InterruptedException {
         WebElement searchField = driver.findElement(By.xpath("//*[@name='q']"));
         searchField.sendKeys("selenium");
         searchField.sendKeys(Keys.ENTER);
 
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         WebElement images = driver.findElement(By.xpath("//*[text()='Images']"));
         images.click();
 
         Assert.assertEquals(driver.getTitle(), "selenium - Google Search");
     }
 
-    @Test
+    @Test(enabled=false)
     public void googleSearch_SearchForJava_SearchPageOpened() {
         WebElement searchField = driver.findElement(By.xpath("//*[@name='q']"));
         searchField.sendKeys("Java");
@@ -46,4 +46,15 @@ public class SimpleTestSelenium {
 
         Assert.assertEquals(driver.getTitle(), "Java - Google Search");
     }
+
+    @Test()
+    public void udemy_SearchForJava_SearchPageOpened() throws InterruptedException {
+        Thread.sleep(10000);
+        WebElement searchField = driver.findElement(By.cssSelector("[data-purpose*='search-box']"));
+        searchField.sendKeys("Java");
+        searchField.sendKeys(Keys.RETURN);
+
+
+    }
+
 }
