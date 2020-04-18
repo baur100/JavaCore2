@@ -26,9 +26,9 @@ public class App {
         }
 
         fruits.remove(f4);
-//        System.out.println(fruits.size());
+        System.out.println(fruits.size());
 
-
+          fruits.forEach(y-> System.out.println(y.toString()));
 
 //        Classrooms
 
@@ -45,6 +45,8 @@ public class App {
         classrooms.add(c4);
         System.out.println(classrooms.size());
 
+        classrooms.forEach(z-> System.out.println(z.toString()));
+
         for (Classrooms c:classrooms) {
             System.out.println("Today grade 11B has following class: " + c.getSubject() + "  in classroom number " + c.getNumber());
         }
@@ -58,6 +60,8 @@ public class App {
         System.out.println(price.size());
         System.out.println(price.get(2));
         System.out.println(price.toString());
+
+        price.forEach(x-> System.out.println(x.toString()));
     }
 }
 

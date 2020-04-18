@@ -14,6 +14,7 @@ public class App {
         cleaning.put("Small meeting room", "Clorox");
 
         System.out.println(cleaning.keySet());
+        System.out.println(cleaning);
 
         cleaning.replace("Hallways", "Clorox");
         System.out.println(cleaning.get("Hallways"));

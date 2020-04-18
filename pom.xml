@@ -21,4 +21,13 @@
             </plugin>
         </plugins>
     </build>
+    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+    <dependencies>
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.1.0</version>
+        <scope>test</scope>
+    </dependency>
+    </dependencies>
 </project>
