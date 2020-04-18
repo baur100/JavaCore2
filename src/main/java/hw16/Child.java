@@ -8,8 +8,6 @@ public class Child {
     }
 
 
-
-
     public double getAge() {
         return age;
     }
@@ -20,8 +18,9 @@ public class Child {
 
     @Override
     public String toString() {
-        return "Child " +
-                "age=" + age
-                ;
+        return "Child" +
+                " age=" + age ;
     }
 }
+
+

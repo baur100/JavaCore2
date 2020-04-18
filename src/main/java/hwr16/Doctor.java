@@ -35,8 +35,5 @@ public class Doctor {
         this.position = position;
     }
 
-    @Override
-    public String toString() {
-        return "Doctor's name is "+name + "lastName='" + lastName + " position= " + position ;
-    }
-}
+        }
+
