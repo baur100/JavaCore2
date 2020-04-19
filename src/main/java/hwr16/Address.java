@@ -12,6 +12,8 @@ public class Address {
         this.state = state;
         this.zip = zip;
     }
+    public Address() {
+    }
 
     public String getStreetAddress() {
         return streetAddress;
@@ -47,11 +49,9 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
-                "streetAddress='" + streetAddress + '\'' +
+        return " Address: " + streetAddress + '\'' +
                 ", town='" + town + '\'' +
                 ", state='" + state + '\'' +
-                ", zip=" + zip +
-                '}';
+                ", zip=" + zip;
     }
 }
