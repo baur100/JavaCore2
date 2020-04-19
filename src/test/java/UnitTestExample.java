@@ -2,7 +2,7 @@ import L10.Person;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestL10Person {
+public class UnitTestExample {
     @Test
     public void testResultFromPerson(){
         //Arrange
