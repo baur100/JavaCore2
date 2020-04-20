@@ -19,7 +19,7 @@ public class KoelSimpleTest {
 
     @BeforeMethod
     public void startUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
 
         explicitWait = new WebDriverWait(driver, 10);
