@@ -51,7 +51,6 @@ public class KoelLoginTest {
 
         fluentWait.until(x -> x.findElement(By.xpath("//*[@class='home active']")).isDisplayed());
         WebElement homeButton = driver.findElement(By.xpath("//*[@class='home active']"));
-        homeButton.click();
 
         Assert.assertEquals(homeButton.getText(), "Home");
     }
