@@ -7,7 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import java.time.Duration;
 
 public class SHW1 {
@@ -19,7 +18,7 @@ public class SHW1 {
         System.setProperty("webdriver.chrome.drive", "chromedriver.exe");
         driver = new ChromeDriver();
         wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(10))
+                .withTimeout(Duration.ofSeconds(2))
                 .pollingEvery(Duration.ofMillis(100))
                 .ignoring(Exception.class)
                 .ignoring(StaleElementReferenceException.class);
@@ -29,11 +28,11 @@ public class SHW1 {
 
     @AfterMethod
     public void tearDown() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         driver.quit();
     }
 
-    @Test(priority = 1)
+    @Test(enabled = true, priority = 1)
     public void koelApp_ValidLoginCredentials_UserAccessGranted() {
         // Locate elements using CSS Selector
         var email = driver.findElement(By.cssSelector("[type='email']"));
@@ -44,24 +43,30 @@ public class SHW1 {
         password.sendKeys("te$t$tudent02");
         submitBtn.click();
 
-        Assert.assertTrue(wait.until(driver -> driver.findElement(By.cssSelector(".logout")).isDisplayed()));
+        try {
+            Assert.assertTrue(wait.until(driver -> driver.findElement(By.cssSelector(".logout")).isDisplayed()));
+        } catch (StaleElementReferenceException | TimeoutException err) {
+            Assert.assertFalse(wait.until(driver -> driver.findElement(By.cssSelector("[class='login-wrapper']")).isDisplayed()));
+        }
     }
 
-    @Test(priority = 2)
+    @Test(enabled = true, priority = 2)
     public void koelApp_InvalidLoginCredentials_UserAccessRejected() {
         // Locate elements using XPath
         var email = driver.findElement(By.xpath("//input[@type='email']"));
         var password = driver.findElement(By.xpath("//input[@type='password']"));
         var submitBtn = driver.findElement(By.xpath("//button[@type='submit']"));
 
-        email.sendKeys("test@testpro.io");
-        password.sendKeys("test@3121312#");
+        email.sendKeys("testpro.user02@testpro.io");
+        password.sendKeys("te$t$tudent026");
         submitBtn.click();
 
-        Assert.assertTrue(wait.until(driver -> driver.findElement(By.xpath("//form[@class='error']")).isDisplayed()));
-
-//        wait.until(driver -> driver.findElement(By.xpath("//form[@class='error']")));
-//        Assert.assertEquals(driver.findElement(By.xpath("//form[@class='error']"))
-//                                  .getCssValue("border-color"), "rgb(142, 73, 71)");
+        try {
+            Assert.assertTrue(wait.until(driver -> driver
+                    .findElement(By.xpath("//form[@class='error']")).isDisplayed()));
+        } catch (StaleElementReferenceException | TimeoutException err) {
+            Assert.assertFalse(wait.until(driver -> driver
+                    .findElement(By.xpath("//div[@id='main']")).isDisplayed()));
+        }
     }
 }
