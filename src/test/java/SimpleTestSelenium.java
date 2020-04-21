@@ -12,7 +12,7 @@ public class SimpleTestSelenium {
 
     @BeforeMethod
     public void startUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -52,16 +52,16 @@ public class SimpleTestSelenium {
 
     }
 
-    @Test(enabled=true)
+    @Test(enabled=false)
     public void googleSearch_SearchForJava_SearchPageOpened() {
         WebElement searchField = driver.findElement(By.xpath("//*[@name='q']"));
         searchField.sendKeys("Java");
         searchField.sendKeys(Keys.RETURN);
 
-        Assert.assertEquals(driver.getTitle(), "Java - Google Searc");
+        Assert.assertEquals(driver.getTitle(), "Java - Google Search");
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void udemy_SearchForJava_SearchPageOpened() throws InterruptedException {
 //        Thread.sleep(10000);
         WebElement searchField = driver.findElement(By.cssSelector("[data-purpose*='search-box']"));
