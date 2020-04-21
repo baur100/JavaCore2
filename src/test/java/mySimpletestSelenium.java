@@ -27,5 +27,12 @@ public class mySimpletestSelenium {
 
         Thread.sleep(5000);
         driver.quit();
+
+        WebElement seachField2 = driver.findElement(By.xpath("//*[@name='']"));
+        seachField2.sendKeys();
     }
+
+
+
+
 }
