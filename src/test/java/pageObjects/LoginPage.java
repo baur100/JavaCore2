@@ -23,6 +23,7 @@ public class LoginPage {
                 .ignoring(Exception.class)
                 .ignoring(StaleElementReferenceException.class);
     }
+<<<<<<< HEAD
 
     public void openPage() {
         driver.get(url);
@@ -41,6 +42,21 @@ public class LoginPage {
     }
 
     public HomePage login(String email, String password) {
+=======
+    public void openPage(){
+        driver.get(url);
+    }
+    public WebElement getEmailField(){
+        return driver.findElement(By.xpath(emailXpath));
+    }
+    public WebElement getPasswordField(){
+        return driver.findElement(By.xpath(passwordXpath));
+    }
+    public WebElement getLoginButton(){
+        return driver.findElement(By.xpath(loginButtonXpath));
+    }
+    public HomePage login(String email, String password){
+>>>>>>> a587164... S6
         getEmailField().sendKeys(email);
         getPasswordField().sendKeys(password);
         getLoginButton().click();
@@ -48,12 +64,22 @@ public class LoginPage {
     }
 
     public boolean isError() {
+<<<<<<< HEAD
         try {
             fluentWait.until(x -> x.findElement(By.xpath(errorXpath)));
+=======
+        try{
+            fluentWait.until(x->x.findElement(By.xpath(errorXpath)));
+>>>>>>> a587164... S6
         } catch (TimeoutException err) {
             return false;
         }
         return true;
+<<<<<<< HEAD
 
     }
 }
+=======
+    }
+}
+>>>>>>> a587164... S6
