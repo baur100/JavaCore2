@@ -7,7 +7,6 @@ import java.util.Map;
 
 public class Work162 {
     public static void main(String[] args) {
-
         Doctor doctor1 = new Doctor("Oleg", "Petrov", Position.Cardiologist);
         var doctor2 = new Doctor("Igor", "Ivanov", Position.Dermatologist);
         var doctor3 = new Doctor("Dan", "Asanov", Position.Pediatrician);
