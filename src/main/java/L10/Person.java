@@ -11,7 +11,9 @@ public class Person {
         return name+(a+b+c);
     }
 
-    public String lastResult(int a,String b) {
-        return lastname + a + b;
+    public String lastResult(int a,String b){
+        return lastname+a+b;
     }
+
+
 }
