@@ -5,9 +5,9 @@ public class hWAFibonacciNumbers {
         System.out.println("sequence of "+n+" Fibonacci numbers");
         for(int i=1;i<=n;i++){
             System.out.println(n1+" ");
-            int sumOfTwo = n1+n2;
+            int someOfTwo = n1+n2;
             n1=n2;
-            n2=sumOfTwo;
+            n2=someOfTwo;
         }
 
     }

@@ -21,6 +21,8 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+
+
 public class hWASel5 {
     private WebDriver driver;
     private WebDriverWait explicitWait;
@@ -71,12 +73,26 @@ public class hWASel5 {
         email.sendKeys("testpro.user02@testpro.io");
 
         var password = driver.findElement(By.xpath("//*[@type='password']"));
-        password.sendKeys("te$t$tudent0");
+        password.sendKeys("te$t$tudent02");
 
         var loginButton = driver.findElement(By.xpath("//*[@type='submit']"));
         loginButton.click();
+        try{
 
         fluentWait.until(x->x.findElement(By.xpath("//*[@class='error']")).isEnabled());
+
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@class='error']")).isEnabled());
+
+      //  Assert.assertEquals(driver.getCurrentUrl(),"https://koelapp.testpro.io/");
+     //   Assert.assertNotNull(driver.findElement(By.xpath("//*[@class='error']")).isEnabled());
+
+
+    }catch (Exception e){
+        System.out.println("Register element is not found.");
+
+
+
+    }
 
 
     }
