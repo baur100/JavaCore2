@@ -26,15 +26,15 @@ public class UdemyTest {
     }
     @Test
     public void udemySearch_SearchForJavaCourse_CoursePageOpened() throws InterruptedException {
-        WebElement searchField = driver.findElement(By.xpath("//*[contains(@class,'form-control')]"));
+        WebElement searchField = driver.findElement(By.xpath("//*[@id='billboard-search-bar']"));
         searchField.sendKeys("java");
         searchField.sendKeys(Keys.ENTER);
 
-        Thread.sleep(2000);
-        WebElement images = driver.findElement(By.xpath("//*[contains(@class,'course-cards-skeleton--skeleton--2jKpO')]"));
-        images.click();
+        Thread.sleep(5000);
+        WebElement course = driver.findElement(By.xpath("//*[contains(@class,'course-cards-skeleton--skeleton--2jKpO')]"));
+        course.click();
 
-        Assert.assertEquals(driver.getTitle(), "Complete Java Software developer Masterclass (for Java 10) | Udemy");
+        Assert.assertEquals(driver.getTitle(), "Complete Java Software Developer Masterclass (for Java 10) | Udemy");
 
     }
 
