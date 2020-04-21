@@ -1,4 +1,4 @@
-package HWS5;
+package HWs.Tests;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -8,14 +8,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.security.Key;
 import java.time.Duration;
 
 public class work {
     private WebDriver driver;
     private FluentWait<WebDriver> fluentWait;
 
-   // JavascriptExecutor js = (JavascriptExecutor) driver;
+
     public boolean isExist(){
         try {
             driver.findElement(By.xpath("//*[@class='playlist playlist']/*[.='Shsmith']")).isDisplayed();
