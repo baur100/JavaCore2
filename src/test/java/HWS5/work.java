@@ -30,9 +30,9 @@ public class work {
         Thread.sleep(5000);
         driver.quit();
     }
-    @Test
+    @Test //positive testing - Correct login with correct credentials
     public void login_CorrectCredentialsLoginForm() throws InterruptedException {
-
+        fluentWait.until(x->x.findElement(By.cssSelector("[type = 'submit']")).isDisplayed());
         driver.findElement(By.cssSelector("[type = 'email']")).sendKeys("testpro.user02@testpro.io");
         driver.findElement(By.cssSelector("[type = 'password']")).sendKeys("te$t$tudent02");
         driver.findElement(By.cssSelector("[type = 'submit']")).click();
@@ -40,9 +40,9 @@ public class work {
         fluentWait.until(x->x.findElement(By.xpath("//*[@class='logout']")).isDisplayed());
         Assert.assertTrue(driver.findElement(By.xpath("//*[@class='logout']")).isDisplayed());
     }
-    @Test
+    @Test  //negative - verifying incorrect authorization form behavior
     public void login_InCorrectCredentialsLoginForm() throws InterruptedException {
-
+        fluentWait.until(x->x.findElement(By.cssSelector("[type = 'submit']")).isDisplayed());
         driver.findElement(By.cssSelector("[type = 'email']")).sendKeys("testpro.user02t@estpro.io");//testpro.user02@testpro.io
         driver.findElement(By.cssSelector("[type = 'password']")).sendKeys("te$t$tudent02");
         driver.findElement(By.cssSelector("[type = 'submit']")).click();
