@@ -19,6 +19,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -28,47 +29,30 @@ public class hWASel5 {
     private WebDriverWait explicitWait;
     private FluentWait<WebDriver> fluentWait;
 
-        @BeforeMethod
-        public void startUp() {
-            System.setProperty("webdriver.chrome.driver", "chromedriver");
-            driver = new ChromeDriver();
+    @BeforeMethod
+    public void startUp() {
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        driver = new ChromeDriver();
 
-            explicitWait = new WebDriverWait(driver, 10);
-            fluentWait = new FluentWait<WebDriver>(driver)
-                    .withTimeout(Duration.ofSeconds(10))
-                    .pollingEvery(Duration.ofMillis(100))
-                    .ignoring(Exception.class)
-                    .ignoring(StaleElementReferenceException.class);
+        explicitWait = new WebDriverWait(driver, 10);
+        fluentWait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(100))
+                .ignoring(Exception.class)
+                .ignoring(StaleElementReferenceException.class);
 
-            driver.get("https://koelapp.testpro.io/");
+        driver.get("https://koelapp.testpro.io/");
 
-        }
+    }
 
-        @AfterMethod
-        public void tearDown() throws InterruptedException {
-            Thread.sleep(5000);
-            driver.quit();
-        }
-
-        @Test(enabled = true)
-        public void login_CorrectCredentialsFluent_SuccessfulLogin(){
-            var email = driver.findElement(By.xpath("//*[@type='email']"));
-            email.sendKeys("testpro.user02@testpro.io");
-
-            var password = driver.findElement(By.xpath("//*[@type='password']"));
-            password.sendKeys("te$t$tudent02");
-
-            var loginButton = driver.findElement(By.xpath("//*[@type='submit']"));
-            loginButton.click();
-
-            fluentWait.until(x->x.findElement(By.xpath("//*[@class='home active']")).isDisplayed());
-
-            var homeButton = driver.findElement(By.xpath("//*[@class='home active']"));
-            homeButton.click();
-        }
+    @AfterMethod
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(5000);
+        driver.quit();
+    }
 
     @Test(enabled = true)
-    public void login_WrongPasswordFluent_SuccessfulLogin(){
+    public void login_CorrectCredentialsFluent_SuccessfulLogin() {
         var email = driver.findElement(By.xpath("//*[@type='email']"));
         email.sendKeys("testpro.user02@testpro.io");
 
@@ -77,25 +61,35 @@ public class hWASel5 {
 
         var loginButton = driver.findElement(By.xpath("//*[@type='submit']"));
         loginButton.click();
-        try{
 
-        fluentWait.until(x->x.findElement(By.xpath("//*[@class='error']")).isEnabled());
+        fluentWait.until(x -> x.findElement(By.xpath("//*[@class='home active']")).isDisplayed());
 
-        Assert.assertTrue(driver.findElement(By.xpath("//*[@class='error']")).isEnabled());
+        var homeButton = driver.findElement(By.xpath("//*[@class='home active']"));
+        homeButton.click();
+    }
 
-      //  Assert.assertEquals(driver.getCurrentUrl(),"https://koelapp.testpro.io/");
-     //   Assert.assertNotNull(driver.findElement(By.xpath("//*[@class='error']")).isEnabled());
+    @Test(enabled = true)
+    public void login_WrongPasswordFluent_SuccessfulLogin() {
+        var email = driver.findElement(By.xpath("//*[@type='email']"));
+        email.sendKeys("testpro.user02@testpro.io");
+
+        var password = driver.findElement(By.xpath("//*[@type='password']"));
+        password.sendKeys("te$t$tudent02");
+
+        var loginButton = driver.findElement(By.xpath("//*[@type='submit']"));
+        loginButton.click();
 
 
-    }catch (Exception e){
-        System.out.println("Register element is not found.");
+        fluentWait.until(x->x.findElement(By.className("error")));
 
+            List<WebElement> error = driver.findElements(By.xpath("//*[@class='error']"));
 
+            Assert.assertEquals(error.size(),1);
+            Assert.assertTrue(error.size()==1);
+            Assert.assertEquals(error.size(),1,"custom error message");
 
+        }
     }
 
 
-    }
-
-    }
 
