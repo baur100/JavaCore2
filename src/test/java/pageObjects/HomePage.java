@@ -1,27 +1,15 @@
 package pageObjects;
 
-<<<<<<< HEAD
 import org.openqa.selenium.*;
-=======
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
->>>>>>> a587164... S6
 import org.openqa.selenium.support.ui.FluentWait;
 
 import java.time.Duration;
 
 public class HomePage {
     private WebDriver driver;
-<<<<<<< HEAD
     FluentWait<WebDriver> fluentWait;
     private String homeButtonXpath = "//*[@class='home active']";
     private String isPlayListCreated = "//*[@type='text'][1]";
-=======
-    FluentWait<WebDriver>fluentWait;
-    private String homeButtonXpath = "//*[@class='home active']";
->>>>>>> a587164... S6
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -29,7 +17,6 @@ public class HomePage {
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(100))
                 .ignoring(Exception.class)
-<<<<<<< HEAD
                 .ignoring(StaleElementReferenceException.class);
     }
 
@@ -56,21 +43,10 @@ public class HomePage {
     public boolean isPlayListCreated(String nick_playlist) {
         try {
             fluentWait.until(x -> x.findElement(By.xpath(isPlayListCreated)));
-=======
-                .ignoring(StaleElementReferenceException .class);
-    }
-
-    public boolean isHomepage(){
-        try{
-            fluentWait.until(x->x.findElement(By.xpath(homeButtonXpath)));
->>>>>>> a587164... S6
         } catch (TimeoutException err) {
             return false;
         }
         return true;
     }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> a587164... S6

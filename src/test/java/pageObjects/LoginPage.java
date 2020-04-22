@@ -2,9 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.FluentWait;
-
 import java.time.Duration;
-
 public class LoginPage {
     private final String emailXpath = "//*[@type='email']";
     private final String passwordXpath = "//*[@type='password']";
