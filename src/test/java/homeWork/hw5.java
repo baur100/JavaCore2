@@ -12,6 +12,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
 import java.time.Duration;
 
@@ -55,6 +56,7 @@ public class hw5 {
 
         WebElement logOutButton = driver.findElement(By.xpath("//*[@class='logout']"));
         logOutButton.isDisplayed();
+        Assert.assertEquals(false,logOutButton.isDisplayed());
 
         String expectedURL = "https://koelapp.testpro.io/#!/home";
         String actualURL = driver.getCurrentUrl();
@@ -83,8 +85,9 @@ public class hw5 {
         fluentWait.until(x -> x.findElement(By.xpath("//*[@class='error']")).isDisplayed());
 
         logInButton.isDisplayed();
-        
+
         var error = driver.findElement(By.xpath("//*[@class='error']"));
+        Assert.assertTrue(true,"");
         error.isDisplayed();
 
     }
