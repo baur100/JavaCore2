@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import java.time.Duration;
 
@@ -40,8 +41,9 @@ public class SHW1 {
         var submitBtn = driver.findElement(By.cssSelector("[type='submit']"));
 
         email.sendKeys("testpro.user02@testpro.io");
-        password.sendKeys("te$t$tudent02");
+        password.sendKeys("te$t$tudent025");
         submitBtn.click();
+
 
         try {
             Assert.assertTrue(wait.until(driver -> driver.findElement(By.cssSelector(".logout")).isDisplayed()));
@@ -50,7 +52,7 @@ public class SHW1 {
         }
     }
 
-    @Test(enabled = true, priority = 2)
+    @Test(enabled = false, priority = 2)
     public void koelApp_InvalidLoginCredentials_UserAccessRejected() {
         // Locate elements using XPath
         var email = driver.findElement(By.xpath("//input[@type='email']"));
