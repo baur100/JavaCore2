@@ -30,7 +30,6 @@ public class LoginTests {
         Thread.sleep(5000);
         driver.quit();
     }
-<<<<<<< HEAD
 
     @Test
     public void loginTest_correctCredentials_loggedToApp() {
@@ -53,21 +52,3 @@ public class LoginTests {
     }
 
 }
-=======
-    @Test
-    public void loginTest_correctCredentials_loggedToApp(){
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.openPage();
-        HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
-        Assert.assertTrue(homePage.isHomepage());
-    }
-    @Test
-    public void loginTest_incorrectCredentials_notLoggedToApp(){
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.openPage();
-        loginPage.login("testpro.user02@testpro.io","********");
-        Assert.assertTrue(loginPage.isError());
-    }
-
-}
->>>>>>> a587164... S6
