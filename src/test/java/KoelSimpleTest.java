@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class KoelSimpleTest {
@@ -97,5 +98,23 @@ public class KoelSimpleTest {
         homeButton.click();
 
         Assert.assertEquals(driver.getTitle(), "Koel");
+    }
+
+    @Test
+    // Module_WhatTesting_ExpectedResult
+    public void login_IncorrectCredentialsFluentWait_CantLogin() {
+        WebElement email = driver.findElement(By.xpath("//*[@type='email']"));
+        email.sendKeys("testpro.user02@testpro.io");
+
+        WebElement password = driver.findElement(By.xpath("//*[@type='password']"));
+        password.sendKeys("te$t$tudent0");
+
+        WebElement submitButton = driver.findElement(By.xpath("//*[@type='submit']"));
+        submitButton.click();
+
+        fluentWait.until(x -> x.findElement(By.className("error")));
+        List<WebElement> error = driver.findElements(By.xpath("//*[@type='error']"));
+
+        Assert.assertEquals(error.size(), 1, "Element not found");
     }
 }
