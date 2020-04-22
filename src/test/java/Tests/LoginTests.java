@@ -31,22 +31,31 @@ public class LoginTests {
         driver.quit();
     }
 
-    @Test
+    @Test(enabled = false)
     public void loginTest_correctCredentials_loggedToApp() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
         Assert.assertTrue(homePage.isHomepage());
-        homePage.addPlaylist("Nick playlist");
-        Assert.assertTrue(homePage.isPlayListCreated("Nick playlist"));
+
 
     }
 
-    @Test
+    @Test(enabled = false)
     public void loginTest_incorrectCredentials_notLoggedToApp() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         loginPage.login("testpro.user02@testpro.io", "********");
         Assert.assertTrue(loginPage.isError());
+    }
+
+    @Test
+    public void createPlaylist_createPlaylist_playlistCreated(){
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.openPage();
+        HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
+        Assert.assertTrue(homePage.isHomepage());
+        homePage.addPlaylist("Vlad's playlist");
+        Assert.assertTrue(homePage.isPlayListCreated("Vlad's playlist"));
     }
 }

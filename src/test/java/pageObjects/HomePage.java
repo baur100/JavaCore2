@@ -8,8 +8,9 @@ import java.time.Duration;
 public class HomePage {
     private WebDriver driver;
     FluentWait<WebDriver> fluentWait;
+    FluentWait<WebDriver> fluentWaitWithHigherPolling;
     private String homeButtonXpath = "//*[@class='home active']";
-    private String isPlayListCreated = "//*[@type='text'][1]";
+    private String playlistCreatedSuccessMessage = "//*[@class='success show']";
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -18,6 +19,12 @@ public class HomePage {
                 .pollingEvery(Duration.ofMillis(100))
                 .ignoring(Exception.class)
                 .ignoring(StaleElementReferenceException.class);
+        this.fluentWaitWithHigherPolling = new FluentWait<WebDriver>(this.driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(1000))
+                .ignoring(Exception.class)
+                .ignoring(StaleElementReferenceException.class)
+                .ignoring(ElementClickInterceptedException.class);
     }
 
     public boolean isHomepage() {
@@ -29,20 +36,28 @@ public class HomePage {
         return true;
     }
 
-    public void addPlaylist(String nick_playlist) {
-        fluentWait.until(driver -> driver.findElement(By.xpath("//*[@class='fa fa-plus-circle control create']")));
+    public void addPlaylist(String playlist) {
         var creatplaylist = driver.findElement(By.xpath("//*[@class='fa fa-plus-circle control create']"));
-        creatplaylist.click();
-
+        boolean clickSuccessful = false;
+        while(clickSuccessful == false) try {
+            fluentWait.until(driver -> driver.findElement(By.xpath("//*[@class='fa fa-plus-circle control create']")));
+            creatplaylist.click();
+            break;
+        } catch (ElementClickInterceptedException err) {
+            clickSuccessful = false;
+        }
         WebElement searchField = driver.findElement(By.xpath("//*[@type='text'][1]"));
-        searchField.sendKeys("Nick playlist");
+        searchField.sendKeys(playlist);
         searchField.sendKeys(Keys.ENTER);
     }
 
 
-    public boolean isPlayListCreated(String nick_playlist) {
+    public boolean isPlayListCreated(String playlist) {
+        String playlistHeader = "//span[contains(text(),\""+playlist+"\")]";
         try {
-            fluentWait.until(x -> x.findElement(By.xpath(isPlayListCreated)));
+            fluentWait.until(x -> x.findElement(By.xpath(playlistCreatedSuccessMessage)).isDisplayed());
+            fluentWait.until(x -> x.findElement(By.xpath(playlistHeader)).isDisplayed());
+
         } catch (TimeoutException err) {
             return false;
         }
