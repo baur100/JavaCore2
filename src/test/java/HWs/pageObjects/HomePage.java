@@ -3,6 +3,7 @@ package HWs.pageObjects;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.testng.annotations.Test;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -57,7 +58,7 @@ public class HomePage {
         }
         return true;
     }
-    public boolean isPlayListExist(String PlayListName){
+    public boolean isPlayListExists(String PlayListName){
         try {
             Thread.sleep(1000);
             driver.findElement(By.xpath("//*[@class='playlist playlist']/*[.='"+PlayListName+"']")).isDisplayed(); //"+PlayListName+"
@@ -71,15 +72,17 @@ public class HomePage {
         fluentWait.until(x->x.findElement(By.cssSelector(homePlayListCreateCSSSelector)).isDisplayed());
         getHomePlayListCreateCSSSelector().click();
         fluentWait.until(x->x.findElement(By.xpath(homePlayListInputXpatch)).isDisplayed());
-        getHomePlayListInputXpatch().sendKeys(getPlayListName(),Keys.ENTER);
+        getHomePlayListInputXpatch().sendKeys(getPlayListName,Keys.ENTER);
     }
+
+     //TODO in progress
     public void addPlaylistWithCheckingExisting(String getPlayListName) throws InterruptedException {
         Actions actions = new Actions(driver);
-        SimpleDateFormat sdf = new SimpleDateFormat(" M/dd/yyyy HH:mm");
-        String date = sdf.format(new Date());
+//        SimpleDateFormat sdf = new SimpleDateFormat(" M/dd/yyyy HH:mm");
+//        String date = sdf.format(new Date());
         fluentWait.until(x->x.findElement(By.cssSelector(homePlayListCreateCSSSelector)).isDisplayed());
         Thread.sleep(2000);
-        while (isPlayListExist(getPlayListName)){
+        while (isPlayListExists(getPlayListName)){
 
             driver.findElement(By.xpath("//*[@class='playlist playlist']/*[.='"+PlayListName +"']")).click();
             actions.doubleClick(homePlayListActiveElementCSS()).perform();
@@ -88,6 +91,6 @@ public class HomePage {
         }
         getHomePlayListCreateCSSSelector().click();
         fluentWait.until(x->x.findElement(By.xpath(homePlayListInputXpatch)).isDisplayed());
-        getHomePlayListInputXpatch().sendKeys(getPlayListName+date,Keys.ENTER);
+        getHomePlayListInputXpatch().sendKeys(getPlayListName,Keys.ENTER); //+date
     }
 }

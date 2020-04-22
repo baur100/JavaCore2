@@ -47,18 +47,17 @@ public class LoginTests {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
-        homePage.setPlayListName("sh11_test");
-        homePage.addPlaylist(homePage.getPlayListName());
-        Assert.assertTrue(homePage.isPlayListCreated(homePage.getPlayListName()));
+        homePage.addPlaylist("sh11_test");
+        Assert.assertTrue(homePage.isPlayListCreated("sh11_test"));
     }
-    @Test
+    @Test //TODO in progress
     public void createPlayListTest_ItemCreatedAndCheckedCopy() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
         homePage.setPlayListName("sh11_test");
         homePage.addPlaylistWithCheckingExisting(homePage.getPlayListName());
-        Assert.assertTrue(homePage.isPlayListExist(homePage.getPlayListName()));
+        Assert.assertTrue(homePage.isPlayListExists(homePage.getPlayListName()));
     }
 
 }
