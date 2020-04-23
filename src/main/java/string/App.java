@@ -12,7 +12,7 @@ public class App {
         boolean xx = "ddd".equals("ttt");
         System.out.println(str.compareToIgnoreCase("HellO stUdents, today is a good day"));
         System.out.println(str.concat(" - because today is Sunday"));
-        System.out.println(str.indent(5)); // Set intend - отступ
+        //System.out.println(str.indent(5)); // Set intend - отступ
         var words = str.split(" ");
         System.out.println(words[1]);
         String url = "www.strings.com";
