@@ -7,11 +7,11 @@ import pageObjects.LoginPage;
 
 public class HomepageTests extends BaseTest{
     @Test
-    public void loginTest_createNewPlaylist_newPlaylistCreated() throws InterruptedException {
+    public void loginTest_createNewPlaylist_newPlaylistCreated(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
-        homePage.createNewPlaylist("HeyY");
-        Assert.assertTrue(homePage.isPlaylistCreated("HeyY"));
+        homePage.createNewPlaylist("HeyYoPlaylist");
+        Assert.assertTrue(homePage.isPlaylistCreated("HeyYoPlaylist"));
     }
 }

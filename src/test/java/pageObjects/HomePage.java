@@ -1,14 +1,11 @@
 package pageObjects;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends BasePage{
-
     public HomePage(WebDriver driver) {
         super(driver);
     }
-
     public boolean isHomepage(){
         try{
             fluentWait.until(x->x.findElement(By.xpath(HomePageSelectors.homeButtonXpath)));
@@ -17,12 +14,8 @@ public class HomePage extends BasePage{
         }
         return true;
     }
-    public WebElement getPlusButton() throws InterruptedException {
-
-  //      wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(HomePageSelectors.plusButtonCssSelector)));
-        Thread.sleep(100);
-
-
+    public WebElement getPlusButton(){
+        fluentWait.until(x-> x.findElement(By.cssSelector(HomePageSelectors.plusButtonCssSelector)).isEnabled());
         return driver.findElement(By.cssSelector(HomePageSelectors.plusButtonCssSelector));
     }
     private WebElement getNewPlaylistNameField(){
@@ -31,7 +24,7 @@ public class HomePage extends BasePage{
     private String getPlaylistXpath(String name){
         return "//a[text()='"+name+"']";
     }
-    public void createNewPlaylist(String name) throws InterruptedException {
+    public void createNewPlaylist(String name){
         getPlusButton().click();
         getNewPlaylistNameField().sendKeys(name);
         getNewPlaylistNameField().sendKeys(Keys.ENTER);

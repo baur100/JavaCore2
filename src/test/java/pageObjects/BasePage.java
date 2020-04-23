@@ -3,14 +3,12 @@ package pageObjects;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
 public class BasePage {
     protected WebDriver driver;
     protected FluentWait<WebDriver> fluentWait;
-    WebDriverWait wait = new WebDriverWait(driver, 20);
     protected final String url = "https://koelapp.testpro.io/";
 
     public BasePage(WebDriver driver) {
