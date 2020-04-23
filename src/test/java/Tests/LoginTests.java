@@ -49,4 +49,6 @@ public class LoginTests {
         loginPage.login("testpro.user02@testpro.io", "********");
         Assert.assertTrue(loginPage.isError());
     }
+
+
 }

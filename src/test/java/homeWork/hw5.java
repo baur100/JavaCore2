@@ -1,9 +1,6 @@
 package homeWork;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -14,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
 
+import java.security.Key;
 import java.time.Duration;
 
 public class hw5 {
@@ -56,12 +54,27 @@ public class hw5 {
 
         WebElement logOutButton = driver.findElement(By.xpath("//*[@class='logout']"));
         logOutButton.isDisplayed();
-        Assert.assertEquals(false,logOutButton.isDisplayed());
+        Assert.assertEquals(true,logOutButton.isDisplayed());
 
         String expectedURL = "https://koelapp.testpro.io/#!/home";
         String actualURL = driver.getCurrentUrl();
         System.out.println(actualURL);
         Assert.assertEquals(actualURL,expectedURL);
+
+        WebElement add_Playlist_button = driver.findElement(By.xpath("//*[@class='fa fa-plus-circle control create']"));
+        add_Playlist_button.click();
+
+        WebElement playlist_inputname_field = driver.findElement(By.xpath("//*[@type='text'][1]"));
+        playlist_inputname_field.sendKeys("danila");
+        playlist_inputname_field.sendKeys(Keys.RETURN);
+
+        fluentWait.until(z->z.findElement(By.xpath("//*[@title='Delete this playlist']")).isEnabled());
+        WebElement remove_PlayList_button = driver.findElement(By.xpath("//*[@title='Delete this playlist']"));
+        remove_PlayList_button.click();
+
+
+
+
 
 
 
