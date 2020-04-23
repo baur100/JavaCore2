@@ -12,6 +12,6 @@ public class HomepageTests extends BaseTest{
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
         homePage.createNewPlaylist("HeyYoPlaylist");
-        Assert.assertTrue(homePage.isPlaylistCreated("HeyYoPlaylist"));
+        Assert.assertTrue(homePage.isPlaylistCreated("HeyY"));
     }
 }
