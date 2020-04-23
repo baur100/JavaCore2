@@ -1,5 +1,6 @@
 package HWs.Tests;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -18,6 +19,7 @@ public class LoginTests {
     public void startUp() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
+
     }
 
     @AfterMethod
@@ -47,17 +49,19 @@ public class LoginTests {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
-        homePage.addPlaylist("sh11_test");
-        Assert.assertTrue(homePage.isPlayListCreated("sh11_test"));
+        homePage.setPlayListName("zzz");
+        homePage.addPlaylist(homePage.getPlayListName());
+        Assert.assertTrue(homePage.isPlayListCreated());
     }
-    @Test //TODO in progress
-    public void createPlayListTest_ItemCreatedAndCheckedCopy() throws InterruptedException {
+    @Test
+    public void PlayListTest_ItemChanged() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
-        homePage.setPlayListName("sh11_test");
-        homePage.addPlaylistWithCheckingExisting(homePage.getPlayListName());
-        Assert.assertTrue(homePage.isPlayListExists(homePage.getPlayListName()));
+        homePage.setPlayListName("zzz");
+
+        homePage.changePlaylistCheckingExisting(homePage.getPlayListName());
+        Assert.assertTrue(homePage.isPlayListChanged());
     }
 
 }

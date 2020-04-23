@@ -3,12 +3,8 @@ package HWs.pageObjects;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.testng.annotations.Test;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
 
 @SuppressWarnings("ALL")
 public class HomePage {
@@ -17,21 +13,31 @@ public class HomePage {
     private String homeButtonXpath = "//*[@class='home active']";
     private String homePlayListCreateCSSSelector = "[class='fa fa-plus-circle control create']";
     private String homePlayListInputXpatch = "//*[@placeholder='↵ to save']";
-    private String PlayListName = "Shsmith"; //default
-    private String homePlayListElementXpatch = "//*[@class='playlist playlist']/*[.='"+PlayListName+"']";
+    private String PlayListName;// = "Shsmith"; //default
+    private String homePlayListElementXpatch;// = "//*[@class='playlist playlist']/*[.='shsmith']";
     private String homePlayListActiveElementCSS = "[class='active']";
     private String homePlayListActiveEditingXpath = "//*[@type='text']";
 
 
 
+
+    public void setPlayListName(String PlayListName){
+        this.PlayListName=PlayListName;
+    }
+
+    public String getPlayListName() {
+        return PlayListName;
+    }
+    public String getPlayListElementXpatch(){
+        return homePlayListElementXpatch = "//*[@class='playlist playlist']/*[.='"+PlayListName+"']";
+    }
     public WebElement getHomePlayListCreateCSSSelector() {return driver.findElement(By.cssSelector(homePlayListCreateCSSSelector));}
     public WebElement getHomePlayListInputXpatch() {return driver.findElement(By.xpath(homePlayListInputXpatch));}
-    public WebElement getHomePlayListElementXpatch() {return driver.findElement(By.xpath(homePlayListElementXpatch));}
-    public WebElement homePlayListActiveElementCSS() {return driver.findElement(By.cssSelector(homePlayListActiveElementCSS));}
-    public WebElement homePlayListActiveEditingXpath() {return driver.findElement(By.xpath(homePlayListActiveEditingXpath));}
-
-    public void setPlayListName(String playListName) {this.PlayListName = playListName;}
-    public String getPlayListName() {return PlayListName;}
+    public WebElement getHomePlayListElementXpatch() {return driver.findElement(By.xpath(getPlayListElementXpatch()));}
+    public WebElement getHomePlayListActiveElementCSS() {return driver.findElement(By.cssSelector(homePlayListActiveElementCSS));}
+    public WebElement getHomePlayListActiveEditingXpath() {return driver.findElement(By.xpath(homePlayListActiveEditingXpath));}
+    public WebElement getHomeSideBarXpath() {return driver.findElement(By.xpath("//*[@id='sidebar']"));}
+    //public WebElement getHomePlayListElementXpatch() {return driver.findElement(By.xpath(homePlayListElementXpatch));}
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -50,18 +56,26 @@ public class HomePage {
         }
         return true;
     }
-    public boolean isPlayListCreated(String PlayListName) {
+    public boolean isPlayListCreated() {
         try {
-            fluentWait.until(x -> x.findElement(By.xpath("//*[@class='playlist playlist']/*[.='" + PlayListName + "']")).isDisplayed());
+            fluentWait.until(x -> x.findElement(By.xpath(getPlayListElementXpatch())).isDisplayed());
         } catch (NoSuchElementException err) {
             return false;
         }
         return true;
     }
-    public boolean isPlayListExists(String PlayListName){
+    public boolean isPlayListChanged() {
+        try {
+            fluentWait.until(x -> x.findElement(By.xpath("//*[@class='playlist playlist']/*[.='zzz.old']")).isDisplayed());
+        } catch (NoSuchElementException | TimeoutException err) {
+            return false;
+        }
+        return true;
+    }
+    public boolean isPlayListExists(){
         try {
             Thread.sleep(1000);
-            driver.findElement(By.xpath("//*[@class='playlist playlist']/*[.='"+PlayListName+"']")).isDisplayed(); //"+PlayListName+"
+            getHomePlayListElementXpatch().isDisplayed(); //"+PlayListName+"
         }
         catch (NoSuchElementException | InterruptedException err){
             return false;
@@ -75,22 +89,20 @@ public class HomePage {
         getHomePlayListInputXpatch().sendKeys(getPlayListName,Keys.ENTER);
     }
 
-     //TODO in progress
-    public void addPlaylistWithCheckingExisting(String getPlayListName) throws InterruptedException {
-        Actions actions = new Actions(driver);
-//        SimpleDateFormat sdf = new SimpleDateFormat(" M/dd/yyyy HH:mm");
-//        String date = sdf.format(new Date());
-        fluentWait.until(x->x.findElement(By.cssSelector(homePlayListCreateCSSSelector)).isDisplayed());
-        Thread.sleep(2000);
-        while (isPlayListExists(getPlayListName)){
 
-            driver.findElement(By.xpath("//*[@class='playlist playlist']/*[.='"+PlayListName +"']")).click();
-            actions.doubleClick(homePlayListActiveElementCSS()).perform();
+    public void changePlaylistCheckingExisting(String getPlayListName) throws InterruptedException {
+        Actions actions = new Actions(driver);
+        fluentWait.until(x->x.findElement(By.cssSelector(homePlayListCreateCSSSelector)).isDisplayed());
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        //js.executeScript("scroll(0, 100)");
+        while (isPlayListExists()){
+            //actions.moveToElement(getHomePlayListElementXpatch()).perform();
+            js.executeScript("document.querySelector('#sidebar').scrollTo(0,document.querySelector('#sidebar').scrollHeight);");
+            getHomePlayListElementXpatch().click();
+            actions.doubleClick(getHomePlayListElementXpatch()).perform();
             fluentWait.until(x->x.findElement(By.xpath(homePlayListActiveEditingXpath)).isDisplayed());
-            homePlayListActiveEditingXpath().sendKeys(".old",Keys.ENTER);
+            getHomePlayListActiveEditingXpath().sendKeys(".old",Keys.ENTER);
         }
-        getHomePlayListCreateCSSSelector().click();
-        fluentWait.until(x->x.findElement(By.xpath(homePlayListInputXpatch)).isDisplayed());
-        getHomePlayListInputXpatch().sendKeys(getPlayListName,Keys.ENTER); //+date
+
     }
 }
