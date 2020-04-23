@@ -1,7 +1,4 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -70,6 +67,13 @@ public class KoelSimpleTest {
         explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='home active']")));
         var homeButton = driver.findElement(By.xpath("//*[@class='home active']"));
         homeButton.click();
+        WebElement addButton = driver.findElement(By.cssSelector(".fa.fa-plus-circle"));
+        addButton.click();
+        WebElement newNameField = driver.findElement(By.xpath("//*[@class='create']/input"));
+        newNameField.sendKeys("hey");
+        newNameField.sendKeys(Keys.ENTER);
+
+
     }
 
     @Test
