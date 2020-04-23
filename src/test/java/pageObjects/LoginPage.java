@@ -2,10 +2,11 @@ package pageObjects;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.FluentWait;
+import tests.BaseTest;
 
 import java.time.Duration;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
     private final String emailXpath = "//*[@type='email']";
     private final String passwordXpath = "//*[@type='password']";
     private final String loginButtonXpath = "//*[@type='submit']";
@@ -15,12 +16,7 @@ public class LoginPage {
     FluentWait<WebDriver> fluentWait;
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        fluentWait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(100))
-                .ignoring(Exception.class)
-                .ignoring(StaleElementReferenceException.class);
+        super(driver);
     }
 
     public void openPage() {
@@ -38,7 +34,6 @@ public class LoginPage {
     public WebElement getLoginButton() {
         return driver.findElement(By.xpath(loginButtonXpath));
     }
-
 
     public HomePage login(String email, String password) {
         getEmailField().sendKeys(email);
