@@ -21,7 +21,8 @@ public class LoginPage {
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(100))
                 .ignoring(Exception.class)
-                .ignoring(StaleElementReferenceException.class);
+                .ignoring(StaleElementReferenceException.class)
+                .ignoring(NullPointerException.class);
     }
 
     public void openPage() {
