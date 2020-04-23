@@ -1,34 +1,37 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.*;
 
-import java.time.Duration;
-
-public class HomePage {
-    private WebDriver driver;
-    FluentWait<WebDriver>fluentWait;
-    private String homeButtonXpath = "//*[@class='home active']";
-
+public class HomePage extends BasePage{
     public HomePage(WebDriver driver) {
-        this.driver = driver;
-        fluentWait = new FluentWait<WebDriver>(this.driver)
-                .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(100))
-                .ignoring(Exception.class)
-                .ignoring(StaleElementReferenceException .class);
+        super(driver);
     }
-
     public boolean isHomepage(){
         try{
-            fluentWait.until(x->x.findElement(By.xpath(homeButtonXpath)));
+            fluentWait.until(x->x.findElement(By.xpath(HomePageSelectors.homeButtonXpath)));
         } catch (TimeoutException err) {
             return false;
         }
         return true;
+    }
+    public WebElement getPlusButton(){
+        fluentWait.until(x-> x.findElement(By.cssSelector(HomePageSelectors.plusButtonCssSelector)).isEnabled());
+        return driver.findElement(By.cssSelector(HomePageSelectors.plusButtonCssSelector));
+    }
+    private WebElement getNewPlaylistNameField(){
+        return driver.findElement(By.xpath(HomePageSelectors.newPlaylistFieldXpath));
+    }
+    private String getPlaylistXpath(String name){
+        return "//a[text()='"+name+"']";
+    }
+    public void createNewPlaylist(String name){
+        getPlusButton().click();
+        getNewPlaylistNameField().sendKeys(name);
+        getNewPlaylistNameField().sendKeys(Keys.ENTER);
+    }
+    public boolean isPlaylistCreated(String name){
+        var list = driver.findElements(By.xpath(getPlaylistXpath(name)));
+        return list.size()>0;
     }
 
 }
