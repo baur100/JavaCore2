@@ -21,7 +21,7 @@ public class LoginTests {
 
     @BeforeMethod
     public void startUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
     }
 
@@ -43,6 +43,14 @@ public class LoginTests {
         loginPage.openPage();
         loginPage.login("testpro.user02@testpro.io","********");
         Assert.assertTrue(loginPage.isError());
+    }
+    @Test
+    public void AddPlayist() throws InterruptedException {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.openPage();
+        HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
+        homePage.addPlayList("abc");
+        Assert.assertTrue(homePage.isplayListCreated("abc"));
     }
 
 }
