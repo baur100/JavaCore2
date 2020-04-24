@@ -1,19 +1,9 @@
 package pageObjects;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.FluentWait;
-import tests.BaseTest;
 
-import java.time.Duration;
 
 public class LoginPage extends BasePage {
-    private final String emailXpath = "//*[@type='email']";
-    private final String passwordXpath = "//*[@type='password']";
-    private final String loginButtonXpath = "//*[@type='submit']";
-    private final String url = "https://koelapp.testpro.io/";
-    private final String errorXpath = "//*[@class='error']";
-    private WebDriver driver;
-    FluentWait<WebDriver> fluentWait;
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -24,15 +14,15 @@ public class LoginPage extends BasePage {
     }
 
     public WebElement getEmailField() {
-        return driver.findElement(By.xpath(emailXpath));
+        return driver.findElement(By.xpath(LoginPageSelectors.emailXpath));
     }
 
     public WebElement getPasswordField() {
-        return driver.findElement(By.xpath(passwordXpath));
+        return driver.findElement(By.xpath(LoginPageSelectors.passwordXpath));
     }
 
     public WebElement getLoginButton() {
-        return driver.findElement(By.xpath(loginButtonXpath));
+        return driver.findElement(By.xpath(LoginPageSelectors.loginButtonXpath));
     }
 
     public HomePage login(String email, String password) {
@@ -44,7 +34,7 @@ public class LoginPage extends BasePage {
 
     public boolean isError() {
         try {
-            fluentWait.until(x -> x.findElement(By.xpath(errorXpath)));
+            fluentWait.until(x -> x.findElement(By.xpath(LoginPageSelectors.errorXpath)));
         } catch (TimeoutException err) {
             return false;
         }
