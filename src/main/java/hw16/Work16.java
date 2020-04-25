@@ -1,6 +1,6 @@
 package hw16;
 
-import java.security.Key;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -71,7 +71,7 @@ public class Work16 {
         kinder.get(c3);
         System.out.println(kinder.getOrDefault(c3, c3));
 
-        
+
     }
 }
 
