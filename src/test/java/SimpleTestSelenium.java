@@ -13,7 +13,7 @@ public class SimpleTestSelenium {
 
     @BeforeMethod
     public void startUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
         driver.get("https://google.com");
     }
