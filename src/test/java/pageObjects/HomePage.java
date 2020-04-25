@@ -3,9 +3,6 @@ package pageObjects;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.security.Key;
 
 public class HomePage extends BasePage{
     public HomePage(WebDriver driver) {
