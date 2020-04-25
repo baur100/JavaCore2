@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends BasePage{
     public HomePage(WebDriver driver) {
@@ -15,8 +16,9 @@ public class HomePage extends BasePage{
         return true;
     }
     public WebElement getPlusButton(){
-        fluentWait.until(x-> x.findElement(By.cssSelector(HomePageSelectors.plusButtonCssSelector)).isEnabled());
-        return driver.findElement(By.cssSelector(HomePageSelectors.plusButtonCssSelector));
+      //  fluentWait.until(x-> x.findElement(By.cssSelector(HomePageSelectors.plusButtonCssSelector)).isEnabled());
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.plusButtonCssSelector)));
+        return driver.findElement(By.xpath(HomePageSelectors.plusButtonCssSelector));
     }
     private WebElement getNewPlaylistNameField(){
         return driver.findElement(By.xpath(HomePageSelectors.newPlaylistFieldXpath));
