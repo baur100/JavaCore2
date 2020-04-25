@@ -45,7 +45,7 @@ public class App {
 
         names.forEach(System.out::println);
 
-        List<Person> people = new ArrayList<>();
+//        List<Person> people = new ArrayList<>();
         
 //        ArrayList<Double> xx = null;
 //        xx.add(23.6);
