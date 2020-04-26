@@ -1,19 +1,16 @@
 package tests;
 
+import browserFactory.BrowserFactory;
+import enums.BrowserType;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
     protected WebDriver driver;
     @BeforeMethod
-    public void startUp() {
-//        System.setProperty("webdriver.chrome.driver", "chromedriver");
-//        driver = new ChromeDriver();
-        System.setProperty("webdriver.gecko.driver", "geckodriver");
-        driver = new FirefoxDriver();
+    public void startUp() throws NoSuchMethodException {
+        driver = BrowserFactory.createWebDriver(BrowserType.OPERA);
     }
 
     @AfterMethod
