@@ -2,8 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-
-import java.util.List;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends BasePage{
     public HomePage(WebDriver driver) {
@@ -18,8 +17,8 @@ public class HomePage extends BasePage{
         return true;
     }
     public WebElement getPlusButton(){
-        fluentWait.until(x-> x.findElement(By.xpath(HomePageSelectors.plusButtonXPath)).isDisplayed());
-        return driver.findElement(By.xpath(HomePageSelectors.plusButtonXPath));
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(HomePageSelectors.plusButtonCssSelector)));
+        return driver.findElement(By.cssSelector(HomePageSelectors.plusButtonCssSelector));
     }
     private WebElement getNewPlaylistNameField(){
         return driver.findElement(By.xpath(HomePageSelectors.newPlaylistFieldXpath));
@@ -27,13 +26,7 @@ public class HomePage extends BasePage{
     private String getPlaylistXpath(String name){
         return "//a[text()='"+name+"']";
     }
-
-    private WebElement getRenameField(){
-        fluentWait.until(x-> x.findElement(By.xpath(HomePageSelectors.renameFieldXpath)).isEnabled());
-        return driver.findElement(By.xpath(HomePageSelectors.renameFieldXpath));
-    }
-
-    public void createNewPlaylist(String name){
+    public void createNewPlaylist(String name) {
         getPlusButton().click();
         getNewPlaylistNameField().sendKeys(name);
         getNewPlaylistNameField().sendKeys(Keys.ENTER);
@@ -43,25 +36,23 @@ public class HomePage extends BasePage{
         return list.size()>0;
     }
 
-    public void scroll(String name) {
+    public void leftHandScrollDown(String name) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        //Find element by link text and store in variable "Element"
-        WebElement pL = driver.findElement(By.xpath("(//a[text()='"+name+"'])[1]"));
+        WebElement playlist = driver.findElement(By.xpath(getPlaylistXpath(name)));
+        js.executeScript("arguments[0].scrollIntoView();", playlist);
 
-        //This will scroll the page till the element is found
-        js.executeScript("arguments[0].scrollIntoView();", pL);
+//        Actions actions = new Actions(driver);
+//        actions.moveToElement(playlist);
+//        actions.perform();
     }
-    public void rename(String name, String name2) throws InterruptedException {
+
+    public void renamePlayList(String oldName, String newName) {
+        WebElement playlist = driver.findElement(By.xpath(getPlaylistXpath(oldName)));
         Actions actions = new Actions(driver);
-        var playList = driver.findElement(By.xpath("(//a[text()='"+name+"'])[1]"));
-        actions.doubleClick(playList).perform();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].value = '';", getRenameField());
-        getRenameField().sendKeys(name2);
-        getRenameField().sendKeys(Keys.RETURN);
-    }
-    public boolean isPlaylistRenamed(String name){
-        var list = driver.findElements(By.xpath(getPlaylistXpath(name)));
-        return list.size()>0;
+        actions.doubleClick(playlist).perform();
+        WebElement textField = driver.findElement(By.xpath("//*[@class='playlist playlist editing']/input"));
+        textField.sendKeys(Keys.CONTROL + "a");
+        textField.sendKeys(newName);
+        textField.sendKeys(Keys.ENTER);
     }
 }
