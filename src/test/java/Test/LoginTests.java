@@ -1,4 +1,4 @@
-package tests;
+package Test;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,7 +6,7 @@ import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
 
-public class LoginTests extends BaseTest{
+public class LoginTests extends BaseTest {
 
     @Test
     public void loginTest_correctCredentials_loggedToApp(){
