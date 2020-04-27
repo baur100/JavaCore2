@@ -8,7 +8,7 @@ public class Plane {
         return "name=" + name;
     }
 
-    public String getInfo(){
+    public String getInfo() {
         return name;
     }
 }

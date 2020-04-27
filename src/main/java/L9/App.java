@@ -13,20 +13,20 @@ public class App {
         car.price = 13000;
 
         Car yourcar = new Car();
-        yourcar.model="Civic";
-        yourcar.brand="Honda";
+        yourcar.model = "Civic";
+        yourcar.brand = "Honda";
         yourcar.year = 2018;
         yourcar.price = 18000;
         yourcar.color = "White";
 
-        System.out.println("My new car is "+car.brand+" "+car.model +" "+ car.year);
+        System.out.println("My new car is " + car.brand + " " + car.model + " " + car.year);
 
         Person anna = new Person();
-        anna.name="Anna";
-        anna.lastName="Ivanova";
-        anna.eyeColor="Blue";
-        anna.height=102;
-        anna.year=2015;
+        anna.name = "Anna";
+        anna.lastName = "Ivanova";
+        anna.eyeColor = "Blue";
+        anna.height = 102;
+        anna.year = 2015;
 
         var boris = new Person();
         boris.name = "Boris";
@@ -37,7 +37,7 @@ public class App {
 
         Fruit ff = new Fruit();
         ff.name = "apple";
-        ff.color="green";
+        ff.color = "green";
 
         var sharik = new Dog();
         sharik.name = "Sharik";
@@ -50,9 +50,9 @@ public class App {
         lord.breed = "Dog";
 
 
-        if(sharik.age > lord.age){
+        if (sharik.age > lord.age) {
             System.out.println("Sharik is older");
-        }else {
+        } else {
             System.out.println("Lord is older");
         }
 

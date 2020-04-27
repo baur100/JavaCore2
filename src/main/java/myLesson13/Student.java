@@ -1,6 +1,6 @@
 package myLesson13;
 
-public class Student extends Person{
+public class Student extends Person {
     public Student(int age) {
         super(age);
     }

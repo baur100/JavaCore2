@@ -7,7 +7,8 @@ public class Person {
     protected String gender;
     protected Address address;
 
-    public Person() {}
+    public Person() {
+    }
 
     public Person(String name, String lastName, int year, String gender, Address address) {
         this.name = name;

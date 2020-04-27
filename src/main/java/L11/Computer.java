@@ -12,7 +12,8 @@ public class Computer {
         this.mouse = mouse;
         this.keyboard = keyboard;
     }
-    public void printInfo(){
+
+    public void printInfo() {
         monitor.printInfo();
         keyboard.printInfo();
         mouse.printInfo();

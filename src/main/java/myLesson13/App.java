@@ -7,7 +7,7 @@ public class App {
 
         Child rose = new Child();
 
-        Human[] h1 = {ivan,rose};
+        Human[] h1 = {ivan, rose};
 
         Human vv = rose;
 

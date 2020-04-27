@@ -7,12 +7,12 @@ public class Car {
     public String color;
     public double price;
 
-    public void drive(){
-        System.out.println(brand + " " + model +" is driving");
+    public void drive() {
+        System.out.println(brand + " " + model + " is driving");
     }
 
-    public void printInfo(){
-        System.out.println("\tBrand -> "+ brand+"\n\tModel -> "+
-                model + "\n\tYear -> "+year + "\n\tColor -> "+ color + "\n\tPrice -> "+price);
+    public void printInfo() {
+        System.out.println("\tBrand -> " + brand + "\n\tModel -> " +
+                model + "\n\tYear -> " + year + "\n\tColor -> " + color + "\n\tPrice -> " + price);
     }
 }

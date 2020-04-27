@@ -7,8 +7,8 @@ public class Person {
     public int height;
     public String eyeColor;
 
-    public void printInfo(){
-        System.out.println("\tName -> "+ name+"\n\tLast Name -> "+
-                lastName + "\n\tYear -> "+year + "\n\tEye Color -> "+ eyeColor + "\n\tHeight -> "+height);
+    public void printInfo() {
+        System.out.println("\tName -> " + name + "\n\tLast Name -> " +
+                lastName + "\n\tYear -> " + year + "\n\tEye Color -> " + eyeColor + "\n\tHeight -> " + height);
     }
 }

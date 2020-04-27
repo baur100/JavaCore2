@@ -1,6 +1,6 @@
 package L12;
 
-public class Student extends Person{
+public class Student extends Person {
     protected String major;
     protected String program;
 

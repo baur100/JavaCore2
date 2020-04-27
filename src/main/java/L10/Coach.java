@@ -32,9 +32,9 @@ public class Coach {
     }
 
     public void setLastName(String lastName) {
-        if(lastName.length()<2){
+        if (lastName.length() < 2) {
             System.out.println("wrong lastname");
-            this.lastName="00";
+            this.lastName = "00";
             return;
         }
         this.lastName = lastName;

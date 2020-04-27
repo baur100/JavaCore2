@@ -5,10 +5,11 @@ public class Dog {
     public String breed;
     public int age;
 
-    public void bark(){
+    public void bark() {
         System.out.println(name + " is barking");
     }
-    public void sleep(){
+
+    public void sleep() {
         System.out.println(name + " is sleeping");
     }
 }

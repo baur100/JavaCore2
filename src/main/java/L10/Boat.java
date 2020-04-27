@@ -6,24 +6,27 @@ public class Boat {
     public String owner;
     public int regNumber;
 
-    public Boat(int length, String name, String owner){
-        this.length=length;
-        this.name=name;
-        this.owner=owner;
-    }
-    public Boat(int length){
-        this.length=length;
+    public Boat(int length, String name, String owner) {
+        this.length = length;
+        this.name = name;
+        this.owner = owner;
     }
 
-    public Boat(int l, String o){
-        length=l;
-        owner=o;
+    public Boat(int length) {
+        this.length = length;
     }
-    public Boat(String owner){
-        this.owner=owner;
+
+    public Boat(int l, String o) {
+        length = l;
+        owner = o;
     }
-    public void printName(){
-        if(name == null){
+
+    public Boat(String owner) {
+        this.owner = owner;
+    }
+
+    public void printName() {
+        if (name == null) {
             System.out.println("no name defined");
             return;
         }

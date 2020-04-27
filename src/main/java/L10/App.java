@@ -15,8 +15,8 @@ public class App {
 //        Dog alice = new Dog("Alisa");
 //        alice.bark();
 
-        int[] xx={1,2,1};
-        House house = new House(900,2,1,"Colonial", xx);
+        int[] xx = {1, 2, 1};
+        House house = new House(900, 2, 1, "Colonial", xx);
         house.printHouseInfo();
 
         var boat = new Boat("John");

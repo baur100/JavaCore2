@@ -15,7 +15,7 @@ public class Address {
 
 
     public void printAddress() {
-        String address =  "Address{" +
+        String address = "Address{" +
                 "street='" + street + '\'' +
                 ", town='" + town + '\'' +
                 ", zip=" + zip +

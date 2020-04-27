@@ -54,6 +54,6 @@ public class Car {
                 "\nBrand = " + brand +
                 "\nBodel = " + model +
                 "\nYear = " + year +
-                "\nPrice = $" + price+"\n";
+                "\nPrice = $" + price + "\n";
     }
 }

@@ -31,7 +31,7 @@ public class App {
         Object xy = myCar;
 
         Person per = new Student();
- //       Person per1 = new Teacher();
+        //       Person per1 = new Teacher();
 //        Person per2 = new Person(); нельзя создавать объекты абстрактного класса
     }
 }

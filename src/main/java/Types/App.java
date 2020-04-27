@@ -10,13 +10,13 @@ public class App {
         int a = 5;
         System.out.println(a);
         Plane p = new Plane();
-        p.name="Boing";
+        p.name = "Boing";
 
         System.out.println(p.getInfo());
 
-        int[] arr = {1,1,3};
+        int[] arr = {1, 1, 3};
 
-        for (int v:arr) {
+        for (int v : arr) {
             System.out.println(v);
         }
         System.out.println(p);
@@ -25,7 +25,6 @@ public class App {
         Random random = new Random();
 
         System.out.println(xx);
-
 
 
     }

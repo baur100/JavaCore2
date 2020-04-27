@@ -1,7 +1,8 @@
 package myLesson13;
 
-public class ArmDeskLampWithClamp extends DeskLight{
+public class ArmDeskLampWithClamp extends DeskLight {
     private int numberOfArms;
+
     public ArmDeskLampWithClamp(int price, String brand, String model, int numberOfArms) {
         super(price, brand, model);
         this.numberOfArms = numberOfArms;

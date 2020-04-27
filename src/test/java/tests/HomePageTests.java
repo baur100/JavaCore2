@@ -6,28 +6,28 @@ import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
 public class HomePageTests extends BaseTest {
-    @Test(priority = 0)
+    @Test
     // Module_WhatTesting_ExpectedResult
     public void homePageTest_AddPlaylist_NewPlaylistAdded() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
-        var date = homePage.getDate();
-        homePage.addPlaylist("ag20 " + date);
+        homePage.setPlaylistName("ag20 " + homePage.getDate());
+        homePage.addPlaylist();
         Assert.assertTrue(homePage.isPlayListCreated());
     }
 
-    @Test(priority = 1)
+    @Test
     // Module_WhatTesting_ExpectedResult
     public void homePageTest_Add5Playlists_New5PlaylistsAdded() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
-        var date = homePage.getDate();
-        homePage.add5Playlist("ag20 " + date);
+        homePage.setPlaylistName("ag20 " + homePage.getDate());
+        homePage.add5Playlist();
     }
 
-    @Test(priority = 2)
+    @Test
     // Module_WhatTesting_ExpectedResult
     public void homePageTest_DeleteSimilarPlaylists_SimilarPlaylistSDeleted() {
         LoginPage loginPage = new LoginPage(driver);
@@ -45,5 +45,20 @@ public class HomePageTests extends BaseTest {
         HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
         homePage.findLastPlaylistAndEdit();
         Assert.assertTrue(homePage.isPlayListRenamed());
+    }
+
+    @Test
+    // Module_WhatTesting_ExpectedResult
+    public void playlist_addSongToPlaylist_SongsAddedToPlaylist() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.openPage();
+        HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
+        homePage.setPlaylistName("ag20 " + homePage.getDate());
+        homePage.addPlaylist();
+        homePage.setSongName("Stomps and Claps");
+        homePage.findSongByTitle();
+        homePage.addSongToPlaylist();
+        homePage.navigateToLastAddedPlaylist();
+        Assert.assertTrue(homePage.isSongAdded());
     }
 }

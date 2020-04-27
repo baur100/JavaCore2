@@ -2,8 +2,7 @@ package L11;
 
 public class App {
     public static void main(String[] args) {
-        Address homeAddress = new Address("158 Broadway","New York",10016,"NY");
-
+        Address homeAddress = new Address("158 Broadway", "New York", 10016, "NY");
 
 
         Name andrew = new Name("Andrew", "Dowson");
@@ -12,8 +11,6 @@ public class App {
         String l = nm.getLastName();
         String ln = ad.getName().getLastName();
         System.out.println(ln);
-
-
 
 
 //
@@ -29,12 +26,12 @@ public class App {
 //        mouse.printInfo();
         Keyboard kb = new Keyboard("Microsoft");
 //        kb.printInfo();
-        Monitor monitor = new Monitor("Samsung", "XX-20",32);
+        Monitor monitor = new Monitor("Samsung", "XX-20", 32);
 //        monitor.printInfo();
         // TODO Create class Motherboard and Processor and add them to SysBlock, add to constructor
         SysBlock sys = new SysBlock();
 
-        Computer dell = new Computer(monitor,sys,mouse,kb);
+        Computer dell = new Computer(monitor, sys, mouse, kb);
         dell.printInfo();
         String xx = new String("gg");
 

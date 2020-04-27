@@ -21,14 +21,14 @@ public class App {
         names.add("Shaun");
         System.out.println(names);
 
-        List<String> colors = new ArrayList<String>(Arrays.asList("Red","Black","Black"));
+        List<String> colors = new ArrayList<String>(Arrays.asList("Red", "Black", "Black"));
         System.out.println(colors);
 
-        names.add(0,"David");
+        names.add(0, "David");
         System.out.println(names);
 //        System.out.println(names.get(0));
 //        System.out.println(names.get(3));
-        names.set(3,"Andrew");
+        names.set(3, "Andrew");
         System.out.println(names);
 
         System.out.println(names.get(3));
@@ -42,16 +42,16 @@ public class App {
         System.out.println(names);
         System.out.println(names.contains("Shaun"));
 
-        List<Integer> temp = new ArrayList<Integer>(Arrays.asList(7,8,9,8,8,9,9,2));
+        List<Integer> temp = new ArrayList<Integer>(Arrays.asList(7, 8, 9, 8, 8, 9, 9, 2));
         System.out.println(temp);
 
         System.out.println(names.size());
 
-        for (String v:names){
+        for (String v : names) {
             System.out.println(v);
         }
 
-        names.forEach(x-> System.out.println(x));
+        names.forEach(x -> System.out.println(x));
 
         names.forEach(System.out::println);
 
