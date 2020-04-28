@@ -30,19 +30,26 @@ public class LoginTests {
         Thread.sleep(5000);
         driver.quit();
     }
-    @Test
+    @Test(enabled = false)
     public void loginTest_correctCredentials_loggedToApp(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
         Assert.assertTrue(homePage.isHomepage());
     }
-    @Test
+    @Test(enabled = false)
     public void loginTest_incorrectCredentials_notLoggedToApp(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         loginPage.login("testpro.user02@testpro.io","********");
         Assert.assertTrue(loginPage.isError());
+    }
+    @Test
+    public void loginTest_createNewPlaylist_newPlaylistCreated(){
+        LoginPage LoginPage = new LoginPage(driver);
+        LoginPage.openPage();
+        HomePage homePage=LoginPage.login("testpro.user02@testpro.io","te$t$tudent02");
+        homePage.createNewPlayList("Nasu");
     }
 
 }
