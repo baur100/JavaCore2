@@ -26,7 +26,7 @@ public class BrowserFactory {
         OperaOptions options = new OperaOptions();
         options.addArguments("window-size=1400,1000");
 //        options.addArguments("--headless");
-        System.setProperty("webdriver.opera.driver","operadriver.exe");
+        System.setProperty("webdriver.opera.driver","operadriver");
         return new OperaDriver(options);
     }
 
@@ -34,7 +34,7 @@ public class BrowserFactory {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("window-size=1400,1000");
 //        options.addArguments("--headless");
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         return new ChromeDriver(options);
 
     }
@@ -44,7 +44,7 @@ public class BrowserFactory {
         options.addArguments("--width=1400");
         options.addArguments("--height=1000");
 //        options.addArguments("--headless");
-        System.setProperty("webdriver.gecko.driver","geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver","geckodriver");
         return new FirefoxDriver(options);
     }
 }

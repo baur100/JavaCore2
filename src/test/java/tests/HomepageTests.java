@@ -25,4 +25,26 @@ public class HomepageTests extends BaseTest{
         Assert.assertTrue(homePage.isPlaylistCreated("newName"));
 
     }
+    @Test
+    public void homepage_allSongs_addSongToPlaylist_byMenuButton(){
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.openPage();
+        HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
+        homePage.addSongToPlaylist_byMenuButton("The Only Home We Have", "zebra2");
+    }
+    @Test
+    public void homepage_allSongs_addSongToPlaylist_byContextMenu(){
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.openPage();
+        HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
+        homePage.addSongToPlaylist_byRightClick("Lesser Faith", "zebra2");
+    }
+    @Test
+    public void homepage_allSongs_playSong_byDoubleClick() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.openPage();
+        HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
+        homePage.allSongs_playSong_byDoubleClick("Lesser Faith");
+        Assert.assertTrue(homePage.isMusicPlaying());
+    }
 }
