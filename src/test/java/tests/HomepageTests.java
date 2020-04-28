@@ -6,7 +6,7 @@ import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
 public class HomepageTests extends BaseTest{
-    @Test
+    @Test//(enabled=false)
     public void loginTest_createNewPlaylist_newPlaylistCreated() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
