@@ -21,11 +21,14 @@ public class HomePage extends BasePage{
         return driver.findElement(By.xpath(HomePageSelectors.plusButtonCssSelector));
     }
     private WebElement getNewPlaylistNameField(){
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.newPlaylistFieldXpath)));
         return driver.findElement(By.xpath(HomePageSelectors.newPlaylistFieldXpath));
     }
     private String getPlaylistXpath(String name){
         return "//a[text()='"+name+"']";
     }
+
+
     public void createNewPlaylist(String name) {
         getPlusButton().click();
         getNewPlaylistNameField().sendKeys(name);
@@ -54,5 +57,62 @@ public class HomePage extends BasePage{
         textField.sendKeys(Keys.CONTROL + "a");
         textField.sendKeys(newName);
         textField.sendKeys(Keys.ENTER);
+    }
+    public WebElement getAllSongsButton(){
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.allSongsButtonXpath)));
+        return driver.findElement(By.xpath(HomePageSelectors.allSongsButtonXpath));
+
+    }
+    public WebElement getTitleSong(){
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.titleOfSongXpath)));
+        return driver.findElement(By.xpath(HomePageSelectors.titleOfSongXpath));
+    }
+
+    public WebElement getAddToButton(){
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.addToButtonXPath)));
+        return driver.findElement(By.xpath(HomePageSelectors.addToButtonXPath));
+    }
+    public WebElement getCreateNewPlayListFieldXpath()
+    {
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.createNewPlayListFieldXpath)));
+        return driver.findElement(By.xpath(HomePageSelectors.createNewPlayListFieldXpath));
+    }
+    public WebElement getSaveNewPlayListButtonXpath()
+    {
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.saveNewPlayListButtonXpath)));
+        return driver.findElement(By.xpath(HomePageSelectors.saveNewPlayListButtonXpath));
+    }
+
+    public WebElement getDeletePlayListButton()
+    {
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.deletePlayListButtonXpath)));
+        return driver.findElement(By.xpath(HomePageSelectors.deletePlayListButtonXpath));
+    }
+
+    public WebElement getOkForDeletePlayList()
+    {
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.okForDeletePlayListXpath )));
+        return driver.findElement(By.xpath(HomePageSelectors.okForDeletePlayListXpath ));
+    }
+
+    public void createNewPlayListAndAddSongToPlayList(String name){
+        getAllSongsButton().click();
+
+        Actions actions = new Actions(driver);
+        actions.contextClick(getTitleSong()).perform();
+        getAddToButton().click();
+        getCreateNewPlayListFieldXpath().sendKeys(name);
+        getSaveNewPlayListButtonXpath().click();
+
+    }
+    public void deletePlayList(String name){
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(getPlaylistXpath(name) )));
+        var list = driver.findElement(By.xpath(getPlaylistXpath(name)));
+        list.click();
+        getDeletePlayListButton().click();
+        getOkForDeletePlayList().click();
+
+
+
     }
 }
