@@ -3,7 +3,6 @@ package pageObjects;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -90,8 +89,6 @@ public class HomePage extends BasePage{
         action.moveToElement(playlist_list).build().perform();
 //        System.out.println(playlist_list.isEnabled());
         playlist_list.click();
-
-
     }
     public void addSongToPlaylist_byRightClick(String name, String pName) {
         getAllSongsLinkXpath().click();
@@ -117,6 +114,26 @@ public class HomePage extends BasePage{
     public boolean isMusicPlaying(){
         WebElement playControl = driver.findElement(By.xpath("//*[@class='pause control']/*[@class='fa fa-pause']"));
         return playControl.isDisplayed();
+    }
+    public void addSongToPlaylist_byMenuButton_plusCreatePLaylist(String name, String pName) {
+        getAllSongsLinkXpath().click();
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement song = driver.findElement(By.xpath(getSongXpath(name)));
+//        js.executeScript("arguments[0].scrollIntoView();", song);
+        song.click();
+        getAddToButtonXpath().click();
+        WebElement create_pl_field = driver.findElement(By.xpath("//*[@id='songsWrapper']//input"));
+        create_pl_field.click();
+        create_pl_field.sendKeys(pName);
+        WebElement save_pl_button = driver.findElement(By.xpath("//*[@id='songsWrapper']//*[@type='submit']"));
+        save_pl_button.click();
+
+//        js.executeScript("arguments[0].scrollIntoView();", playlist_list);
+//        Actions action = new Actions(driver);
+//        action.click(getAddToButtonXpath()).moveToElement(driver.findElement(By.xpath(getPlaylistInTheListXpath(pName)))).click().build().perform();
+//        action.moveToElement(playlist_list).build().perform();
+//        System.out.println(playlist_list.isEnabled());
+//        playlist_list.click();
     }
 }
 

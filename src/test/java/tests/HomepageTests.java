@@ -47,4 +47,11 @@ public class HomepageTests extends BaseTest{
         homePage.allSongs_playSong_byDoubleClick("Lesser Faith");
         Assert.assertTrue(homePage.isMusicPlaying());
     }
+    @Test
+    public void homepage_allSongs_addSongToPlaylist_byMenuButton_plusCreatePL(){
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.openPage();
+        HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
+        homePage.addSongToPlaylist_byMenuButton_plusCreatePLaylist("Lesser Faith", "zebra3");
+    }
 }
