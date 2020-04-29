@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
-public class HomepageTests extends BaseTest{
+public class HomepageTests extends BaseTest {
     @Test//(enabled=false)
     public void loginTest_createNewPlaylist_newPlaylistCreated() {
         LoginPage loginPage = new LoginPage(driver);
