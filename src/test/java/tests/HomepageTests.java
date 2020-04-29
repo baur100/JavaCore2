@@ -32,8 +32,9 @@ public class HomepageTests extends BaseTest{
         HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
         homePage.createNewPlayListAndAddSongToPlayList("anna");
         Assert.assertTrue(homePage.isPlaylistCreated("anna"));
-//        homePage.deletePlayList("anna");
-//        Assert.assertFalse(homePage.isPlaylistCreated("anna"));
+       //driver.navigate().refresh();
+        homePage.deletePlayList("anna");
+        Assert.assertFalse(homePage.isPlaylistCreated("anna"));
 
     }
 }
