@@ -11,8 +11,8 @@ public class HomepageTests extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
-        homePage.createNewPlaylist("HeyYoPlaylist");
-        Assert.assertTrue(homePage.isPlaylistCreated("HeyYoPlaylist"));
+        homePage.createNewPlaylist("ZZZ");
+        Assert.assertTrue(homePage.isPlaylistCreated("ZZZ"));
     }
     @Test
     public void scrollDown(){
@@ -30,15 +30,15 @@ public class HomepageTests extends BaseTest{
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
-        homePage.addSongToPlaylist_byMenuButton("The Only Home We Have", "zebra2");
+        homePage.addSongToPlaylist_byMenuButton("The Only Home We Have", "abc");
     }
-    @Test
-    public void homepage_allSongs_addSongToPlaylist_byContextMenu(){
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.openPage();
-        HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
-        homePage.addSongToPlaylist_byRightClick("Lesser Faith", "zebra2");
-    }
+//    @Test
+//    public void homepage_allSongs_addSongToPlaylist_byContextMenu(){
+//        LoginPage loginPage = new LoginPage(driver);
+//        loginPage.openPage();
+//        HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
+//        homePage.addSongToPlaylist_byRightClick("Lesser Faith", "zebra");
+//    }
     @Test
     public void homepage_allSongs_playSong_byDoubleClick() {
         LoginPage loginPage = new LoginPage(driver);
@@ -54,4 +54,5 @@ public class HomepageTests extends BaseTest{
         HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
         homePage.addSongToPlaylist_byMenuButton_plusCreatePLaylist("Lesser Faith", "zebra3");
     }
+
 }

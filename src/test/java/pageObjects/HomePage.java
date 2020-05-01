@@ -22,23 +22,24 @@ public class HomePage extends BasePage{
         explicitWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(HomePageSelectors.plusButtonCssSelector)));
         return driver.findElement(By.cssSelector(HomePageSelectors.plusButtonCssSelector));
     }
-    private WebElement getNewPlaylistNameField(){
+    public WebElement getNewPlaylistNameField(){
         return driver.findElement(By.xpath(HomePageSelectors.newPlaylistFieldXpath));
     }
-    private String getPlaylistXpath(String name){
+    public String getPlaylistXpath(String name){
         return "//a[text()='"+name+"']";
     }
-    private WebElement getAllSongsLinkXpath(){
+    public WebElement getAllSongsLinkXpath(){
         explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.allSongsLinkXpath)));
         return driver.findElement(By.xpath(HomePageSelectors.allSongsLinkXpath));
     }
-    private String getSongXpath(String name){
+    public String getSongXpath(String name){
         return "//*[@class='song-item item']/td[text()='"+name+"']";
     }
-    private String getPlaylistInTheListXpath(String pName){
+
+    public String getPlaylistInTheListXpath(String pName){
         return "//*[@id='songsWrapper']//*[@class='add-to']//*[@class='playlist' and text()='"+pName+"']";
     }
-    private WebElement getAddToButtonXpath() {
+    public WebElement getAddToButtonXpath() {
         return driver.findElement(By.xpath(HomePageSelectors.addToButtonXpath));
     }
     public void createNewPlaylist(String name) {
@@ -108,6 +109,7 @@ public class HomePage extends BasePage{
     public void allSongs_playSong_byDoubleClick(String name){
         getAllSongsLinkXpath().click();
         WebElement song = driver.findElement(By.xpath(getSongXpath(name)));
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(getSongXpath(name))));
         Actions actions = new Actions(driver);
         actions.doubleClick(song).perform();
     }
@@ -128,12 +130,7 @@ public class HomePage extends BasePage{
         WebElement save_pl_button = driver.findElement(By.xpath("//*[@id='songsWrapper']//*[@type='submit']"));
         save_pl_button.click();
 
-//        js.executeScript("arguments[0].scrollIntoView();", playlist_list);
-//        Actions action = new Actions(driver);
-//        action.click(getAddToButtonXpath()).moveToElement(driver.findElement(By.xpath(getPlaylistInTheListXpath(pName)))).click().build().perform();
-//        action.moveToElement(playlist_list).build().perform();
-//        System.out.println(playlist_list.isEnabled());
-//        playlist_list.click();
     }
+
 }
 

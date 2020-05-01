@@ -10,7 +10,7 @@ public class BaseTest {
     protected WebDriver driver;
     @BeforeMethod
     public void startUp() throws NoSuchMethodException {
-        driver = BrowserFactory.createWebDriver(BrowserType.CHROME);
+        driver = BrowserFactory.createWebDriver(BrowserType.FIREFOX);
     }
 
     @AfterMethod
