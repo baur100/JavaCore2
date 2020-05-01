@@ -2,77 +2,133 @@ package pageObjects;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 
-import java.sql.Time;
+import javax.xml.crypto.KeySelector;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomePage extends BasePage{
-    private final String homeBtnPath = "//*[@class='home active']";
-    private final String addPlayListBtn = "//i[@class='fa fa-plus-circle control create']";
-    private final String playListTextField = "//*[contains(@placeholder, 'to save')]";
+    public HomePage(WebDriver driver) { super(driver); }
 
-    public HomePage(WebDriver driver) {
-        super(driver);    }
-
-    public WebElement getAddPlayListBtn () {
-        return driver.findElement(By.xpath(addPlayListBtn));
+    public void isHomePage() {
+        final By xpath = By.xpath("//*[@class='home active']");
+        wait.until(d -> d.findElement(xpath));
     }
 
-    public WebElement getPlayListTextField () {
-        return  driver.findElement(By.xpath("//*[contains(@placeholder, 'to save')]"));
+    public WebElement getAddPlayListBtn() {
+        final By xpath = By.xpath("//i[@class='fa fa-plus-circle control create']");
+        wait.until(d -> d.findElement(xpath).isEnabled());
+        return driver.findElement(xpath);
     }
 
+    public WebElement getPlayListTextField() {
+        final By xpath = By.xpath("//*[contains(@placeholder, 'to save')]");
+        return wait.until(d -> d.findElement(xpath));
+    }
+
+    private WebElement getAllSongsMenu() {
+        final By css = By.cssSelector("[class='songs']");
+        return wait.until(d -> d.findElement(css));
+    }
     public List<WebElement> getPlayListItems(String playListName) {
-        return driver.findElements(By.xpath("//a[text()=" + "'" + playListName + "'" + "]"));
+        return List.of(getPlayListItem(playListName));
+    }
+
+    public String getPlayListItemHref(String playListName) {
+        final By xpath = By.xpath("//a[text()=" + "'" + playListName + "'" + "]");
+        return wait.until(d -> d.findElement(xpath).getAttribute("href").substring(27));
+    }
+
+    public WebElement getPlayListItem(String playListName) {
+        final By css = By.cssSelector("[href='" + getPlayListItemHref(playListName) + "']");
+        return wait.until(d -> d.findElement(css));
     }
 
     public void addPlayList(String playListName) {
         isHomePage();
-        wait.until(driver -> getAddPlayListBtn());
-        ((JavascriptExecutor)driver).executeScript("arguments[0].click();", getAddPlayListBtn());
-        wait.until(driver -> getPlayListTextField());
-        getPlayListTextField().sendKeys(playListName);
-        getPlayListTextField().sendKeys(Keys.RETURN);
+        getAddPlayListBtn().click();
+        var textField = getPlayListTextField();
+        textField.sendKeys(playListName);
+        textField.sendKeys(Keys.RETURN);
         wait.until(driver -> driver.findElements(By.cssSelector("[class='success show']")));
     }
 
-    public void isHomePage() {
-        wait.until(driver -> driver.findElement(By.xpath(homeBtnPath)));
+    public WebElement playListItemTextField(String playListName) {
+        final By xpath = By.xpath("//a[contains(text(), " + "'" + playListName + "')]/following-sibling::input");
+        return wait.until(d -> d.findElement(xpath));
+    }
+
+    public void playListScroll(String playListName) {
+        final String scrollJs = "arguments[0].scrollIntoView(true);";
+        ((JavascriptExecutor)driver).executeScript(scrollJs, getPlayListItem(playListName));
+    }
+
+    public void changePlayListItemName(String currentName, String ChangeToName) {
+        var action = new Actions(driver);
+        action.doubleClick(getPlayListItem(currentName)).build().perform();
+        WebElement inputField = playListItemTextField(currentName);
+        inputField.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        inputField.sendKeys(ChangeToName);
+        inputField.sendKeys(Keys.RETURN);
     }
 
     public Boolean isPlayListCreated(String playListName) {
         isHomePage();
         try {
-            wait.until(driver -> this.driver.findElement(By.xpath("//a[text()=" + "'" + playListName + "'" + "]")));
+            getPlayListItem(playListName);
             return true;
         } catch (TimeoutException | NoSuchElementException err) {
             return false;
         }
     }
 
-    public void playListScroll(String playListName) {
-//        for (int i = 1; i <= 16; i++) {
-//            ((JavascriptExecutor) driver).executeScript("document.getElementById('sidebar').scrollTo(0, " + 100 * i + ");");
-//        }
-        WebElement elem;
-        for (int i = 1; i <= 16; i++) {
-            try {
-                elem = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()=" + "'" + playListName + "'" + "]")));
-                ((JavascriptExecutor) driver).executeScript("document.getElementById('sidebar').scrollTo(0, " + 100 * i + ");");
-            } catch (TimeoutException err) {
-                ((JavascriptExecutor) driver).executeScript("document.getElementById('sidebar').scrollTo(0, " + 100 * i + ");");
-            }
+    private List<WebElement> setSongList(String... songNames) {
+        var songList = new ArrayList<WebElement>();
+        for (var songName : songNames) {
+            By xpath = By.xpath("//*[@id='songsWrapper']//td[contains(text(),'" + songName + "')]/parent::tr");
+            var song = driver.findElement(xpath);
+            songList.add(song);
         }
+        return songList;
     }
 
-    public void changePlayListItemName(String from, String to) {
-        Actions action = new Actions(driver);
-        WebElement playListItem = wait.until(driver -> driver.findElement(By.xpath("//a[contains(text(), " + "'" + from + "')]")));
-        action.doubleClick(playListItem).build().perform();
-        WebElement inputField = wait.until(driver -> driver.findElement(By.xpath("//a[contains(text(), " + "'" + from + "')]/following-sibling::input")));
-        inputField.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-        inputField.sendKeys(to);
-        inputField.sendKeys(Keys.RETURN);
+    public void selectSongs(String playListName) throws InterruptedException {
+        var list = setSongList("Opening", "The Only", "Speaker");
+        var actions = new Actions(driver);
+
+        actions.keyDown(Keys.CONTROL).perform();
+        for (var webElement : list) {
+                    actions.click(webElement);
+        }
+        actions.keyUp(Keys.CONTROL).perform();
+        actions.contextClick().perform();
+        navigateSubMenu(playListName);
+    }
+
+    private void navigateSubMenu(String playListName) throws InterruptedException {
+        var addTo = By.xpath("//ul[@class='menu song-menu' and not(contains(@style, 'display: none'))]" + "//child::li[@class='has-sub']");
+        var playListItem = By.xpath("//ul[@class='menu song-menu' and not(contains(@style," +
+                                    " 'display: none'))]//descendant::li[contains(text(), " + "'" + playListName + "'" + ")]");
+
+        var addToMenuField = wait.until(d -> d.findElement(addTo));
+        var action = new Actions(driver);
+
+        //action.moveToElement(addToMenuField).perform();
+
+        //Thread.sleep(3000);
+
+        var playListItemNav = wait.until(d -> d.findElement(playListItem));
+
+//        action.moveToElement(playListItemNav).perform();
+//        Thread.sleep(3000);
+        playListItemNav.click();
+//        action.click(playListItemNav).perform();
+    }
+    public void addSongsToPlayList(String playListName) throws InterruptedException {
+        wait.until(d -> getAllSongsMenu().isEnabled());
+        getAllSongsMenu().click();
+        //selectSongs(playListName);
+        selectSongs("zzzXYZ");
     }
 }
