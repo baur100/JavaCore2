@@ -1,12 +1,13 @@
 package tests;
 
+import listeners.RetryAnalyzer;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
 public class HomepageTests_new extends BaseTest{
-    @Test
+    @Test (retryAnalyzer = RetryAnalyzer.class)
     public void new_loginTest_createNewPlaylist_newPlaylistCreated() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
@@ -14,7 +15,7 @@ public class HomepageTests_new extends BaseTest{
         homePage.createNewPlaylist("HeyYoPlaylist");
         Assert.assertTrue(homePage.isPlaylistCreated("HeyYoPlaylist"));
     }
-    @Test
+    @Test (retryAnalyzer = RetryAnalyzer.class)
     public void new_scrollDown(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
