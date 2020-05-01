@@ -2,9 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
-import javax.xml.crypto.KeySelector;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,10 +25,6 @@ public class HomePage extends BasePage{
         return wait.until(d -> d.findElement(xpath));
     }
 
-    private WebElement getAllSongsMenu() {
-        final By css = By.cssSelector("[class='songs']");
-        return wait.until(d -> d.findElement(css));
-    }
     public List<WebElement> getPlayListItems(String playListName) {
         return List.of(getPlayListItem(playListName));
     }
@@ -83,29 +77,6 @@ public class HomePage extends BasePage{
         }
     }
 
-    private List<WebElement> setSongList(String... songNames) {
-        var songList = new ArrayList<WebElement>();
-        for (var songName : songNames) {
-            By xpath = By.xpath("//*[@id='songsWrapper']//td[contains(text(),'" + songName + "')]/parent::tr");
-            var song = driver.findElement(xpath);
-            songList.add(song);
-        }
-        return songList;
-    }
-
-    public void selectSongs(String playListName) throws InterruptedException {
-        var list = setSongList("Opening", "The Only", "Speaker");
-        var actions = new Actions(driver);
-
-        actions.keyDown(Keys.CONTROL).perform();
-        for (var webElement : list) {
-                    actions.click(webElement);
-        }
-        actions.keyUp(Keys.CONTROL).perform();
-        actions.contextClick().perform();
-        navigateSubMenu(playListName);
-    }
-
     private void navigateSubMenu(String playListName) throws InterruptedException {
         var addTo = By.xpath("//ul[@class='menu song-menu' and not(contains(@style, 'display: none'))]" + "//child::li[@class='has-sub']");
         var playListItem = By.xpath("//ul[@class='menu song-menu' and not(contains(@style," +
@@ -114,21 +85,47 @@ public class HomePage extends BasePage{
         var addToMenuField = wait.until(d -> d.findElement(addTo));
         var action = new Actions(driver);
 
-        //action.moveToElement(addToMenuField).perform();
-
-        //Thread.sleep(3000);
+        action.moveToElement(addToMenuField).perform();
 
         var playListItemNav = wait.until(d -> d.findElement(playListItem));
 
-//        action.moveToElement(playListItemNav).perform();
-//        Thread.sleep(3000);
-        playListItemNav.click();
-//        action.click(playListItemNav).perform();
+        action.moveToElement(playListItemNav).perform();
+        action.click(playListItemNav).perform();
     }
+
+    private WebElement getAllSongsList() {
+        final By css = By.cssSelector("[class='songs']");
+        return wait.until(d -> d.findElement(css));
+    }
+
+    public void selectSongs(String playListName) throws InterruptedException {
+        var list = setSongList("Opening");
+        var actions = new Actions(driver);
+
+        actions.keyDown(Keys.CONTROL).perform();
+        for (var webElement : list) {
+            actions.click(webElement);
+        }
+        actions.keyUp(Keys.CONTROL).perform();
+        actions.contextClick(list.get(0)).perform();
+
+        navigateSubMenu(playListName);
+    }
+
+    private List<WebElement> setSongList(String... songNames) {
+        var songList = new ArrayList<WebElement>();
+        for (var songName : songNames) {
+            By xpath = By.xpath("//*[@id='songsWrapper']//td[contains(text(),'" + songName + "')]/parent::tr");
+            var song = wait.until(d -> d.findElement(xpath));
+            songList.add(song);
+        }
+        return songList;
+    }
+
     public void addSongsToPlayList(String playListName) throws InterruptedException {
-        wait.until(d -> getAllSongsMenu().isEnabled());
-        getAllSongsMenu().click();
-        //selectSongs(playListName);
-        selectSongs("zzzXYZ");
+        wait.until(d -> getAllSongsList().isEnabled());
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click()", getAllSongsList());
+        selectSongs(playListName);
+        //selectSongs("zzzXYZ");
     }
 }

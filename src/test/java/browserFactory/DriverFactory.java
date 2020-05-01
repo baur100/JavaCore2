@@ -18,7 +18,7 @@ public class DriverFactory {
 
     private static WebDriver getChromeDriver(DriverType driverType) {
         var options = new ChromeOptions();
-        options.addArguments("--start-maximized");
+        options.addArguments("--disable-popup-blocking");
         System.setProperty(driverType.getChromeClass(), driverType.getChromeFile());
         return new ChromeDriver(options);
     }
