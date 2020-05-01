@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Master Suite" parallel="classes" thread-count="4">
+    <test name="All tests" preserve-order="true">
+        <classes>
+            <class name="tests.HomepageTests">
+                <methods>
+                    <include name="loginTest_createNewPlaylist_newPlaylistCreated" />
+                    <include name="scrollDown" />
+                    <include name="addSongToPlayListAndDelitPlayList" />
+                </methods>
+            </class>
+            <class name="tests.HomepageTests_new">
+                <methods>
+                    <include name="new_loginTest_createNewPlaylist_newPlaylistCreated" />
+                    <include name="new_scrollDown" />
+                    <include name="new_addSongToPlayListAndDelitPlayList" />
+                </methods>
+            </class>
+            <class name="tests.LoginTests">
+                <methods>
+                    <include name="loginTest_correctCredentials_loggedToApp" />
+                    <include name="loginTest_incorrectCredentials_notLoggedToApp" />
+                </methods>
+            </class>
+            <class name="tests.LoginTests_new">
+                <methods>
+                    <include name="new_loginTest_correctCredentials_loggedToApp" />
+                    <include name="new_loginTest_incorrectCredentials_notLoggedToApp" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

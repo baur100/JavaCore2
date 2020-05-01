@@ -17,8 +17,8 @@ public class HomePage extends BasePage{
         return true;
     }
     public WebElement getPlusButton(){
-        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.plusButtonCssSelector)));
-        return driver.findElement(By.xpath(HomePageSelectors.plusButtonCssSelector));
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.plusButtonXPath)));
+        return driver.findElement(By.xpath(HomePageSelectors.plusButtonXPath));
     }
     private WebElement getNewPlaylistNameField(){
         explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageSelectors.newPlaylistFieldXpath)));
@@ -39,7 +39,7 @@ public class HomePage extends BasePage{
         return list.size()>0;
     }
 
-    public void leftHandScrollDown(String name) {
+       public void leftHandScrollDown(String name) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement playlist = driver.findElement(By.xpath(getPlaylistXpath(name)));
         js.executeScript("arguments[0].scrollIntoView();", playlist);
