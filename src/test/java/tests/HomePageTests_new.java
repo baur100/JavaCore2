@@ -1,28 +1,25 @@
 package tests;
 
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
-public class HomePageTests extends BaseTest {
-    @Parameters({"email", "password", "playlist"})
+public class HomePageTests_new extends BaseTest {
     @Test
     // Module_WhatTesting_ExpectedResult
-    public void homePageTest_AddPlaylist_NewPlaylistAdded(String login, String pwd, String playlist) {
+    public void new_homePageTest_AddPlaylist_NewPlaylistAdded() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
-        HomePage homePage = loginPage.login(login, pwd);
-        homePage.setPlaylistName(playlist + " " + homePage.getDate());
+        HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
+        homePage.setPlaylistName("ag20 " + homePage.getDate());
         homePage.addPlaylist();
         Assert.assertTrue(homePage.isPlayListCreated());
     }
 
-
     @Test
     // Module_WhatTesting_ExpectedResult
-    public void homePageTest_Add5Playlists_New5PlaylistsAdded() {
+    public void new_homePageTest_Add5Playlists_New5PlaylistsAdded() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
@@ -32,7 +29,7 @@ public class HomePageTests extends BaseTest {
 
     @Test
     // Module_WhatTesting_ExpectedResult
-    public void homePageTest_DeleteSimilarPlaylists_SimilarPlaylistSDeleted() {
+    public void new_homePageTest_DeleteSimilarPlaylists_SimilarPlaylistSDeleted() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
@@ -40,20 +37,19 @@ public class HomePageTests extends BaseTest {
         Assert.assertFalse(homePage.isSimilarPlaylistsCreated());
     }
 
-    @Parameters({"email", "password", "playlist", "new-playlist"})
     @Test
     // Module_WhatTesting_ExpectedResult
-    public void homePageTest_EditLastPlaylist_LastPlaylistEdited(String login, String pwd, String playlist, String newPlaylist) {
+    public void new_homePageTest_EditLastPlaylist_LastPlaylistEdited() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
-        HomePage homePage = loginPage.login(login, pwd);
+        HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
         homePage.findLastPlaylistAndEdit();
         Assert.assertTrue(homePage.isPlayListRenamed());
     }
 
     @Test
     // Module_WhatTesting_ExpectedResult
-    public void playlist_addSongToPlaylist_SongsAddedToPlaylist() {
+    public void new_playlist_addSongToPlaylist_SongsAddedToPlaylist() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");

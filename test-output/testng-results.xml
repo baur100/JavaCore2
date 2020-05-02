@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results retried="5" ignored="13" total="22" passed="0" failed="4" skipped="0">
+    <reporter-output>
+    </reporter-output>
+    <suite started-at="2020-05-01T19:50:06 PDT" name="Master Suite" finished-at="2020-05-01T19:50:42 PDT"
+           duration-ms="35900">
+        <groups>
+        </groups>
+        <test started-at="2020-05-01T19:50:06 PDT" name="All tests" finished-at="2020-05-01T19:50:42 PDT"
+              duration-ms="35900">
+            <class name="tests.LoginTests">
+                <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:06 PDT" name="startUp" finished-at="2020-05-01T19:50:10 PDT"
+                             duration-ms="3593" status="PASS">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- startUp -->
+                <test-method
+                        signature="loginTest_CorrectCredentials_LoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448]"
+                        started-at="2020-05-01T19:50:10 PDT" name="loginTest_CorrectCredentials_LoggedToApp"
+                        finished-at="2020-05-01T19:50:12 PDT" duration-ms="1582" status="FAIL">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[testpro.user02@testpro.io]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[te$t$tudent02]]>
+                            </value>
+                        </param>
+                    </params>
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message>
+                            <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53962}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: e3be1521430e63bc5dd31cfc21f5fd62
+*** Element info: {Using=xpath, value=//*[@type='777submit']}]]>
+                        </message>
+                        <full-stacktrace>
+                            <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53962}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: e3be1521430e63bc5dd31cfc21f5fd62
+*** Element info: {Using=xpath, value=//*[@type='777submit']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
+at pageObjects.LoginPage.login(LoginPage.java:31)
+at tests.LoginTests.loginTest_CorrectCredentials_LoggedToApp(LoginTests.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+                        </full-stacktrace>
+                    </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- loginTest_CorrectCredentials_LoggedToApp -->
+                <test-method is-config="true"
+                             signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:12 PDT" name="tearDown" finished-at="2020-05-01T19:50:12 PDT"
+                             duration-ms="855" status="PASS">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[[TestResult name=loginTest_CorrectCredentials_LoggedToApp status=FAILURE method=LoginTests.loginTest_CorrectCredentials_LoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448] output={null}]]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- tearDown -->
+                <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:12 PDT" name="startUp" finished-at="2020-05-01T19:50:15 PDT"
+                             duration-ms="3052" status="PASS">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- startUp -->
+                <test-method retried="true"
+                             signature="loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:15 PDT" name="loginTest_IncorrectCredentials_NotLoggedToApp"
+                             finished-at="2020-05-01T19:50:17 PDT" duration-ms="1420" status="SKIP">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[testpro.user02@testpro.io]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[********]]>
+                            </value>
+                        </param>
+                    </params>
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message>
+                            <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53992}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3dca194ffc47b93807cce29dd88de0c0
+*** Element info: {Using=xpath, value=//*[@type='777submit']}]]>
+                        </message>
+                        <full-stacktrace>
+                            <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53992}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3dca194ffc47b93807cce29dd88de0c0
+*** Element info: {Using=xpath, value=//*[@type='777submit']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
+at pageObjects.LoginPage.login(LoginPage.java:31)
+at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+                        </full-stacktrace>
+                    </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- loginTest_IncorrectCredentials_NotLoggedToApp -->
+                <test-method is-config="true"
+                             signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:17 PDT" name="tearDown" finished-at="2020-05-01T19:50:17 PDT"
+                             duration-ms="551" status="PASS">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[[TestResult name=loginTest_IncorrectCredentials_NotLoggedToApp status=SKIP method=LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448] output={null}]]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- tearDown -->
+                <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:17 PDT" name="startUp" finished-at="2020-05-01T19:50:20 PDT"
+                             duration-ms="3034" status="PASS">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- startUp -->
+                <test-method retried="true"
+                             signature="loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:20 PDT" name="loginTest_IncorrectCredentials_NotLoggedToApp"
+                             finished-at="2020-05-01T19:50:22 PDT" duration-ms="1373" status="SKIP">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[testpro.user02@testpro.io]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[********]]>
+                            </value>
+                        </param>
+                    </params>
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message>
+                            <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54022}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: f1a8aec2ead8f216634e12274ee1c808
+*** Element info: {Using=xpath, value=//*[@type='777submit']}]]>
+                        </message>
+                        <full-stacktrace>
+                            <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54022}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: f1a8aec2ead8f216634e12274ee1c808
+*** Element info: {Using=xpath, value=//*[@type='777submit']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
+at pageObjects.LoginPage.login(LoginPage.java:31)
+at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+                        </full-stacktrace>
+                    </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- loginTest_IncorrectCredentials_NotLoggedToApp -->
+                <test-method is-config="true"
+                             signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:22 PDT" name="tearDown" finished-at="2020-05-01T19:50:22 PDT"
+                             duration-ms="554" status="PASS">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[[TestResult name=loginTest_IncorrectCredentials_NotLoggedToApp status=SKIP method=LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448] output={null}]]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- tearDown -->
+                <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:22 PDT" name="startUp" finished-at="2020-05-01T19:50:25 PDT"
+                             duration-ms="2980" status="PASS">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- startUp -->
+                <test-method retried="true"
+                             signature="loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:25 PDT" name="loginTest_IncorrectCredentials_NotLoggedToApp"
+                             finished-at="2020-05-01T19:50:27 PDT" duration-ms="1254" status="SKIP">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[testpro.user02@testpro.io]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[********]]>
+                            </value>
+                        </param>
+                    </params>
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message>
+                            <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54035}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 945e100636e2f99b78057bd1cad13513
+*** Element info: {Using=xpath, value=//*[@type='777submit']}]]>
+                        </message>
+                        <full-stacktrace>
+                            <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54035}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 945e100636e2f99b78057bd1cad13513
+*** Element info: {Using=xpath, value=//*[@type='777submit']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
+at pageObjects.LoginPage.login(LoginPage.java:31)
+at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+                        </full-stacktrace>
+                    </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- loginTest_IncorrectCredentials_NotLoggedToApp -->
+                <test-method is-config="true"
+                             signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:27 PDT" name="tearDown" finished-at="2020-05-01T19:50:27 PDT"
+                             duration-ms="547" status="PASS">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[[TestResult name=loginTest_IncorrectCredentials_NotLoggedToApp status=SKIP method=LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448] output={null}]]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- tearDown -->
+                <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:27 PDT" name="startUp" finished-at="2020-05-01T19:50:30 PDT"
+                             duration-ms="2972" status="PASS">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- startUp -->
+                <test-method retried="true"
+                             signature="loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:30 PDT" name="loginTest_IncorrectCredentials_NotLoggedToApp"
+                             finished-at="2020-05-01T19:50:31 PDT" duration-ms="1363" status="SKIP">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[testpro.user02@testpro.io]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[********]]>
+                            </value>
+                        </param>
+                    </params>
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message>
+                            <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54053}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: db52d2348966fe1c01eb5bb80c2af242
+*** Element info: {Using=xpath, value=//*[@type='777submit']}]]>
+                        </message>
+                        <full-stacktrace>
+                            <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54053}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: db52d2348966fe1c01eb5bb80c2af242
+*** Element info: {Using=xpath, value=//*[@type='777submit']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
+at pageObjects.LoginPage.login(LoginPage.java:31)
+at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+                        </full-stacktrace>
+                    </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- loginTest_IncorrectCredentials_NotLoggedToApp -->
+                <test-method is-config="true"
+                             signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:31 PDT" name="tearDown" finished-at="2020-05-01T19:50:32 PDT"
+                             duration-ms="558" status="PASS">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[[TestResult name=loginTest_IncorrectCredentials_NotLoggedToApp status=SKIP method=LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448] output={null}]]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- tearDown -->
+                <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:32 PDT" name="startUp" finished-at="2020-05-01T19:50:35 PDT"
+                             duration-ms="2978" status="PASS">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- startUp -->
+                <test-method retried="true"
+                             signature="loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:35 PDT" name="loginTest_IncorrectCredentials_NotLoggedToApp"
+                             finished-at="2020-05-01T19:50:36 PDT" duration-ms="1282" status="SKIP">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[testpro.user02@testpro.io]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[********]]>
+                            </value>
+                        </param>
+                    </params>
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message>
+                            <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54067}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 98d10f43558d796bae81ada02fad669e
+*** Element info: {Using=xpath, value=//*[@type='777submit']}]]>
+                        </message>
+                        <full-stacktrace>
+                            <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54067}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 98d10f43558d796bae81ada02fad669e
+*** Element info: {Using=xpath, value=//*[@type='777submit']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
+at pageObjects.LoginPage.login(LoginPage.java:31)
+at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+                        </full-stacktrace>
+                    </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- loginTest_IncorrectCredentials_NotLoggedToApp -->
+                <test-method is-config="true"
+                             signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:36 PDT" name="tearDown" finished-at="2020-05-01T19:50:37 PDT"
+                             duration-ms="553" status="PASS">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[[TestResult name=loginTest_IncorrectCredentials_NotLoggedToApp status=SKIP method=LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448] output={null}]]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- tearDown -->
+                <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:37 PDT" name="startUp" finished-at="2020-05-01T19:50:40 PDT"
+                             duration-ms="2975" status="PASS">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- startUp -->
+                <test-method
+                        signature="loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448]"
+                        started-at="2020-05-01T19:50:40 PDT" name="loginTest_IncorrectCredentials_NotLoggedToApp"
+                        finished-at="2020-05-01T19:50:41 PDT" duration-ms="1538" status="FAIL">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[testpro.user02@testpro.io]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[********]]>
+                            </value>
+                        </param>
+                    </params>
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message>
+                            <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54086}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 146408858fdff252b48faddea8ecce7f
+*** Element info: {Using=xpath, value=//*[@type='777submit']}]]>
+                        </message>
+                        <full-stacktrace>
+                            <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54086}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 146408858fdff252b48faddea8ecce7f
+*** Element info: {Using=xpath, value=//*[@type='777submit']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
+at pageObjects.LoginPage.login(LoginPage.java:31)
+at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+                        </full-stacktrace>
+                    </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- loginTest_IncorrectCredentials_NotLoggedToApp -->
+                <test-method is-config="true"
+                             signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTests@40f08448]"
+                             started-at="2020-05-01T19:50:41 PDT" name="tearDown" finished-at="2020-05-01T19:50:42 PDT"
+                             duration-ms="840" status="PASS">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[[TestResult name=loginTest_IncorrectCredentials_NotLoggedToApp status=FAILURE method=LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@40f08448] output={null}]]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- tearDown -->
+            </class> <!-- tests.LoginTests -->
+            <class name="tests.LoginTests_new">
+                <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests_new@276438c9]"
+                             started-at="2020-05-01T19:50:06 PDT" name="startUp" finished-at="2020-05-01T19:50:10 PDT"
+                             duration-ms="3593" status="PASS">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- startUp -->
+                <test-method
+                        signature="loginTest_CorrectCredentials_LoggedToApp()[pri:0, instance:tests.LoginTests_new@276438c9]"
+                        started-at="2020-05-01T19:50:10 PDT" name="loginTest_CorrectCredentials_LoggedToApp"
+                        finished-at="2020-05-01T19:50:12 PDT" duration-ms="1590" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message>
+                            <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53963}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 02ba15cff713ffd6d882d0c0ca4abd8b
+*** Element info: {Using=xpath, value=//*[@type='777submit']}]]>
+                        </message>
+                        <full-stacktrace>
+                            <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53963}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 02ba15cff713ffd6d882d0c0ca4abd8b
+*** Element info: {Using=xpath, value=//*[@type='777submit']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
+at pageObjects.LoginPage.login(LoginPage.java:31)
+at tests.LoginTests_new.loginTest_CorrectCredentials_LoggedToApp(LoginTests_new.java:15)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+                        </full-stacktrace>
+                    </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- loginTest_CorrectCredentials_LoggedToApp -->
+                <test-method is-config="true"
+                             signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTests_new@276438c9]"
+                             started-at="2020-05-01T19:50:12 PDT" name="tearDown" finished-at="2020-05-01T19:50:12 PDT"
+                             duration-ms="850" status="PASS">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[[TestResult name=loginTest_CorrectCredentials_LoggedToApp status=FAILURE method=LoginTests_new.loginTest_CorrectCredentials_LoggedToApp()[pri:0, instance:tests.LoginTests_new@276438c9] output={null}]]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- tearDown -->
+                <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests_new@276438c9]"
+                             started-at="2020-05-01T19:50:12 PDT" name="startUp" finished-at="2020-05-01T19:50:15 PDT"
+                             duration-ms="3054" status="PASS">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- startUp -->
+                <test-method
+                        signature="loginTest_IncorrectCredentials_NotLoggedToApp()[pri:0, instance:tests.LoginTests_new@276438c9]"
+                        started-at="2020-05-01T19:50:15 PDT" name="loginTest_IncorrectCredentials_NotLoggedToApp"
+                        finished-at="2020-05-01T19:50:17 PDT" duration-ms="1308" status="FAIL">
+                    <exception class="org.openqa.selenium.NoSuchElementException">
+                        <message>
+                            <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53993}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 734da819a69b1aae504774b7bcbd0f13
+*** Element info: {Using=xpath, value=//*[@type='777submit']}]]>
+                        </message>
+                        <full-stacktrace>
+                            <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@type='777submit']"}
+  (Session info: headless chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QPPOL30', ip: '192.168.1.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53993}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 734da819a69b1aae504774b7bcbd0f13
+*** Element info: {Using=xpath, value=//*[@type='777submit']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
+at pageObjects.LoginPage.login(LoginPage.java:31)
+at tests.LoginTests_new.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests_new.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+                        </full-stacktrace>
+                    </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- loginTest_IncorrectCredentials_NotLoggedToApp -->
+                <test-method is-config="true"
+                             signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTests_new@276438c9]"
+                             started-at="2020-05-01T19:50:17 PDT" name="tearDown" finished-at="2020-05-01T19:50:18 PDT"
+                             duration-ms="829" status="PASS">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[[TestResult name=loginTest_IncorrectCredentials_NotLoggedToApp status=FAILURE method=LoginTests_new.loginTest_IncorrectCredentials_NotLoggedToApp()[pri:0, instance:tests.LoginTests_new@276438c9] output={null}]]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- tearDown -->
+            </class> <!-- tests.LoginTests_new -->
+        </test> <!-- All tests -->
+    </suite> <!-- Master Suite -->
+</testng-results>

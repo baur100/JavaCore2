@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="classes" name="Failed suite [Master Suite]" guice-stage="DEVELOPMENT">
+    <parameter name="wrong-password" value="********"/>
+    <parameter name="password" value="te$t$tudent02"/>
+    <parameter name="playlist" value="agAGagAGag"/>
+    <parameter name="email" value="testpro.user02@testpro.io"/>
+    <parameter name="new-playlist" value="ag20AG20ag20AG20"/>
+    <listeners>
+        <listener class-name="listeners.Listeners"/>
+    </listeners>
+    <test thread-count="4" parallel="classes" name="All tests(failed)">
+        <classes>
+            <class name="tests.LoginTests_new">
+                <methods>
+                    <include name="startUp"/>
+                    <include name="loginTest_CorrectCredentials_LoggedToApp"/>
+                    <include name="loginTest_IncorrectCredentials_NotLoggedToApp"/>
+                    <include name="tearDown"/>
+                </methods>
+            </class> <!-- tests.LoginTests_new -->
+            <class name="tests.LoginTests">
+                <methods>
+                    <include name="loginTest_IncorrectCredentials_NotLoggedToApp" invocation-numbers="0 0 0 0 0 0"/>
+                    <include name="startUp"/>
+                    <include name="loginTest_CorrectCredentials_LoggedToApp" invocation-numbers="0"/>
+                    <include name="tearDown"/>
+                </methods>
+            </class> <!-- tests.LoginTests -->
+        </classes>
+    </test> <!-- All tests(failed) -->
+</suite> <!-- Failed suite [Master Suite] -->

@@ -2,7 +2,10 @@ package tests;
 
 import browserFactory.BrowserFactory;
 import enums.BrowserType;
+import helpers.GetScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -12,12 +15,13 @@ public class BaseTest {
     @BeforeMethod
     public void startUp() throws NoSuchMethodException {
         driver = BrowserFactory.createWebDriver(BrowserType.CHROME);
-//        driver.manage().window().maximize();
     }
 
     @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(5000);
+    public void tearDown(ITestResult iTestResult) {
+        if (iTestResult.getStatus() == ITestResult.FAILURE) {
+            GetScreenshot.capture(driver, iTestResult.getName());
+        }
         driver.quit();
     }
 }
