@@ -1,14 +1,18 @@
 package listeners;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import tests.HomepageTests;
 
 public class Listeners implements ITestListener {
-
+    private static Logger logger = LogManager.getLogger(HomepageTests.class);
     @Override
     public void onTestStart(ITestResult iTestResult) {
         System.out.println("test started "+iTestResult.getName());
+        logger.warn("Test started " + iTestResult.getName());
 
     }
 
@@ -19,13 +23,13 @@ public class Listeners implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        System.out.println("HELP - test FAILED " + iTestResult.getName());
+        logger.fatal("Test failed " + iTestResult.getName());
 
     }
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
-
+        logger.error("Test skipped "+ iTestResult.getName());
     }
 
     @Override
