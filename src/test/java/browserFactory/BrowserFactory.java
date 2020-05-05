@@ -26,15 +26,15 @@ public class BrowserFactory {
         OperaOptions options = new OperaOptions();
         options.addArguments("window-size=1400,1000");
 //        options.addArguments("--headless");
-        System.setProperty("webdriver.opera.driver","operadriver");
+        System.setProperty("webdriver.opera.driver","operadriver.exe");
         return new OperaDriver(options);
     }
 
     private static WebDriver getChromeDriver() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("window-size=1400,1000");
-//        options.addArguments("--headless");
-        System.setProperty("webdriver.chrome.driver","chromedriver");
+        options.addArguments("--headless");
+        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         return new ChromeDriver(options);
 
     }
@@ -43,8 +43,8 @@ public class BrowserFactory {
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--width=1400");
         options.addArguments("--height=1000");
-//        options.addArguments("--headless");
-        System.setProperty("webdriver.gecko.driver","geckodriver");
+        options.addArguments("--headless");
+        System.setProperty("webdriver.gecko.driver","geckodriver.exe");
         return new FirefoxDriver(options);
     }
 }
