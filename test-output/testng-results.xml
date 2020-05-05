@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results retried="2" ignored="2" total="14" passed="9" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-05-01T20:17:04 PDT" name="Master Suite" finished-at="2020-05-01T20:18:04 PDT" duration-ms="60886">
+    <groups>
+    </groups>
+    <test started-at="2020-05-01T20:17:04 PDT" name="All tests" finished-at="2020-05-01T20:18:04 PDT" duration-ms="60886">
+      <class name="tests.LoginTests">
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:04 PDT" name="startUp" finished-at="2020-05-01T20:17:10 PDT" duration-ms="6062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method signature="loginTest_correctCredentials_loggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:10 PDT" name="loginTest_correctCredentials_loggedToApp" finished-at="2020-05-01T20:17:13 PDT" duration-ms="2849" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testpro.user02@testpro.io]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[te$t$tudent02]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest_correctCredentials_loggedToApp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:13 PDT" name="tearDown" finished-at="2020-05-01T20:17:20 PDT" duration-ms="7868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:20 PDT" name="startUp" finished-at="2020-05-01T20:17:24 PDT" duration-ms="3525" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method signature="loginTest_incorrectCredentials_notLoggedToApp(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:24 PDT" name="loginTest_incorrectCredentials_notLoggedToApp" finished-at="2020-05-01T20:17:25 PDT" duration-ms="1491" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testpro.user02@testpro.io]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[*******]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest_incorrectCredentials_notLoggedToApp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:25 PDT" name="tearDown" finished-at="2020-05-01T20:17:33 PDT" duration-ms="7991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:33 PDT" name="startUp" finished-at="2020-05-01T20:17:36 PDT" duration-ms="3000" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method retried="true" signature="test_Fails()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:36 PDT" name="test_Fails" finished-at="2020-05-01T20:17:36 PDT" duration-ms="1" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:969)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at org.testng.Assert.assertTrue(Assert.java:53)
+at tests.LoginTests.test_Fails(LoginTests.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:830)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Fails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:36 PDT" name="tearDown" finished-at="2020-05-01T20:17:43 PDT" duration-ms="6690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:43 PDT" name="startUp" finished-at="2020-05-01T20:17:46 PDT" duration-ms="2485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method retried="true" signature="test_Fails()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:46 PDT" name="test_Fails" finished-at="2020-05-01T20:17:46 PDT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:969)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at org.testng.Assert.assertTrue(Assert.java:53)
+at tests.LoginTests.test_Fails(LoginTests.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:830)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Fails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:46 PDT" name="tearDown" finished-at="2020-05-01T20:17:54 PDT" duration-ms="8650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:54 PDT" name="startUp" finished-at="2020-05-01T20:17:57 PDT" duration-ms="2466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method signature="test_Fails()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:57 PDT" name="test_Fails" finished-at="2020-05-01T20:17:57 PDT" duration-ms="0" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:969)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at org.testng.Assert.assertTrue(Assert.java:53)
+at tests.LoginTests.test_Fails(LoginTests.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:830)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Fails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@6dde5c8c]" started-at="2020-05-01T20:17:57 PDT" name="tearDown" finished-at="2020-05-01T20:18:04 PDT" duration-ms="7710" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTests -->
+      <class name="tests.HomepageTests_new">
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.HomepageTests_new@6fb0d3ed]" started-at="2020-05-01T20:17:04 PDT" name="startUp" finished-at="2020-05-01T20:17:09 PDT" duration-ms="5857" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method signature="new_loginTest_createNewPlaylist_newPlaylistCreated()[pri:0, instance:tests.HomepageTests_new@6fb0d3ed]" started-at="2020-05-01T20:17:09 PDT" name="new_loginTest_createNewPlaylist_newPlaylistCreated" finished-at="2020-05-01T20:17:15 PDT" duration-ms="5444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- new_loginTest_createNewPlaylist_newPlaylistCreated -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomepageTests_new@6fb0d3ed]" started-at="2020-05-01T20:17:15 PDT" name="tearDown" finished-at="2020-05-01T20:17:23 PDT" duration-ms="7849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.HomepageTests_new@6fb0d3ed]" started-at="2020-05-01T20:17:23 PDT" name="startUp" finished-at="2020-05-01T20:17:27 PDT" duration-ms="4355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method signature="new_scrollDown()[pri:0, instance:tests.HomepageTests_new@6fb0d3ed]" started-at="2020-05-01T20:17:27 PDT" name="new_scrollDown" finished-at="2020-05-01T20:17:31 PDT" duration-ms="3842" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- new_scrollDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomepageTests_new@6fb0d3ed]" started-at="2020-05-01T20:17:31 PDT" name="tearDown" finished-at="2020-05-01T20:17:40 PDT" duration-ms="8722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.HomepageTests_new -->
+      <class name="tests.HomepageTests">
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.HomepageTests@fe18270]" started-at="2020-05-01T20:17:04 PDT" name="startUp" finished-at="2020-05-01T20:17:09 PDT" duration-ms="5857" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method signature="loginTest_createNewPlaylist_newPlaylistCreated(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.HomepageTests@fe18270]" started-at="2020-05-01T20:17:09 PDT" name="loginTest_createNewPlaylist_newPlaylistCreated" finished-at="2020-05-01T20:17:15 PDT" duration-ms="5312" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testpro.user02@testpro.io]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[te$t$tudent02]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[zebra4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest_createNewPlaylist_newPlaylistCreated -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomepageTests@fe18270]" started-at="2020-05-01T20:17:15 PDT" name="tearDown" finished-at="2020-05-01T20:17:22 PDT" duration-ms="6731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.HomepageTests@fe18270]" started-at="2020-05-01T20:17:22 PDT" name="startUp" finished-at="2020-05-01T20:17:26 PDT" duration-ms="4561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method signature="scrollDown(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.HomepageTests@fe18270]" started-at="2020-05-01T20:17:26 PDT" name="scrollDown" finished-at="2020-05-01T20:17:30 PDT" duration-ms="3637" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testpro.user02@testpro.io]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[te$t$tudent02]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[zebra4]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[newZebra4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scrollDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomepageTests@fe18270]" started-at="2020-05-01T20:17:30 PDT" name="tearDown" finished-at="2020-05-01T20:17:36 PDT" duration-ms="6758" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.HomepageTests@fe18270]" started-at="2020-05-01T20:17:36 PDT" name="startUp" finished-at="2020-05-01T20:17:39 PDT" duration-ms="2476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method signature="addSongToPlaylist_byMenuButton_CreatePLaylist_thenAddSong(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.HomepageTests@fe18270]" started-at="2020-05-01T20:17:39 PDT" name="addSongToPlaylist_byMenuButton_CreatePLaylist_thenAddSong" finished-at="2020-05-01T20:17:42 PDT" duration-ms="3220" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testpro.user02@testpro.io]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[te$t$tudent02]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Lesser Faith]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[zebra4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addSongToPlaylist_byMenuButton_CreatePLaylist_thenAddSong -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomepageTests@fe18270]" started-at="2020-05-01T20:17:42 PDT" name="tearDown" finished-at="2020-05-01T20:17:49 PDT" duration-ms="6697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.HomepageTests -->
+      <class name="tests.LoginTests_new">
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests_new@5123a213]" started-at="2020-05-01T20:17:04 PDT" name="startUp" finished-at="2020-05-01T20:17:09 PDT" duration-ms="5822" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method signature="new_loginTest_correctCredentials_loggedToApp()[pri:0, instance:tests.LoginTests_new@5123a213]" started-at="2020-05-01T20:17:09 PDT" name="new_loginTest_correctCredentials_loggedToApp" finished-at="2020-05-01T20:17:13 PDT" duration-ms="3299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- new_loginTest_correctCredentials_loggedToApp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests_new@5123a213]" started-at="2020-05-01T20:17:13 PDT" name="tearDown" finished-at="2020-05-01T20:17:21 PDT" duration-ms="7879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="startUp()[pri:0, instance:tests.LoginTests_new@5123a213]" started-at="2020-05-01T20:17:21 PDT" name="startUp" finished-at="2020-05-01T20:17:24 PDT" duration-ms="3811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method signature="new_loginTest_incorrectCredentials_notLoggedToApp()[pri:0, instance:tests.LoginTests_new@5123a213]" started-at="2020-05-01T20:17:24 PDT" name="new_loginTest_incorrectCredentials_notLoggedToApp" finished-at="2020-05-01T20:17:26 PDT" duration-ms="1475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- new_loginTest_incorrectCredentials_notLoggedToApp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests_new@5123a213]" started-at="2020-05-01T20:17:26 PDT" name="tearDown" finished-at="2020-05-01T20:17:35 PDT" duration-ms="8897" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTests_new -->
+    </test> <!-- All tests -->
+  </suite> <!-- Master Suite -->
+</testng-results>

@@ -29,4 +29,12 @@ public class HomepageTests extends BaseTest{
         Assert.assertTrue(homePage.isPlaylistCreated(newPlaylist));
 
     }
+    @Parameters({"email","password","song","playlist"})
+    @Test
+    public void addSongToPlaylist_byMenuButton_CreatePLaylist_thenAddSong(String login, String pwd, String song, String playlist){
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.openPage();
+        HomePage homePage = loginPage.login(login,pwd);
+        homePage.addSongToPlaylist_byMenuButton_plusCreatePLaylist(song, playlist);
+    }
 }

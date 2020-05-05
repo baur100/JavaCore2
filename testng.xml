@@ -4,14 +4,16 @@
     <parameter name="email" value="testpro.user02@testpro.io" />
     <parameter name="password" value="te$t$tudent02" />
     <parameter name="wrong-password" value="*******"></parameter>
-    <parameter name="playlist" value="zzZZzzZZ"></parameter>
-    <parameter name="new-playlist" value="newZZZZZZZZZ"></parameter>
+    <parameter name="playlist" value="zebra4"></parameter>
+    <parameter name="new-playlist" value="newZebra4"></parameter>
+    <parameter name="song" value="Lesser Faith"></parameter>
     <test name="All tests" preserve-order="true">
         <classes>
             <class name="tests.HomepageTests">
                 <methods>
                     <include name="loginTest_createNewPlaylist_newPlaylistCreated" />
                     <include name="scrollDown" />
+                    <include name="addSongToPlaylist_byMenuButton_CreatePLaylist_thenAddSong" />
                 </methods>
             </class>
             <class name="tests.HomepageTests_new">

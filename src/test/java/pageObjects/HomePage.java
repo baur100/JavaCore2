@@ -121,6 +121,7 @@ public class HomePage extends BasePage{
         getAllSongsLinkXpath().click();
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement song = driver.findElement(By.xpath(getSongXpath(name)));
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath(getSongXpath(name))));
 //        js.executeScript("arguments[0].scrollIntoView();", song);
         song.click();
         getAddToButtonXpath().click();
