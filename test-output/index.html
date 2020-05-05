@@ -192,28 +192,23 @@
                   </a> <!-- loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ) -->
                   <span class="method-name">loginTest_createNewPlaylist_newPlaylistCreated</span>
                   <span class="parameters">(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;777create&apos;]/*&quot;}
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
   (Session info: headless chrome=81.0.4044.129)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;admins-MacBook-Pro.local&apos;, ip: &apos;192.168.0.10&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.3&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:53782}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: b78cbb276f1fd70265c1776e2e4f0095
-*** Element info: {Using=xpath, value=//*[@class=&apos;777create&apos;]/*}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:54121}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 403d92f3f6ed2705441cca7f5c3307aa
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.HomePage.getNewPlaylistNameField(HomePage.java:24)
-	at pageObjects.HomePage.createNewPlaylist(HomePage.java:31)
-	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:17)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:25)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:830)
@@ -233,8 +228,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;admins-MacBook-Pro.local&apos;, ip: &apos;192.168.0.10&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.3&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:53803}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 3760cf85ddcc862be7470cab5b46b780
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:54143}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0928fdff15791f0784bbd39b64839ec4
 *** Element info: {Using=xpath, value=//*[@class=&apos;777create&apos;]/*}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -248,11 +243,11 @@ Session ID: 3760cf85ddcc862be7470cab5b46b780
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at pageObjects.HomePage.getNewPlaylistNameField(HomePage.java:24)
 	at pageObjects.HomePage.createNewPlaylist(HomePage.java:31)
-	at tests.HomepageTests.scrollDown(HomepageTests.java:26)
+	at tests.HomepageTests.scrollDown(HomepageTests.java:36)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-... Removed 14 stack frames
+... Removed 15 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -275,8 +270,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;admins-MacBook-Pro.local&apos;, ip: &apos;192.168.0.10&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.3&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:53645}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: c0ade88aa118228511d92949804bce5d
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:53985}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 348fd8ac468458a8417aa18f2251d61a
 *** Element info: {Using=xpath, value=//*[@class=&apos;777create&apos;]/*}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -309,8 +304,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;admins-MacBook-Pro.local&apos;, ip: &apos;192.168.0.10&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.3&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:53739}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 5f3a60ba0754c1b4240dd7649b9ae402
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:54075}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c2d85dce4e85cc0ce81b0cd384d73f90
 *** Element info: {Using=xpath, value=//*[@class=&apos;777create&apos;]/*}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -352,8 +347,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;admins-MacBook-Pro.local&apos;, ip: &apos;192.168.0.10&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.3&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:53726}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 4cc7fa5bc5465dfdb509b5d486bc7dce
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:54074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a630b42203d042fb8f115c62763f24a3
 *** Element info: {Using=xpath, value=//*[@class=&apos;777create&apos;]/*}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -367,7 +362,7 @@ Session ID: 4cc7fa5bc5465dfdb509b5d486bc7dce
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at pageObjects.HomePage.getNewPlaylistNameField(HomePage.java:24)
 	at pageObjects.HomePage.createNewPlaylist(HomePage.java:31)
-	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:17)
+	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:25)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:830)
@@ -387,8 +382,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;admins-MacBook-Pro.local&apos;, ip: &apos;192.168.0.10&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.3&apos;, java.version: &apos;13.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:53646}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: c034dda09764ad15e06503854bc2154f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: /var/folders/r3/jx48vvn925n...}, goog:chromeOptions: {debuggerAddress: localhost:53986}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 052ae1fe994f06d0baf308d84734f49e
 *** Element info: {Using=xpath, value=//*[@class=&apos;777create&apos;]/*}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -402,7 +397,7 @@ Session ID: c034dda09764ad15e06503854bc2154f
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at pageObjects.HomePage.getNewPlaylistNameField(HomePage.java:24)
 	at pageObjects.HomePage.createNewPlaylist(HomePage.java:31)
-	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:17)
+	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:25)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:830)
@@ -544,45 +539,45 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'new_loginTest_createNewPlaylist_newPlaylistCreated')
-data.setCell(0, 2, 'tests.HomepageTests_new')
-data.setCell(0, 3, 10092);
+data.setCell(0, 1, 'loginTest_createNewPlaylist_newPlaylistCreated')
+data.setCell(0, 2, 'tests.HomepageTests')
+data.setCell(0, 3, 13535);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginTest_createNewPlaylist_newPlaylistCreated')
-data.setCell(1, 2, 'tests.HomepageTests')
-data.setCell(1, 3, 9965);
+data.setCell(1, 1, 'new_loginTest_createNewPlaylist_newPlaylistCreated')
+data.setCell(1, 2, 'tests.HomepageTests_new')
+data.setCell(1, 3, 11880);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'new_loginTest_correctCredentials_loggedToApp')
 data.setCell(2, 2, 'tests.LoginTests_new')
-data.setCell(2, 3, 8577);
+data.setCell(2, 3, 11314);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'loginTest_correctCredentials_loggedToApp')
 data.setCell(3, 2, 'tests.LoginTests')
-data.setCell(3, 3, 8565);
+data.setCell(3, 3, 11202);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'new_scrollDown')
 data.setCell(4, 2, 'tests.HomepageTests_new')
-data.setCell(4, 3, 6540);
+data.setCell(4, 3, 6717);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'loginTest_createNewPlaylist_newPlaylistCreated')
 data.setCell(5, 2, 'tests.HomepageTests')
-data.setCell(5, 3, 6122);
+data.setCell(5, 3, 6469);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'scrollDown')
 data.setCell(6, 2, 'tests.HomepageTests')
-data.setCell(6, 3, 3959);
+data.setCell(6, 3, 4251);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'loginTest_createNewPlaylist_newPlaylistCreated')
 data.setCell(7, 2, 'tests.HomepageTests')
-data.setCell(7, 3, 3730);
+data.setCell(7, 3, 4220);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'new_loginTest_incorrectCredentials_notLoggedToApp')
 data.setCell(8, 2, 'tests.LoginTests_new')
-data.setCell(8, 3, 3478);
+data.setCell(8, 3, 3160);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'loginTest_incorrectCredentials_notLoggedToApp')
 data.setCell(9, 2, 'tests.LoginTests')
-data.setCell(9, 3, 3421);
+data.setCell(9, 3, 3050);
 window.suiteTableData['Master_Suite']= { tableData: data, tableDiv: 'times-div-Master_Suite'}
 return data;
 }
@@ -624,49 +619,52 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.HomepageTests_new</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">startUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.HomepageTests_new</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">startUp</span>
-                <span class="method-start">9 ms</span>
+                <span class="method-start">6 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">startUp</span>
-                <span class="method-start">17 ms</span>
+                <span class="method-start">6 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">startUp</span>
-                <span class="method-start">17 ms</span>
+                <span class="method-start">6 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">loginTest_correctCredentials_loggedToApp(testpro.user02@testpro.io, te$t$tudent02)</span>
-                <span class="method-start">4457 ms</span>
-              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">new_loginTest_correctCredentials_loggedToApp</span>
-                <span class="method-start">4458 ms</span>
+                <span class="method-start">4402 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginTest_correctCredentials_loggedToApp(testpro.user02@testpro.io, te$t$tudent02)</span>
+                <span class="method-start">4405 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</span>
-                <span class="method-start">4458 ms</span>
+                <span class="method-start">4405 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -675,75 +673,74 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">new_loginTest_createNewPlaylist_newPlaylistCreated</span>
-                <span class="method-start">4458 ms</span>
+                <span class="method-start">4406 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=loginTest_correctCredentials_loggedToApp status=SUCCESS method=LoginTests.loginTest...)</span>
-                <span class="method-start">13022 ms</span>
+                <span class="method-start">15608 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=new_loginTest_correctCredentials_loggedToApp status=SUCCESS method=LoginTests_new.n...)</span>
-                <span class="method-start">13137 ms</span>
+                <span class="method-start">15728 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">startUp</span>
-                <span class="method-start">13229 ms</span>
-              </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">startUp</span>
-                <span class="method-start">13245 ms</span>
+                <span class="method-start">15770 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=loginTest_createNewPlaylist_newPlaylistCreated status=SKIP method=HomepageTests.log...)</span>
-                <span class="method-start">14427 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">startUp</span>
-                <span class="method-start">14503 ms</span>
+                <span class="method-start">15934 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.HomepageTests_new</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=new_loginTest_createNewPlaylist_newPlaylistCreated status=FAILURE method=HomepageTe...)</span>
-                <span class="method-start">14582 ms</span>
+                <span class="method-start">16315 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginTest_createNewPlaylist_newPlaylistCreated status=SKIP method=HomepageTests.log...)</span>
+                <span class="method-start">17941 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startUp</span>
-                <span class="method-start">15690 ms</span>
+                <span class="method-start">18097 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">loginTest_incorrectCredentials_notLoggedToApp(testpro.user02@testpro.io, *******)</span>
-                <span class="method-start">15976 ms</span>
-              </div> <!-- test-method -->
+              <div class="chronological-class-name">tests.HomepageTests_new</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">18098 ms</span>
+              </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">new_loginTest_incorrectCredentials_notLoggedToApp</span>
-                <span class="method-start">16087 ms</span>
+                <span class="method-start">19030 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</span>
-                <span class="method-start">16230 ms</span>
+                <span class="method-name">loginTest_incorrectCredentials_notLoggedToApp(testpro.user02@testpro.io, *******)</span>
+                <span class="method-start">19104 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -752,66 +749,73 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">new_scrollDown</span>
-                <span class="method-start">16688 ms</span>
+                <span class="method-start">19755 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</span>
+                <span class="method-start">19955 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=loginTest_incorrectCredentials_notLoggedToApp status=SUCCESS method=LoginTests.logi...)</span>
-                <span class="method-start">19398 ms</span>
+                <span class="method-start">22155 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=new_loginTest_incorrectCredentials_notLoggedToApp status=SUCCESS method=LoginTests_...)</span>
-                <span class="method-start">19565 ms</span>
+                <span class="method-start">22190 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=loginTest_createNewPlaylist_newPlaylistCreated status=SKIP method=HomepageTests.log...)</span>
-                <span class="method-start">22353 ms</span>
+                <span class="method-start">26425 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">startUp</span>
-                <span class="method-start">22406 ms</span>
-              </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.HomepageTests_new</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=new_scrollDown status=FAILURE method=HomepageTests_new.new_scrollDown()[pri:0, inst...)</span>
-                <span class="method-start">23230 ms</span>
+                <span class="method-start">26475 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">26509 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</span>
-                <span class="method-start">23266 ms</span>
+                <span class="method-start">27670 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=loginTest_createNewPlaylist_newPlaylistCreated status=FAILURE method=HomepageTests....)</span>
-                <span class="method-start">26998 ms</span>
+                <span class="method-start">31894 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startUp</span>
-                <span class="method-start">27620 ms</span>
+                <span class="method-start">32512 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">scrollDown(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ, newZZZZZZZZZ)</span>
-                <span class="method-start">28192 ms</span>
+                <span class="method-start">33182 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=scrollDown status=FAILURE method=HomepageTests.scrollDown(java.lang.String, java.la...)</span>
-                <span class="method-start">32153 ms</span>
+                <span class="method-start">37436 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
