@@ -1,67 +1,58 @@
 package pageObjects;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.time.Duration;
-
-public class HomePage {
-    private WebDriver driver;
-    FluentWait<WebDriver> fluentWait;
-    FluentWait<WebDriver> fluentWaitWithHigherPolling;
-    private String homeButtonXpath = "//*[@class='home active']";
-    private String playlistCreatedSuccessMessage = "//*[@class='success show']";
-
+public class HomePage extends BasePage{
     public HomePage(WebDriver driver) {
-        this.driver = driver;
-        fluentWait = new FluentWait<WebDriver>(this.driver)
-                .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(100))
-                .ignoring(Exception.class)
-                .ignoring(StaleElementReferenceException.class);
-        this.fluentWaitWithHigherPolling = new FluentWait<WebDriver>(this.driver)
-                .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(1000))
-                .ignoring(Exception.class)
-                .ignoring(StaleElementReferenceException.class)
-                .ignoring(ElementClickInterceptedException.class);
+        super(driver);
     }
-
-    public boolean isHomepage() {
-        try {
-            fluentWait.until(x -> x.findElement(By.xpath(homeButtonXpath)));
+    public boolean isHomepage(){
+        try{
+            fluentWait.until(x->x.findElement(By.xpath(HomePageSelectors.homeButtonXpath)));
         } catch (TimeoutException err) {
             return false;
         }
         return true;
     }
-
-    public void addPlaylist(String playlist) {
-        var creatplaylist = driver.findElement(By.xpath("//*[@class='fa fa-plus-circle control create']"));
-        boolean clickSuccessful = false;
-        while(clickSuccessful == false) try {
-            fluentWait.until(driver -> driver.findElement(By.xpath("//*[@class='fa fa-plus-circle control create']")));
-            creatplaylist.click();
-            break;
-        } catch (ElementClickInterceptedException err) {
-            clickSuccessful = false;
-        }
-        WebElement searchField = driver.findElement(By.xpath("//*[@type='text'][1]"));
-        searchField.sendKeys(playlist);
-        searchField.sendKeys(Keys.ENTER);
+    public WebElement getPlusButton(){
+        explicitWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(HomePageSelectors.plusButtonCssSelector)));
+        return driver.findElement(By.cssSelector(HomePageSelectors.plusButtonCssSelector));
+    }
+    private WebElement getNewPlaylistNameField(){
+        return driver.findElement(By.xpath(HomePageSelectors.newPlaylistFieldXpath));
+    }
+    private String getPlaylistXpath(String name){
+        return "//a[text()='"+name+"']";
+    }
+    public void createNewPlaylist(String name) {
+        getPlusButton().click();
+        getNewPlaylistNameField().sendKeys(name);
+        getNewPlaylistNameField().sendKeys(Keys.ENTER);
+    }
+    public boolean isPlaylistCreated(String name){
+        var list = driver.findElements(By.xpath(getPlaylistXpath(name)));
+        return list.size()>0;
     }
 
+    public void leftHandScrollDown(String name) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement playlist = driver.findElement(By.xpath(getPlaylistXpath(name)));
+        js.executeScript("arguments[0].scrollIntoView();", playlist);
 
-    public boolean isPlayListCreated(String playlist) {
-        String playlistHeader = "//span[contains(text(),\""+playlist+"\")]";
-        try {
-            fluentWait.until(x -> x.findElement(By.xpath(playlistCreatedSuccessMessage)).isDisplayed());
-            fluentWait.until(x -> x.findElement(By.xpath(playlistHeader)).isDisplayed());
+//        Actions actions = new Actions(driver);
+//        actions.moveToElement(playlist);
+//        actions.perform();
+    }
 
-        } catch (TimeoutException err) {
-            return false;
-        }
-        return true;
+    public void renamePlayList(String oldName, String newName) {
+        WebElement playlist = driver.findElement(By.xpath(getPlaylistXpath(oldName)));
+        Actions actions = new Actions(driver);
+        actions.doubleClick(playlist).perform();
+        WebElement textField = driver.findElement(By.xpath("//*[@class='playlist playlist editing']/input"));
+        textField.sendKeys(Keys.CONTROL + "a");
+        textField.sendKeys(newName);
+        textField.sendKeys(Keys.ENTER);
     }
 }
-
