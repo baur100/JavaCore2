@@ -55,4 +55,5 @@ public class HomePage extends BasePage{
         textField.sendKeys(newName);
         textField.sendKeys(Keys.ENTER);
     }
+
 }

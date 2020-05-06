@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+    <Appenders>
+        <File name="LogTofile" fileName="logs/app.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m %ex%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <logger name="io.testpro" level="debug" additivity="false">
+            <AppenderRef ref="LogToFile"/>
+        </logger>
+        <Root level="info">
+            <AppenderRef ref="LogToFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

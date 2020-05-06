@@ -1,30 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Master Suite" parallel="classes" thread-count="4">
+<suite name="Master Suite" parallel="classes" thread-count="4" verbose="1">
+    <listeners>
+        <listener class-name="listeners.Listeners"/>
+    </listeners>
+    <parameter name="email" value="testpro.user02@testpro.io"/>
+    <parameter name="password" value="te$t$tudent02"/>
+    <parameter name="wrong-password" value="******"/>
+    <parameter name="playlist" value="zzzZZZzzz"/>
+    <parameter name="new-playlist" value="newZZZzzzZZzz"/>
     <test name="All tests" preserve-order="true">
         <classes>
             <class name="tests.HomepageTests">
                 <methods>
-                    <include name="loginTest_createNewPlaylist_newPlaylistCreated" />
-                    <include name="scrollDown" />
+                    <include name="loginTest_createNewPlaylist_newPlaylistCreated"/>
+                    <include name="scrollDown"/>
                 </methods>
             </class>
             <class name="tests.HomepageTests_new">
                 <methods>
-                    <include name="new_loginTest_createNewPlaylist_newPlaylistCreated" />
-                    <include name="new_scrollDown" />
+                    <include name="new_loginTest_createNewPlaylist_newPlaylistCreated"/>
+                    <include name="new_scrollDown"/>
                 </methods>
             </class>
             <class name="tests.LoginTests">
                 <methods>
-                    <include name="loginTest_correctCredentials_loggedToApp" />
-                    <include name="loginTest_incorrectCredentials_notLoggedToApp" />
+                    <include name="loginTest_correctCredentials_loggedToApp"/>
+                    <include name="loginTest_incorrectCredentials_notLoggedToApp"/>
+                    <include name="test_Fails"/>
                 </methods>
             </class>
             <class name="tests.LoginTests_new">
                 <methods>
-                    <include name="new_loginTest_correctCredentials_loggedToApp" />
-                    <include name="new_loginTest_incorrectCredentials_notLoggedToApp" />
+                    <include name="new_loginTest_correctCredentials_loggedToApp"/>
+                    <include name="new_loginTest_incorrectCredentials_notLoggedToApp"/>
                 </methods>
             </class>
         </classes>
