@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="DEBUG">
     <Appenders>
-        <File name="LogTofile" fileName="logs/app.log">
+        <File name="LogToFile" fileName="logs/app.log">
             <PatternLayout>
-                <Pattern>%d %p %c{1.} [%t] %m %ex%n</Pattern>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
             </PatternLayout>
         </File>
     </Appenders>
     <Loggers>
-        <logger name="io.testpro" level="debug" additivity="false">
+        <Logger name="io.testpro" level="debug" additivity="false">
             <AppenderRef ref="LogToFile"/>
-        </logger>
+        </Logger>
         <Root level="info">
             <AppenderRef ref="LogToFile"/>
         </Root>

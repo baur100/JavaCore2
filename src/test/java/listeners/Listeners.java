@@ -7,13 +7,12 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import tests.HomepageTests;
 
-public class Listeners implements ITestListener{
+public class Listeners implements ITestListener {
     private static Logger logger = LogManager.getLogger(HomepageTests.class);
-
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        System.out.println("test started"+iTestResult.getName());
-        logger.warn("Test started" + iTestResult.getName());
+        System.out.println("test started "+iTestResult.getName());
+        logger.warn("Test started " + iTestResult.getName());
 
     }
 
@@ -24,15 +23,13 @@ public class Listeners implements ITestListener{
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        logger.fatal("Test failed" + iTestResult.getName());
+        logger.fatal("Test failed " + iTestResult.getName());
 
     }
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
-        logger.error("Test skipped" + iTestResult.getName());
-
-
+        logger.error("Test skipped "+ iTestResult.getName());
     }
 
     @Override

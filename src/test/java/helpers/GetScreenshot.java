@@ -10,12 +10,12 @@ import java.io.IOException;
 
 public class GetScreenshot {
     public static void capture(WebDriver driver, String screenshotName){
-        try{
+        try {
             TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
-            File file=takesScreenshot.getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(file,new File("./screenshot/" + screenshotName + ".png"));
+            File file = takesScreenshot.getScreenshotAs((OutputType.FILE));
+            FileUtils.copyFile(file, new File("./screenshots/" + screenshotName +".png"));
         } catch (IOException e) {
-            System.out.println("File IO problem"+ e.getMessage());
+            System.out.println("File IO problem" + e.getMessage());
         }
     }
 }
