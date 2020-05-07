@@ -25,7 +25,7 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>${browser}.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
@@ -61,7 +61,5 @@
             <artifactId>log4j-core</artifactId>
             <version>2.13.2</version>
         </dependency>
-
-
     </dependencies>
 </project>
