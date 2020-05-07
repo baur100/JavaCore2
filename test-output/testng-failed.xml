@@ -11,19 +11,17 @@
     </listeners>
     <test thread-count="4" parallel="classes" name="All tests(failed)">
         <classes>
-            <class name="tests.LoginTests_new">
+            <class name="tests.HomePageTests">
                 <methods>
+                    <include name="homePageTest_AddPlaylist_NewPlaylistAdded" invocation-numbers="0"/>
                     <include name="startUp"/>
-                    <include name="loginTest_CorrectCredentials_LoggedToApp"/>
-                    <include name="loginTest_IncorrectCredentials_NotLoggedToApp"/>
                     <include name="tearDown"/>
                 </methods>
-            </class> <!-- tests.LoginTests_new -->
+            </class> <!-- tests.HomePageTests -->
             <class name="tests.LoginTests">
                 <methods>
-                    <include name="loginTest_IncorrectCredentials_NotLoggedToApp" invocation-numbers="0 0 0 0 0 0"/>
+                    <include name="test_Sum" invocation-numbers="2"/>
                     <include name="startUp"/>
-                    <include name="loginTest_CorrectCredentials_LoggedToApp" invocation-numbers="0"/>
                     <include name="tearDown"/>
                 </methods>
             </class> <!-- tests.LoginTests -->

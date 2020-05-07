@@ -17,25 +17,25 @@ public class HomePageTests_new extends BaseTest {
         Assert.assertTrue(homePage.isPlayListCreated());
     }
 
-    @Test
-    // Module_WhatTesting_ExpectedResult
-    public void new_homePageTest_Add5Playlists_New5PlaylistsAdded() {
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.openPage();
-        HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
-        homePage.setPlaylistName("ag20 " + homePage.getDate());
-        homePage.add5Playlist();
-    }
+//    @Test
+//    // Module_WhatTesting_ExpectedResult
+//    public void new_homePageTest_Add5Playlists_New5PlaylistsAdded() {
+//        LoginPage loginPage = new LoginPage(driver);
+//        loginPage.openPage();
+//        HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
+//        homePage.setPlaylistName("ag20 " + homePage.getDate());
+//        homePage.add5Playlist();
+//    }
 
-    @Test
-    // Module_WhatTesting_ExpectedResult
-    public void new_homePageTest_DeleteSimilarPlaylists_SimilarPlaylistSDeleted() {
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.openPage();
-        HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
-        homePage.deletePlaylistsSimilarNames();
-        Assert.assertFalse(homePage.isSimilarPlaylistsCreated());
-    }
+//    @Test
+//    // Module_WhatTesting_ExpectedResult
+//    public void new_homePageTest_DeleteSimilarPlaylists_SimilarPlaylistSDeleted() {
+//        LoginPage loginPage = new LoginPage(driver);
+//        loginPage.openPage();
+//        HomePage homePage = loginPage.login("testpro.user02@testpro.io", "te$t$tudent02");
+//        homePage.deletePlaylistsSimilarNames();
+//        Assert.assertFalse(homePage.isSimilarPlaylistsCreated());
+//    }
 
     @Test
     // Module_WhatTesting_ExpectedResult

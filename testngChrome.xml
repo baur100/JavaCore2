@@ -9,11 +9,12 @@
     <parameter name="wrong-password" value="********"/>
     <parameter name="playlist" value="agAGagAGag"/>
     <parameter name="new-playlist" value="ag20AG20ag20AG20"/>
+    <parameter name="browser" value="CHROME"/>
     <test name="All tests">
         <classes>
             <class name="tests.HomePageTests">
                 <methods>
-                    <exclude name="homePageTest_AddPlaylist_NewPlaylistAdded"/>
+                    <include name="homePageTest_AddPlaylist_NewPlaylistAdded"/>
                     <exclude name="homePageTest_Add5Playlists_New5PlaylistsAdded"/>
                     <exclude name="homePageTest_DeleteSimilarPlaylists_SimilarPlaylistSDeleted"/>
                     <exclude name="homePageTest_EditLastPlaylist_LastPlaylistEdited"/>
@@ -31,9 +32,9 @@
             </class>
             <class name="tests.LoginTests">
                 <methods>
-                    <include name="loginTest_CorrectCredentials_LoggedToApp"/>
-                    <include name="loginTest_IncorrectCredentials_NotLoggedToApp"/>
-                    <include name="test_Fails"/>
+                    <exclude name="loginTest_CorrectCredentials_LoggedToApp"/>
+                    <exclude name="loginTest_IncorrectCredentials_NotLoggedToApp"/>
+                    <exclude name="test_Fails"/>
                 </methods>
             </class>
             <class name="tests.LoginTests_new">

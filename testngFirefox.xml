@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Master Suite" parallel="classes" thread-count="4">
+    <listeners>
+        <listener class-name="listeners.Listeners"/>
+    </listeners>
+    <parameter name="email" value="testpro.user02@testpro.io"/>
+    <parameter name="password" value="te$t$tudent02"/>
+    <parameter name="wrong-password" value="********"/>
+    <parameter name="playlist" value="agAGagAGag"/>
+    <parameter name="new-playlist" value="ag20AG20ag20AG20"/>
+    <parameter name="browser" value="FIREFOX"/>
+    <test name="All tests">
+        <classes>
+            <class name="tests.HomePageTests">
+                <methods>
+                    <include name="homePageTest_AddPlaylist_NewPlaylistAdded"/>
+                    <exclude name="homePageTest_Add5Playlists_New5PlaylistsAdded"/>
+                    <exclude name="homePageTest_DeleteSimilarPlaylists_SimilarPlaylistSDeleted"/>
+                    <exclude name="homePageTest_EditLastPlaylist_LastPlaylistEdited"/>
+                    <exclude name="playlist_addSongToPlaylist_SongsAddedToPlaylist"/>
+                </methods>
+            </class>
+            <class name="tests.HomePageTests_new">
+                <methods>
+                    <exclude name="new_homePageTest_AddPlaylist_NewPlaylistAdded"/>
+                    <exclude name="new_homePageTest_Add5Playlists_New5PlaylistsAdded"/>
+                    <exclude name="new_homePageTest_DeleteSimilarPlaylists_SimilarPlaylistSDeleted"/>
+                    <exclude name="new_homePageTest_EditLastPlaylist_LastPlaylistEdited"/>
+                    <exclude name="new_playlist_addSongToPlaylist_SongsAddedToPlaylist"/>
+                </methods>
+            </class>
+            <class name="tests.LoginTests">
+                <methods>
+                    <exclude name="loginTest_CorrectCredentials_LoggedToApp"/>
+                    <exclude name="loginTest_IncorrectCredentials_NotLoggedToApp"/>
+                    <exclude name="test_Fails"/>
+                </methods>
+            </class>
+            <class name="tests.LoginTests_new">
+                <methods>
+                    <exclude name="new_loginTest_CorrectCredentials_LoggedToApp"/>
+                    <exclude name="new_loginTest_IncorrectCredentials_NotLoggedToApp"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

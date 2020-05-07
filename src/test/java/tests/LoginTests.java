@@ -63,9 +63,9 @@ public class LoginTests extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "StringSummary")
-    public void test_String_Sum(String a, String b, String c) {
-        String xx = a + b;
-        Assert.assertEquals(a + b, c);
-    }
+//    @Test(dataProvider = "StringSummary")
+//    public void test_String_Sum(String a, String b, String c) {
+//        String xx = a + b;
+//        Assert.assertEquals(a + b, c);
+//    }
 }

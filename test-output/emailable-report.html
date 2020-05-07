@@ -90,11 +90,11 @@
     </tr>
     <tr>
         <td><a href="#t0">All tests</a></td>
+        <td class="num">5</td>
         <td class="num">0</td>
         <td class="num">0</td>
-        <td class="num attn">5</td>
-        <td class="num attn">4</td>
-        <td class="num">35,900</td>
+        <td class="num attn">2</td>
+        <td class="num">15,740</td>
         <td></td>
         <td></td>
     </tr>
@@ -118,97 +118,90 @@
         <th colspan="4">All tests &#8212; failed</th>
     </tr>
     <tr class="failedeven">
-        <td rowspan="2">tests.LoginTests</td>
-        <td><a href="#m0">loginTest_CorrectCredentials_LoggedToApp</a></td>
-        <td rowspan="1">1588387810434</td>
-        <td rowspan="1">1582</td>
-    </tr>
-    <tr class="failedeven">
-        <td><a href="#m1">loginTest_IncorrectCredentials_NotLoggedToApp</a></td>
-        <td rowspan="1">1588387840326</td>
-        <td rowspan="1">1538</td>
+        <td rowspan="1">tests.HomePageTests</td>
+        <td><a href="#m0">homePageTest_AddPlaylist_NewPlaylistAdded</a></td>
+        <td rowspan="1">1588445495755</td>
+        <td rowspan="1">6526</td>
     </tr>
     <tr class="failedodd">
-        <td rowspan="2">tests.LoginTests_new</td>
-        <td><a href="#m2">loginTest_CorrectCredentials_LoggedToApp</a></td>
-        <td rowspan="1">1588387810434</td>
-        <td rowspan="1">1590</td>
-    </tr>
-    <tr class="failedodd">
-        <td><a href="#m3">loginTest_IncorrectCredentials_NotLoggedToApp</a></td>
-        <td rowspan="1">1588387815933</td>
-        <td rowspan="1">1308</td>
+        <td rowspan="1">tests.LoginTests</td>
+        <td><a href="#m1">test_Sum</a></td>
+        <td rowspan="1">1588445502992</td>
+        <td rowspan="1">0</td>
     </tr>
     <tr>
-        <th colspan="4">All tests &#8212; retried</th>
+        <th colspan="4">All tests &#8212; passed</th>
     </tr>
-    <tr class="retriedeven">
-        <td rowspan="5">tests.LoginTests</td>
-        <td><a href="#m4">loginTest_IncorrectCredentials_NotLoggedToApp</a></td>
-        <td rowspan="5">1588387835516</td>
-        <td rowspan="5">1282</td>
+    <tr class="passedeven">
+        <td rowspan="3">tests.LoginTests</td>
+        <td><a href="#m2">test_Sum</a></td>
+        <td rowspan="3">1588445506862</td>
+        <td rowspan="3">0</td>
     </tr>
-    <tr class="retriedeven">
-        <td><a href="#m5">loginTest_IncorrectCredentials_NotLoggedToApp</a></td>
+    <tr class="passedeven">
+        <td><a href="#m3">test_Sum</a></td>
     </tr>
-    <tr class="retriedeven">
+    <tr class="passedeven">
+        <td><a href="#m4">test_Sum</a></td>
+    </tr>
+    <tr class="passedodd">
+        <td rowspan="2">tests.LoginTests_new</td>
+        <td><a href="#m5">loginTest_CorrectCredentials_LoggedToApp</a></td>
+        <td rowspan="1">1588445495742</td>
+        <td rowspan="1">5340</td>
+    </tr>
+    <tr class="passedodd">
         <td><a href="#m6">loginTest_IncorrectCredentials_NotLoggedToApp</a></td>
-    </tr>
-    <tr class="retriedeven">
-        <td><a href="#m7">loginTest_IncorrectCredentials_NotLoggedToApp</a></td>
-    </tr>
-    <tr class="retriedeven">
-        <td><a href="#m8">loginTest_IncorrectCredentials_NotLoggedToApp</a></td>
+        <td rowspan="1">1588445504665</td>
+        <td rowspan="1">2628</td>
     </tr>
     </tbody>
 </table>
 <h2>All tests</h2>
-<h3 id="m0">tests.LoginTests#loginTest_CorrectCredentials_LoggedToApp</h3>
+<h3 id="m0">tests.HomePageTests#homePageTest_AddPlaylist_NewPlaylistAdded</h3>
 <table class="result">
     <tr class="param">
         <th>Parameter #1</th>
         <th>Parameter #2</th>
+        <th>Parameter #3</th>
     </tr>
     <tr class="param stripe">
         <td>testpro.user02@testpro.io</td>
         <td>te$t$tudent02</td>
+        <td>agAGagAGag</td>
     </tr>
     <tr>
-        <th colspan="2">Exception</th>
+        <th colspan="3">Exception</th>
     </tr>
     <tr>
-        <td colspan="2">
-            <div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate
-                element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@type=&apos;777submit&apos;]&quot;}
+        <td colspan="3">
+            <div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted:
+                Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point
+                (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side
+                side-nav showing&quot;&gt;...&lt;/nav&gt;
                 (Session info: headless chrome=81.0.4044.129)
-                For documentation on this error, please visit:
-                https://www.seleniumhq.org/exceptions/no_such_element.html
                 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
                 System info: host: &apos;DESKTOP-QPPOL30&apos;, ip: &apos;192.168.1.138&apos;, os.name: &apos;Windows 10&apos;,
                 os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.1&apos;
                 Driver info: org.openqa.selenium.chrome.ChromeDriver
                 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome:
                 {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...},
-                goog:chromeOptions: {debuggerAddress: localhost:53962}, javascriptEnabled: true,
+                goog:chromeOptions: {debuggerAddress: localhost:53970}, javascriptEnabled: true,
                 networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS,
                 proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad:
                 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators:
                 true}
-                Session ID: e3be1521430e63bc5dd31cfc21f5fd62
-                *** Element info: {Using=xpath, value=//*[@type=&apos;777submit&apos;]}
+                Session ID: 2283ac71e59c2fd1b67ac58f1b88f5a6
                 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
                 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
                 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
                 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
                 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
                 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-                at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-                at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
-                at pageObjects.LoginPage.login(LoginPage.java:31)
-                at tests.LoginTests.loginTest_CorrectCredentials_LoggedToApp(LoginTests.java:19)
+                at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+                at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+                at pageObjects.HomePage.addPlaylist(HomePage.java:128)
+                at tests.HomePageTests.homePageTest_AddPlaylist_NewPlaylistAdded(HomePageTests.java:26)
                 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
                 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
                 at java.base/java.lang.Thread.run(Thread.java:832)
@@ -218,52 +211,25 @@
     </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.LoginTests#loginTest_IncorrectCredentials_NotLoggedToApp</h3>
+<h3 id="m1">tests.LoginTests#test_Sum</h3>
 <table class="result">
     <tr class="param">
         <th>Parameter #1</th>
         <th>Parameter #2</th>
+        <th>Parameter #3</th>
     </tr>
     <tr class="param stripe">
-        <td>testpro.user02@testpro.io</td>
-        <td>********</td>
+        <td>3</td>
+        <td>3</td>
+        <td>7</td>
     </tr>
     <tr>
-        <th colspan="2">Exception</th>
+        <th colspan="3">Exception</th>
     </tr>
     <tr>
-        <td colspan="2">
-            <div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate
-                element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@type=&apos;777submit&apos;]&quot;}
-                (Session info: headless chrome=81.0.4044.129)
-                For documentation on this error, please visit:
-                https://www.seleniumhq.org/exceptions/no_such_element.html
-                Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-                System info: host: &apos;DESKTOP-QPPOL30&apos;, ip: &apos;192.168.1.138&apos;, os.name: &apos;Windows 10&apos;,
-                os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.1&apos;
-                Driver info: org.openqa.selenium.chrome.ChromeDriver
-                Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome:
-                {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...},
-                goog:chromeOptions: {debuggerAddress: localhost:54086}, javascriptEnabled: true,
-                networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS,
-                proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad:
-                300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators:
-                true}
-                Session ID: 146408858fdff252b48faddea8ecce7f
-                *** Element info: {Using=xpath, value=//*[@type=&apos;777submit&apos;]}
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-                at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-                at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-                at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-                at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-                at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
-                at pageObjects.LoginPage.login(LoginPage.java:31)
-                at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
+        <td colspan="3">
+            <div class="stacktrace">java.lang.AssertionError: expected [7] but found [6]
+                at tests.LoginTests.test_Sum(LoginTests.java:52)
                 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
                 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
                 at java.base/java.lang.Thread.run(Thread.java:832)
@@ -273,372 +239,59 @@
     </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.LoginTests_new#loginTest_CorrectCredentials_LoggedToApp</h3>
-<table class="result">
-    <tr>
-        <th>Exception</th>
-    </tr>
-    <tr>
-        <td>
-            <div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate
-                element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@type=&apos;777submit&apos;]&quot;}
-                (Session info: headless chrome=81.0.4044.129)
-                For documentation on this error, please visit:
-                https://www.seleniumhq.org/exceptions/no_such_element.html
-                Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-                System info: host: &apos;DESKTOP-QPPOL30&apos;, ip: &apos;192.168.1.138&apos;, os.name: &apos;Windows 10&apos;,
-                os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.1&apos;
-                Driver info: org.openqa.selenium.chrome.ChromeDriver
-                Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome:
-                {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...},
-                goog:chromeOptions: {debuggerAddress: localhost:53963}, javascriptEnabled: true,
-                networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS,
-                proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad:
-                300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators:
-                true}
-                Session ID: 02ba15cff713ffd6d882d0c0ca4abd8b
-                *** Element info: {Using=xpath, value=//*[@type=&apos;777submit&apos;]}
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-                at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-                at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-                at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-                at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-                at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
-                at pageObjects.LoginPage.login(LoginPage.java:31)
-                at tests.LoginTests_new.loginTest_CorrectCredentials_LoggedToApp(LoginTests_new.java:15)
-                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-                at java.base/java.lang.Thread.run(Thread.java:832)
-                ... Removed 17 stack frames
-            </div>
-        </td>
-    </tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.LoginTests_new#loginTest_IncorrectCredentials_NotLoggedToApp</h3>
-<table class="result">
-    <tr>
-        <th>Exception</th>
-    </tr>
-    <tr>
-        <td>
-            <div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate
-                element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@type=&apos;777submit&apos;]&quot;}
-                (Session info: headless chrome=81.0.4044.129)
-                For documentation on this error, please visit:
-                https://www.seleniumhq.org/exceptions/no_such_element.html
-                Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-                System info: host: &apos;DESKTOP-QPPOL30&apos;, ip: &apos;192.168.1.138&apos;, os.name: &apos;Windows 10&apos;,
-                os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.1&apos;
-                Driver info: org.openqa.selenium.chrome.ChromeDriver
-                Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome:
-                {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...},
-                goog:chromeOptions: {debuggerAddress: localhost:53993}, javascriptEnabled: true,
-                networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS,
-                proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad:
-                300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators:
-                true}
-                Session ID: 734da819a69b1aae504774b7bcbd0f13
-                *** Element info: {Using=xpath, value=//*[@type=&apos;777submit&apos;]}
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-                at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-                at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-                at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-                at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-                at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
-                at pageObjects.LoginPage.login(LoginPage.java:31)
-                at tests.LoginTests_new.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests_new.java:24)
-                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-                at java.base/java.lang.Thread.run(Thread.java:832)
-                ... Removed 17 stack frames
-            </div>
-        </td>
-    </tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.LoginTests#loginTest_IncorrectCredentials_NotLoggedToApp</h3>
+<h3 id="m2">tests.LoginTests#test_Sum</h3>
 <table class="result">
     <tr class="param">
         <th>Parameter #1</th>
         <th>Parameter #2</th>
+        <th>Parameter #3</th>
     </tr>
     <tr class="param stripe">
-        <td>testpro.user02@testpro.io</td>
-        <td>********</td>
-    </tr>
-    <tr>
-        <th colspan="2">Exception</th>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate
-                element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@type=&apos;777submit&apos;]&quot;}
-                (Session info: headless chrome=81.0.4044.129)
-                For documentation on this error, please visit:
-                https://www.seleniumhq.org/exceptions/no_such_element.html
-                Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-                System info: host: &apos;DESKTOP-QPPOL30&apos;, ip: &apos;192.168.1.138&apos;, os.name: &apos;Windows 10&apos;,
-                os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.1&apos;
-                Driver info: org.openqa.selenium.chrome.ChromeDriver
-                Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome:
-                {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...},
-                goog:chromeOptions: {debuggerAddress: localhost:54067}, javascriptEnabled: true,
-                networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS,
-                proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad:
-                300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators:
-                true}
-                Session ID: 98d10f43558d796bae81ada02fad669e
-                *** Element info: {Using=xpath, value=//*[@type=&apos;777submit&apos;]}
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-                at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-                at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-                at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-                at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-                at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
-                at pageObjects.LoginPage.login(LoginPage.java:31)
-                at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
-                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-                at java.base/java.lang.Thread.run(Thread.java:832)
-                ... Removed 17 stack frames
-            </div>
-        </td>
+        <td>4</td>
+        <td>3</td>
+        <td>7</td>
     </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.LoginTests#loginTest_IncorrectCredentials_NotLoggedToApp</h3>
+<h3 id="m3">tests.LoginTests#test_Sum</h3>
 <table class="result">
     <tr class="param">
         <th>Parameter #1</th>
         <th>Parameter #2</th>
+        <th>Parameter #3</th>
     </tr>
     <tr class="param stripe">
-        <td>testpro.user02@testpro.io</td>
-        <td>********</td>
-    </tr>
-    <tr>
-        <th colspan="2">Exception</th>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate
-                element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@type=&apos;777submit&apos;]&quot;}
-                (Session info: headless chrome=81.0.4044.129)
-                For documentation on this error, please visit:
-                https://www.seleniumhq.org/exceptions/no_such_element.html
-                Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-                System info: host: &apos;DESKTOP-QPPOL30&apos;, ip: &apos;192.168.1.138&apos;, os.name: &apos;Windows 10&apos;,
-                os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.1&apos;
-                Driver info: org.openqa.selenium.chrome.ChromeDriver
-                Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome:
-                {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...},
-                goog:chromeOptions: {debuggerAddress: localhost:54053}, javascriptEnabled: true,
-                networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS,
-                proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad:
-                300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators:
-                true}
-                Session ID: db52d2348966fe1c01eb5bb80c2af242
-                *** Element info: {Using=xpath, value=//*[@type=&apos;777submit&apos;]}
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-                at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-                at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-                at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-                at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-                at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
-                at pageObjects.LoginPage.login(LoginPage.java:31)
-                at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
-                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-                at java.base/java.lang.Thread.run(Thread.java:832)
-                ... Removed 17 stack frames
-            </div>
-        </td>
+        <td>32</td>
+        <td>2</td>
+        <td>34</td>
     </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">tests.LoginTests#loginTest_IncorrectCredentials_NotLoggedToApp</h3>
+<h3 id="m4">tests.LoginTests#test_Sum</h3>
 <table class="result">
     <tr class="param">
         <th>Parameter #1</th>
         <th>Parameter #2</th>
+        <th>Parameter #3</th>
     </tr>
     <tr class="param stripe">
-        <td>testpro.user02@testpro.io</td>
-        <td>********</td>
-    </tr>
-    <tr>
-        <th colspan="2">Exception</th>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate
-                element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@type=&apos;777submit&apos;]&quot;}
-                (Session info: headless chrome=81.0.4044.129)
-                For documentation on this error, please visit:
-                https://www.seleniumhq.org/exceptions/no_such_element.html
-                Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-                System info: host: &apos;DESKTOP-QPPOL30&apos;, ip: &apos;192.168.1.138&apos;, os.name: &apos;Windows 10&apos;,
-                os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.1&apos;
-                Driver info: org.openqa.selenium.chrome.ChromeDriver
-                Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome:
-                {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...},
-                goog:chromeOptions: {debuggerAddress: localhost:53992}, javascriptEnabled: true,
-                networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS,
-                proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad:
-                300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators:
-                true}
-                Session ID: 3dca194ffc47b93807cce29dd88de0c0
-                *** Element info: {Using=xpath, value=//*[@type=&apos;777submit&apos;]}
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-                at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-                at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-                at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-                at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-                at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
-                at pageObjects.LoginPage.login(LoginPage.java:31)
-                at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
-                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-                at java.base/java.lang.Thread.run(Thread.java:832)
-                ... Removed 17 stack frames
-            </div>
-        </td>
+        <td>2</td>
+        <td>8</td>
+        <td>10</td>
     </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">tests.LoginTests#loginTest_IncorrectCredentials_NotLoggedToApp</h3>
+<h3 id="m5">tests.LoginTests_new#loginTest_CorrectCredentials_LoggedToApp</h3>
 <table class="result">
-    <tr class="param">
-        <th>Parameter #1</th>
-        <th>Parameter #2</th>
-    </tr>
-    <tr class="param stripe">
-        <td>testpro.user02@testpro.io</td>
-        <td>********</td>
-    </tr>
     <tr>
-        <th colspan="2">Exception</th>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate
-                element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@type=&apos;777submit&apos;]&quot;}
-                (Session info: headless chrome=81.0.4044.129)
-                For documentation on this error, please visit:
-                https://www.seleniumhq.org/exceptions/no_such_element.html
-                Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-                System info: host: &apos;DESKTOP-QPPOL30&apos;, ip: &apos;192.168.1.138&apos;, os.name: &apos;Windows 10&apos;,
-                os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.1&apos;
-                Driver info: org.openqa.selenium.chrome.ChromeDriver
-                Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome:
-                {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...},
-                goog:chromeOptions: {debuggerAddress: localhost:54035}, javascriptEnabled: true,
-                networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS,
-                proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad:
-                300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators:
-                true}
-                Session ID: 945e100636e2f99b78057bd1cad13513
-                *** Element info: {Using=xpath, value=//*[@type=&apos;777submit&apos;]}
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-                at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-                at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-                at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-                at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-                at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
-                at pageObjects.LoginPage.login(LoginPage.java:31)
-                at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
-                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-                at java.base/java.lang.Thread.run(Thread.java:832)
-                ... Removed 17 stack frames
-            </div>
-        </td>
+        <th class="invisible"/>
     </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">tests.LoginTests#loginTest_IncorrectCredentials_NotLoggedToApp</h3>
+<h3 id="m6">tests.LoginTests_new#loginTest_IncorrectCredentials_NotLoggedToApp</h3>
 <table class="result">
-    <tr class="param">
-        <th>Parameter #1</th>
-        <th>Parameter #2</th>
-    </tr>
-    <tr class="param stripe">
-        <td>testpro.user02@testpro.io</td>
-        <td>********</td>
-    </tr>
     <tr>
-        <th colspan="2">Exception</th>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate
-                element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@type=&apos;777submit&apos;]&quot;}
-                (Session info: headless chrome=81.0.4044.129)
-                For documentation on this error, please visit:
-                https://www.seleniumhq.org/exceptions/no_such_element.html
-                Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-                System info: host: &apos;DESKTOP-QPPOL30&apos;, ip: &apos;192.168.1.138&apos;, os.name: &apos;Windows 10&apos;,
-                os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14.0.1&apos;
-                Driver info: org.openqa.selenium.chrome.ChromeDriver
-                Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome:
-                {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\Anton\AppData\Loca...},
-                goog:chromeOptions: {debuggerAddress: localhost:54022}, javascriptEnabled: true,
-                networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS,
-                proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad:
-                300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators:
-                true}
-                Session ID: f1a8aec2ead8f216634e12274ee1c808
-                *** Element info: {Using=xpath, value=//*[@type=&apos;777submit&apos;]}
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-                at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-                at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-                at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-                at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-                at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-                at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-                at pageObjects.LoginPage.getLoginButton(LoginPage.java:25)
-                at pageObjects.LoginPage.login(LoginPage.java:31)
-                at tests.LoginTests.loginTest_IncorrectCredentials_NotLoggedToApp(LoginTests.java:29)
-                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-                at java.base/java.lang.Thread.run(Thread.java:832)
-                ... Removed 17 stack frames
-            </div>
-        </td>
+        <th class="invisible"/>
     </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
