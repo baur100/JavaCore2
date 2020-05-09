@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Master Suite</th></tr><tr><td><a href="#t0">All tests</a></td><td class="num">4</td><td class="num attn">2</td><td class="num attn">4</td><td class="num">38,046</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Master Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">All tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">tests.HomepageTests</td><td><a href="#m0">loginTest_createNewPlaylist_newPlaylistCreated</a></td><td rowspan="1">1588554472560</td><td rowspan="1">4008</td></tr><tr class="failedeven"><td><a href="#m1">scrollDown</a></td><td rowspan="1">1588554480600</td><td rowspan="1">3740</td></tr><tr class="failedodd"><td rowspan="2">tests.HomepageTests_new</td><td><a href="#m2">new_loginTest_createNewPlaylist_newPlaylistCreated</a></td><td rowspan="1">1588554451376</td><td rowspan="1">8783</td></tr><tr class="failedodd"><td><a href="#m3">new_scrollDown</a></td><td rowspan="1">1588554464259</td><td rowspan="1">5650</td></tr><tr><th colspan="4">All tests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">tests.HomepageTests</td><td><a href="#m4">loginTest_createNewPlaylist_newPlaylistCreated</a></td><td rowspan="2">1588554464304</td><td rowspan="2">4665</td></tr><tr class="skippedeven"><td><a href="#m5">loginTest_createNewPlaylist_newPlaylistCreated</a></td></tr><tr><th colspan="4">All tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.LoginTests</td><td><a href="#m6">loginTest_correctCredentials_loggedToApp</a></td><td rowspan="1">1588554451376</td><td rowspan="1">7173</td></tr><tr class="passedeven"><td><a href="#m7">loginTest_incorrectCredentials_notLoggedToApp</a></td><td rowspan="1">1588554462177</td><td rowspan="1">2555</td></tr><tr class="passedodd"><td rowspan="2">tests.LoginTests_new</td><td><a href="#m8">new_loginTest_correctCredentials_loggedToApp</a></td><td rowspan="1">1588554451376</td><td rowspan="1">6162</td></tr><tr class="passedodd"><td><a href="#m9">new_loginTest_incorrectCredentials_notLoggedToApp</a></td><td rowspan="1">1588554461150</td><td rowspan="1">2076</td></tr></tbody></table><h2>All tests</h2><h3 id="m0">tests.HomepageTests#loginTest_createNewPlaylist_newPlaylistCreated</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testpro.user02@testpro.io</td><td>te$t$tudent02</td><td>zzZZzzZZ</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52993}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3063ba811f977efe89b82d7711908860
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">tests.HomepageTests#scrollDown</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>testpro.user02@testpro.io</td><td>te$t$tudent02</td><td>zzZZzzZZ</td><td>newZZZZZZZZZ</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53015}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 32712f28dbd224c3549f06f90ee6fa1a
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests.scrollDown(HomepageTests.java:35)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">tests.HomepageTests_new#new_loginTest_createNewPlaylist_newPlaylistCreated</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52866}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8c444ad715215aa814c7d7c3ad28957a
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests_new.new_loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests_new.java:14)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">tests.HomepageTests_new#new_scrollDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52953}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 084ad53abe263b127e15afd2166c6db3
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests_new.new_scrollDown(HomepageTests_new.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m4">tests.HomepageTests#loginTest_createNewPlaylist_newPlaylistCreated</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testpro.user02@testpro.io</td><td>te$t$tudent02</td><td>zzZZzzZZ</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52954}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ef8ac6c8568587205788a83c05872028
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m5">tests.HomepageTests#loginTest_createNewPlaylist_newPlaylistCreated</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testpro.user02@testpro.io</td><td>te$t$tudent02</td><td>zzZZzzZZ</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52867}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2970254833708fa6221e0abba0420d96
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m6">tests.LoginTests#loginTest_correctCredentials_loggedToApp</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>testpro.user02@testpro.io</td><td>te$t$tudent02</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m7">tests.LoginTests#loginTest_incorrectCredentials_notLoggedToApp</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>testpro.user02@testpro.io</td><td>*******</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m8">tests.LoginTests_new#new_loginTest_correctCredentials_loggedToApp</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m9">tests.LoginTests_new#new_loginTest_incorrectCredentials_notLoggedToApp</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>

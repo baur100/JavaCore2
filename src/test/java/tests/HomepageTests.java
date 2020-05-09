@@ -4,13 +4,12 @@ import listeners.RetryAnalyzer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.ITestResult;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
-public class HomepageTests extends BaseTest{
+public class HomepageTests extends tests.BaseTest {
     private static Logger logger = LogManager.getLogger(HomepageTests.class);
     @Parameters({"email","password","playlist"})
     @Test(retryAnalyzer = RetryAnalyzer.class)

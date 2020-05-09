@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Master_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Master Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Master_Suite" class="navigator-link ">
+                    <span>C:\Users\shsmi\Dropbox\QA\TestPro\JavaCore2\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Master_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Master_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Master_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Master_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Master_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Master_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">10 methods, 4 failed,  2 skipped,  4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Master_Suite" class="hide-methods failed suite-Master_Suite"> (hide)</a> <!-- hide-methods failed suite-Master_Suite -->
+                      <a href="#" panel-name="suite-Master_Suite" class="show-methods failed suite-Master_Suite"> (show)</a> <!-- show-methods failed suite-Master_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Master_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="tests.HomepageTests" class="method navigator-link" hash-for-method="loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)">loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="tests.HomepageTests_new" class="method navigator-link" hash-for-method="new_loginTest_createNewPlaylist_newPlaylistCreated">new_loginTest_createNewPlaylist_newPlaylistCreated</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="tests.HomepageTests_new" class="method navigator-link" hash-for-method="new_scrollDown">new_scrollDown</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="tests.HomepageTests" class="method navigator-link" hash-for-method="scrollDown(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ, newZZZZZZZZZ)">scrollDown(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ, newZZZZZZZZZ)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Master_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Master_Suite" class="hide-methods skipped suite-Master_Suite"> (hide)</a> <!-- hide-methods skipped suite-Master_Suite -->
+                      <a href="#" panel-name="suite-Master_Suite" class="show-methods skipped suite-Master_Suite"> (show)</a> <!-- show-methods skipped suite-Master_Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Master_Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="tests.HomepageTests" class="method navigator-link" hash-for-method="loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)">loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="tests.HomepageTests" class="method navigator-link" hash-for-method="loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)">loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Master_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Master_Suite" class="hide-methods passed suite-Master_Suite"> (hide)</a> <!-- hide-methods passed suite-Master_Suite -->
+                      <a href="#" panel-name="suite-Master_Suite" class="show-methods passed suite-Master_Suite"> (show)</a> <!-- show-methods passed suite-Master_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Master_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="loginTest_correctCredentials_loggedToApp(testpro.user02@testpro.io, te$t$tudent02)">loginTest_correctCredentials_loggedToApp(testpro.user02@testpro.io, te$t$tudent02)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="tests.LoginTests" class="method navigator-link" hash-for-method="loginTest_incorrectCredentials_notLoggedToApp(testpro.user02@testpro.io, *******)">loginTest_incorrectCredentials_notLoggedToApp(testpro.user02@testpro.io, *******)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="tests.LoginTests_new" class="method navigator-link" hash-for-method="new_loginTest_correctCredentials_loggedToApp">new_loginTest_correctCredentials_loggedToApp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Master_Suite" title="tests.LoginTests_new" class="method navigator-link" hash-for-method="new_loginTest_incorrectCredentials_notLoggedToApp">new_loginTest_incorrectCredentials_notLoggedToApp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Master_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Master_Suite" class="panel Master_Suite">
+          <div class="suite-Master_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.HomepageTests_new</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="new_loginTest_createNewPlaylist_newPlaylistCreated">
+                  </a> <!-- new_loginTest_createNewPlaylist_newPlaylistCreated -->
+                  <span class="method-name">new_loginTest_createNewPlaylist_newPlaylistCreated</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52866}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8c444ad715215aa814c7d7c3ad28957a
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests_new.new_loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests_new.java:14)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="new_scrollDown">
+                  </a> <!-- new_scrollDown -->
+                  <span class="method-name">new_scrollDown</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52953}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 084ad53abe263b127e15afd2166c6db3
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests_new.new_scrollDown(HomepageTests_new.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-failed -->
+          <div class="suite-Master_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.HomepageTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)">
+                  </a> <!-- loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ) -->
+                  <span class="method-name">loginTest_createNewPlaylist_newPlaylistCreated</span>
+                  <span class="parameters">(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52993}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3063ba811f977efe89b82d7711908860
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="scrollDown(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ, newZZZZZZZZZ)">
+                  </a> <!-- scrollDown(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ, newZZZZZZZZZ) -->
+                  <span class="method-name">scrollDown</span>
+                  <span class="parameters">(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ, newZZZZZZZZZ)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53015}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 32712f28dbd224c3549f06f90ee6fa1a
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests.scrollDown(HomepageTests.java:35)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-failed -->
+          <div class="suite-Master_Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.HomepageTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)">
+                  </a> <!-- loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ) -->
+                  <span class="method-name">loginTest_createNewPlaylist_newPlaylistCreated</span>
+                  <span class="parameters">(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52954}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ef8ac6c8568587205788a83c05872028
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)">
+                  </a> <!-- loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ) -->
+                  <span class="method-name">loginTest_createNewPlaylist_newPlaylistCreated</span>
+                  <span class="parameters">(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;i class=&quot;fa fa-plus-circle control create&quot;&gt;&lt;/i&gt; is not clickable at point (233, 408). Other element would receive the click: &lt;nav id=&quot;sidebar&quot; class=&quot;side side-nav showing&quot;&gt;...&lt;/nav&gt;
+  (Session info: headless chrome=81.0.4044.129)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1TJR8E3&apos;, ip: &apos;192.168.128.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;13.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\shsmi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52867}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2970254833708fa6221e0abba0420d96
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.HomePage.createNewPlaylist(HomePage.java:30)
+	at tests.HomepageTests.loginTest_createNewPlaylist_newPlaylistCreated(HomepageTests.java:24)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-skipped -->
+          <div class="suite-Master_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.LoginTests_new</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="new_loginTest_correctCredentials_loggedToApp">
+                  </a> <!-- new_loginTest_correctCredentials_loggedToApp -->
+                  <span class="method-name">new_loginTest_correctCredentials_loggedToApp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="new_loginTest_incorrectCredentials_notLoggedToApp">
+                  </a> <!-- new_loginTest_incorrectCredentials_notLoggedToApp -->
+                  <span class="method-name">new_loginTest_incorrectCredentials_notLoggedToApp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-passed -->
+          <div class="suite-Master_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.LoginTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest_correctCredentials_loggedToApp(testpro.user02@testpro.io, te$t$tudent02)">
+                  </a> <!-- loginTest_correctCredentials_loggedToApp(testpro.user02@testpro.io, te$t$tudent02) -->
+                  <span class="method-name">loginTest_correctCredentials_loggedToApp</span>
+                  <span class="parameters">(testpro.user02@testpro.io, te$t$tudent02)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest_incorrectCredentials_notLoggedToApp(testpro.user02@testpro.io, *******)">
+                  </a> <!-- loginTest_incorrectCredentials_notLoggedToApp(testpro.user02@testpro.io, *******) -->
+                  <span class="method-name">loginTest_incorrectCredentials_notLoggedToApp</span>
+                  <span class="parameters">(testpro.user02@testpro.io, *******)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Master_Suite-class-passed -->
+        </div> <!-- panel Master_Suite -->
+        <div panel-name="test-xml-Master_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\shsmi\Dropbox\QA\TestPro\JavaCore2\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;4&quot; parallel=&quot;classes&quot; name=&quot;Master Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;parameter name=&quot;wrong-password&quot; value=&quot;*******&quot;/&gt;
+  &lt;parameter name=&quot;password&quot; value=&quot;te$t$tudent02&quot;/&gt;
+  &lt;parameter name=&quot;playlist&quot; value=&quot;zzZZzzZZ&quot;/&gt;
+  &lt;parameter name=&quot;email&quot; value=&quot;testpro.user02@testpro.io&quot;/&gt;
+  &lt;parameter name=&quot;new-playlist&quot; value=&quot;newZZZZZZZZZ&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;listeners.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;All tests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tests.HomepageTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;loginTest_createNewPlaylist_newPlaylistCreated&quot;/&gt;
+          &lt;include name=&quot;scrollDown&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- tests.HomepageTests --&gt;
+      &lt;class name=&quot;tests.HomepageTests_new&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;new_loginTest_createNewPlaylist_newPlaylistCreated&quot;/&gt;
+          &lt;include name=&quot;new_scrollDown&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- tests.HomepageTests_new --&gt;
+      &lt;class name=&quot;tests.LoginTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;loginTest_correctCredentials_loggedToApp&quot;/&gt;
+          &lt;include name=&quot;loginTest_incorrectCredentials_notLoggedToApp&quot;/&gt;
+          &lt;include name=&quot;test_Fails&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- tests.LoginTests --&gt;
+      &lt;class name=&quot;tests.LoginTests_new&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;new_loginTest_correctCredentials_loggedToApp&quot;/&gt;
+          &lt;include name=&quot;new_loginTest_incorrectCredentials_notLoggedToApp&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- tests.LoginTests_new --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- All tests --&gt;
+&lt;/suite&gt; &lt;!-- Master Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Master_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Master Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">All tests (4 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Master_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Master Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Master_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Master Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Master_Suite');
+function tableData_Master_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(10);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'loginTest_createNewPlaylist_newPlaylistCreated')
+data.setCell(0, 2, 'tests.HomepageTests')
+data.setCell(0, 3, 9227);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'new_loginTest_createNewPlaylist_newPlaylistCreated')
+data.setCell(1, 2, 'tests.HomepageTests_new')
+data.setCell(1, 3, 8783);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginTest_correctCredentials_loggedToApp')
+data.setCell(2, 2, 'tests.LoginTests')
+data.setCell(2, 3, 7173);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'new_loginTest_correctCredentials_loggedToApp')
+data.setCell(3, 2, 'tests.LoginTests_new')
+data.setCell(3, 3, 6162);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'new_scrollDown')
+data.setCell(4, 2, 'tests.HomepageTests_new')
+data.setCell(4, 3, 5650);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'loginTest_createNewPlaylist_newPlaylistCreated')
+data.setCell(5, 2, 'tests.HomepageTests')
+data.setCell(5, 3, 4665);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'loginTest_createNewPlaylist_newPlaylistCreated')
+data.setCell(6, 2, 'tests.HomepageTests')
+data.setCell(6, 3, 4008);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'scrollDown')
+data.setCell(7, 2, 'tests.HomepageTests')
+data.setCell(7, 3, 3740);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'loginTest_incorrectCredentials_notLoggedToApp')
+data.setCell(8, 2, 'tests.LoginTests')
+data.setCell(8, 3, 2555);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'new_loginTest_incorrectCredentials_notLoggedToApp')
+data.setCell(9, 2, 'tests.LoginTests_new')
+data.setCell(9, 3, 2076);
+window.suiteTableData['Master_Suite']= { tableData: data, tableDiv: 'times-div-Master_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 54 seconds</span>
+              <div id="times-div-Master_Suite">
+              </div> <!-- times-div-Master_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Master_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Master Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Master_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">3 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.LoginTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">test_Sum</span>
+                <br/>
+                <span class="ignored-method-name">test_StringSum</span>
+                <br/>
+                <span class="ignored-method-name">test_Fails</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Master_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests_new</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginTest_correctCredentials_loggedToApp(testpro.user02@testpro.io, te$t$tudent02)</span>
+                <span class="method-start">4093 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">new_loginTest_correctCredentials_loggedToApp</span>
+                <span class="method-start">4093 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests_new</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">new_loginTest_createNewPlaylist_newPlaylistCreated</span>
+                <span class="method-start">4093 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</span>
+                <span class="method-start">4094 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=new_loginTest_correctCredentials_loggedToApp status=SUCCESS method=LoginTests_new.n...)</span>
+                <span class="method-start">10256 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">10810 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginTest_correctCredentials_loggedToApp status=SUCCESS method=LoginTests.loginTest...)</span>
+                <span class="method-start">11267 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">11828 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests_new</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=new_loginTest_createNewPlaylist_newPlaylistCreated status=FAILURE method=HomepageTe...)</span>
+                <span class="method-start">12883 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginTest_createNewPlaylist_newPlaylistCreated status=SKIP method=HomepageTests.log...)</span>
+                <span class="method-start">13322 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">new_loginTest_incorrectCredentials_notLoggedToApp</span>
+                <span class="method-start">13867 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">13897 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests_new</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">13903 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginTest_incorrectCredentials_notLoggedToApp(testpro.user02@testpro.io, *******)</span>
+                <span class="method-start">14894 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests_new</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=new_loginTest_incorrectCredentials_notLoggedToApp status=SUCCESS method=LoginTests_...)</span>
+                <span class="method-start">15943 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests_new</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">new_scrollDown</span>
+                <span class="method-start">16976 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</span>
+                <span class="method-start">17021 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginTest_incorrectCredentials_notLoggedToApp status=SUCCESS method=LoginTests.logi...)</span>
+                <span class="method-start">17449 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginTest_createNewPlaylist_newPlaylistCreated status=SKIP method=HomepageTests.log...)</span>
+                <span class="method-start">21687 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">22245 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests_new</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=new_scrollDown status=FAILURE method=HomepageTests_new.new_scrollDown()[pri:0, inst...)</span>
+                <span class="method-start">22627 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.HomepageTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginTest_createNewPlaylist_newPlaylistCreated(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ)</span>
+                <span class="method-start">25277 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginTest_createNewPlaylist_newPlaylistCreated status=FAILURE method=HomepageTests....)</span>
+                <span class="method-start">29287 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp</span>
+                <span class="method-start">30272 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">scrollDown(testpro.user02@testpro.io, te$t$tudent02, zzZZzzZZ, newZZZZZZZZZ)</span>
+                <span class="method-start">33317 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=scrollDown status=FAILURE method=HomepageTests.scrollDown(java.lang.String, java.la...)</span>
+                <span class="method-start">37058 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

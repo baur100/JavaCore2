@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="classes" name="Failed suite [Master Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="wrong-password" value="*******"/>
+  <parameter name="password" value="te$t$tudent02"/>
+  <parameter name="playlist" value="zzZZzzZZ"/>
+  <parameter name="email" value="testpro.user02@testpro.io"/>
+  <parameter name="new-playlist" value="newZZZZZZZZZ"/>
+  <listeners>
+    <listener class-name="listeners.Listeners"/>
+  </listeners>
+  <test parallel="classes" name="All tests(failed)">
+    <classes>
+      <class name="tests.HomepageTests_new">
+        <methods>
+          <include name="startUp"/>
+          <include name="new_scrollDown"/>
+          <include name="tearDown"/>
+          <include name="new_loginTest_createNewPlaylist_newPlaylistCreated"/>
+        </methods>
+      </class> <!-- tests.HomepageTests_new -->
+      <class name="tests.LoginTests_new">
+        <methods>
+          <include name="startUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.LoginTests_new -->
+      <class name="tests.HomepageTests">
+        <methods>
+          <include name="loginTest_createNewPlaylist_newPlaylistCreated" invocation-numbers="0 0 0"/>
+          <include name="startUp"/>
+          <include name="tearDown"/>
+          <include name="scrollDown" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- tests.HomepageTests -->
+      <class name="tests.LoginTests">
+        <methods>
+          <include name="startUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.LoginTests -->
+    </classes>
+  </test> <!-- All tests(failed) -->
+</suite> <!-- Failed suite [Master Suite] -->
