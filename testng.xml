@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Master Suite" parallel="classes" thread-count="2">
+    <listeners>
+        <listener class-name="listeners.TestListeners"/>
+    </listeners>
+    <parameter name="email" value="testpro.user02@testpro.io"/>
+    <parameter name="password" value="te$t$tudent02"/>
+    <parameter name="browser" value="FIREFOX"/>
+    <test name="All tests" preserve-order="true">
+        <classes>
+            <class name = "tests.LoginPageTests">
+                <methods>
+                    <include name="loginPage_LoginWithValidCredentials_AuthenticationSucceeds"/>
+                    <exclude name="loginPage_LoginWithInvalidCredentials_AuthenticationFails"/>
+                </methods>
+            </class>
+            <class name="tests.HomePageTests">
+                <methods>
+                    <exclude name="homePage_AddPlayList_PlaylistIsCreated"/>
+                    <exclude name="homePage_ChangePlaylistName_NameIsChanged"/>
+                    <exclude name="homePage_addSongsToPlayList_SongsAreAdded"/>
+                </methods>
+            </class>
+            <class name = "tests.LoginPageTestsCopy">
+                <methods>
+                    <exclude name="new_loginPage_LoginWithValidCredentials_AuthenticationSucceeds"/>
+                    <exclude name="new_loginPage_LoginWithInvalidCredentials_AuthenticationFails"/>
+                </methods>
+            </class>
+            <class name="tests.HomePageTests">
+                <methods>
+                    <exclude name="new_homePage_AddPlayList_PlaylistIsCreated"/>
+                    <exclude name="new_homePage_ChangePlaylistName_NameIsChanged"/>
+                    <exclude name="new_homePage_addSongsToPlayList_SongsAreAdded"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

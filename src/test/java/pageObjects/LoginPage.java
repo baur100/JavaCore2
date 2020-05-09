@@ -10,23 +10,23 @@ public class LoginPage extends BasePage{
         super(driver);
     }
 
+    private final By emailField = By.cssSelector("[type='email']");
+    private final By pwdField = By.cssSelector("[type='password']");
+    private final By submitBtn = By.cssSelector("[type='submit']");
+    private final By errorFrm = By.cssSelector("[class='error']");
+
     public void openPage() {
         String url = "https://koelapp.testpro.io/";
         driver.get(url);
     }
 
-    public WebElement getEmailField() {
-        String emailPath = "[type='email']";
-        return driver.findElement(By.cssSelector(emailPath)); }
+    public WebElement getEmailField() { return driver.findElement(emailField); }
 
-    public WebElement getPasswordField() {
-        String passwordPath = "[type='password']";
-        return driver.findElement(By.cssSelector(passwordPath)); }
+    public WebElement getPasswordField() { return driver.findElement(pwdField); }
 
-    public WebElement getSubmitBtn() {
-        String submitBtnPath = "[type='submit']";
-        return driver.findElement(By.cssSelector(submitBtnPath));
-    }
+    public WebElement getSubmitBtn() { return driver.findElement(submitBtn); }
+
+    public WebElement getErrorFrm() { return wait.until(d -> d.findElement(errorFrm)); }
 
     public HomePage login(String email, String password) {
         getEmailField().sendKeys(email);

@@ -1,10 +1,11 @@
-package browserFactory;
+package driverFactory;
 
 import enums.DriverType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverFactory {
 
@@ -18,13 +19,15 @@ public class DriverFactory {
 
     private static WebDriver getChromeDriver(DriverType driverType) {
         var options = new ChromeOptions();
-        options.addArguments("--disable-popup-blocking");
+        options.setHeadless(true);
         System.setProperty(driverType.getChromeClass(), driverType.getChromeFile());
         return new ChromeDriver(options);
     }
 
     private static WebDriver getFireFoxDriver(DriverType driverType) {
+        var options = new FirefoxOptions();
+        options.setHeadless(true);
         System.setProperty(driverType.getFireFoxClass(), driverType.getFireFoxFile());
-        return new FirefoxDriver();
+        return new FirefoxDriver(options);
     }
 }

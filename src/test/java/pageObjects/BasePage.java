@@ -18,8 +18,4 @@ public class BasePage {
                 .ignoring(Exception.class)
                 .ignoring(StaleElementReferenceException.class);
     }
-
-    public void refreshPage() {
-        driver.navigate().refresh();
-    }
 }
