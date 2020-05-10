@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Master Search">
+    <test name="gtest">
+        <classes>
+            <class name="HWS5.Gtest">
+                <parameter name="Search-query" value="Jenkins"></parameter>
+                <methods>
+                    <include name="googleSearchTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
