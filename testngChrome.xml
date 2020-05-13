@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Master Suit" parallel="classes" thread-count="4">
+    <listeners>
+        <listener class-name="Listener.Listeners"/>
+    </listeners>
+    <parameter name="email" value="testpro.user02@testpro.io"/>
+    <parameter name="password" value="te$t$tudent02"/>
+    <parameter name="wrong-password" value="789"/>
+    <parameter name="playlist" value="ttttttt"/>
+    <parameter name="newplaylist" value="DenisPnew"/>
+    <parameter name="browser" value="CHROME"/>
+    <test name="All tests">
+        <classes>
+            <class name="TestDenis.HomepageTests">
+                <methods>
+                    <include name="logintest_createnewplaylist"/>
+                    <exclude name="scrollDown"/>
+                </methods>
+            </class>
+            <class name="TestDenis.HomepageTests_new">
+                <methods>
+                    <include name="new_logintest_createnewplaylist"/>
+                    <exclude name="new_scrollDown"/>
+                </methods>
+            </class>
+            <class name="TestDenis.Logintests">
+                <methods>
+                    <include name="logintest_correctcredentials_loggedtoapp"/>
+                    <include name="logintest_incorrectcrentials_notloggedtoapp"/>
+                    <include name="test_Fails"/>
+                </methods>
+            </class>
+            <class name="TestDenis.Logintests_new">
+                <methods>
+                    <exclude name="new_logintest_correctcredentials_loggedtoapp"/>
+                    <include name="new_logintest_incorrectcrentials_notloggedtoapp"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
