@@ -44,8 +44,8 @@ public class Gtest {
     @Parameters({"Search-query"})
     @Test
     public void googleSearchTest(String sQuery){
-        fluentWait.until(x->x.findElement(By.cssSelector("[name='q']")).isDisplayed());
-        driver.findElement(By.cssSelector("[name='q']")).sendKeys(sQuery, Keys.ENTER);
+        fluentWait.until(x->x.findElement(By.name("q")).isDisplayed());
+        driver.findElement(By.name("q")).sendKeys(sQuery, Keys.ENTER);
 
 
         Assert.assertTrue(driver.findElement(By.xpath("//*[@class='hdtb-mitem hdtb-msel hdtb-imb']")).isDisplayed());

@@ -11,7 +11,7 @@ public class PetstoreApiTests {
                 given()
                     .baseUri("https://petstore.swagger.io/")
                 .when()
-                    .get("v2/pet/111")
+                    .post("v2/pet/")
                 .then()
                     .statusCode(200)
                     .extract()
