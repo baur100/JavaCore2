@@ -15,13 +15,12 @@ import pageObjects.LoginPage;
 
 import static io.restassured.RestAssured.given;
 
-public class HomepageTests extends tests.BaseTest {
+public class HomepageTests extends BaseTest{
     private String id;
     private static Logger logger = LogManager.getLogger(HomepageTests.class);
     @AfterMethod
-    public void tearDown(ITestResult iTestResult){
-        Header header = new Header("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMwMCwiaXNzIjoiaHR0cHM6Ly9rb2VsYXBwLnRlc3Rwcm8uaW8vYXBpL21lIiwiaWF0IjoxNTg5OTMxODE5LCJleHAiOjE1OTA1MzY2MTksIm5iZiI6MTU4OTkzMTgxOSwianRpIjoiaUlHMlViYUNsR3BFS09xbiJ9.IpJwzrQ5NPwoIDkFFPSasAJmANLlBiGh5Zz0PXTl0lA");
-
+    public void tearDown(){
+        Header header = new Header("Authorization","Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMwMCwiaXNzIjoiaHR0cHM6Ly9rb2VsYXBwLnRlc3Rwcm8uaW8vYXBpL21lIiwiaWF0IjoxNTg5ODU0MDM5LCJleHAiOjE1OTA0NTg4MzksIm5iZiI6MTU4OTg1NDAzOSwianRpIjoiMFFhWEVNYXVEanBjRVNJdSJ9.bZpEG2hGAYhFEpO3sYCa08xl7SQU_Kk7FYQYRXImGOg");
         Response response =
                 given()
                         .baseUri("https://koelapp.testpro.io/")
@@ -32,13 +31,9 @@ public class HomepageTests extends tests.BaseTest {
                         .statusCode(200)
                         .extract()
                         .response();
-
-
-
     }
-
     @Parameters({"email","password","playlist"})
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void loginTest_createNewPlaylist_newPlaylistCreated(String login, String pwd, String playlist) {
         logger.info("test started");
         LoginPage loginPage = new LoginPage(driver);
@@ -48,8 +43,6 @@ public class HomepageTests extends tests.BaseTest {
         HomePage homePage = loginPage.login(login,pwd);
         logger.info("logged to app");
         id = homePage.createNewPlaylist(playlist);
-        System.out.println("there id = " + id);
-
         logger.info("playlist created");
 
         Assert.assertTrue(homePage.isPlaylistCreated(playlist));

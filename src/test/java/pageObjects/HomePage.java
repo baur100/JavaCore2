@@ -31,7 +31,7 @@ public class HomePage extends BasePage{
         getNewPlaylistNameField().sendKeys(name);
         getNewPlaylistNameField().sendKeys(Keys.ENTER);
         String str = driver.getCurrentUrl();
-        return str;//.split("/")[5];
+        return str.split("/")[5];
     }
     public boolean isPlaylistCreated(String name){
         var list = driver.findElements(By.xpath(getPlaylistXpath(name)));
