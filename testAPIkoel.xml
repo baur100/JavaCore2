@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Master Suite koel" parallel="classes" thread-count="4" verbose="1">
+    <listeners>
+        <listener class-name="listeners.Listeners" />
+    </listeners>
+
+    <parameter name="email" value="testpro.user02@testpro.io" />
+    <parameter name="password" value="te$t$tudent02" />
+    <parameter name="wrong-password" value="*******"/>
+    <parameter name="playlist" value="a1a1a1"/>
+    <parameter name="new-playlist" value="newZZZZZZZZZ"/>
+    <parameter name="browser" value="CHROME"/>
+    <test name="All tests" preserve-order="true">
+        <classes>
+            <class name="tests.HomepageTests">
+                <methods>
+                    <include name="loginTest_createNewPlaylist_newPlaylistCreated" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

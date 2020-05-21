@@ -7,7 +7,7 @@ import pageObjects.LoginPage;
 
 public class HomepageTests_new extends BaseTest{
     @Test
-    public void new_loginTest_createNewPlaylist_newPlaylistCreated() {
+    public void new_loginTest_createNewPlaylist_newPlaylistCreated() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
@@ -15,7 +15,7 @@ public class HomepageTests_new extends BaseTest{
         Assert.assertTrue(homePage.isPlaylistCreated("HeyYoPlaylist"));
     }
     @Test
-    public void new_scrollDown(){
+    public void new_scrollDown() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         HomePage homePage = loginPage.login("testpro.user02@testpro.io","te$t$tudent02");
