@@ -1,5 +1,8 @@
 package pageObjects;
 
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,6 +31,15 @@ public class LoginPage extends BasePage{
 
     public WebElement getErrorFrm() { return wait.until(d -> d.findElement(errorFrm)); }
 
+    public static String getToken() {
+        String body = "{\"email\":\"testpro.user02@testpro.io\",\"password\":\"te$t$tudent02\"}";
+        Response response = RestAssured.given()
+                .baseUri("https://koelapp.testpro.io/")
+                .contentType(ContentType.JSON)
+                .body(body)
+                .post("api/me");
+        return response.jsonPath().getString("token");
+    }
     public HomePage login(String email, String password) {
         getEmailField().sendKeys(email);
         getPasswordField().sendKeys(password);

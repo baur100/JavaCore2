@@ -1,8 +1,12 @@
 package tests;
 
+import io.restassured.RestAssured;
+import io.restassured.http.Header;
+import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
@@ -10,6 +14,20 @@ import pageObjects.LoginPage;
 
 public class HomePageTests extends BaseTest{
     private static final Logger logger = LogManager.getLogger(HomePage.class);
+
+    @AfterMethod
+    public void tearDown() {
+        Header header = new Header("Authorization", "Bearer " + LoginPage.getToken());
+        Response response = RestAssured.given()
+                .baseUri("https://koelapp.testpro.io/")
+                .header(header)
+                .when()
+                .delete("api/playlust/" + HomePage.id)
+                .then()
+                .statusCode(200)
+                .extract()
+                .response();
+    }
 
     @Parameters({"email", "password"})
     @Test

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomePage extends BasePage{
+    public static String id = "";
     private final By homeBtn = By.cssSelector("[class='home active']");
     private final By addPLBtn = By.cssSelector("[class='fa fa-plus-circle control create']");
     private final By plTxtField = By.cssSelector("form.create > input[type='text']");

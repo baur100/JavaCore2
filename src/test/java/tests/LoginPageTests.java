@@ -7,7 +7,7 @@ import pageObjects.LoginPage;
 
 public class LoginPageTests extends BaseTest{
     @Parameters({"email", "password"})
-    @Test
+    @Test(enabled = false)
     public void loginPage_LoginWithValidCredentials_AuthenticationSucceeds(String login, String pwd) {
         boolean loginApproved;
         var loginPage = new LoginPage(driver);
@@ -17,7 +17,7 @@ public class LoginPageTests extends BaseTest{
         Assert.assertTrue(loginApproved);
     }
 
-    @Test
+    @Test(enabled = false)
     public void loginPage_LoginWithInvalidCredentials_AuthenticationFails() {
         boolean loginDeclined;
         var loginPage = new LoginPage(driver);
@@ -25,5 +25,11 @@ public class LoginPageTests extends BaseTest{
         loginPage.login("testpro.user02@testpro.io", "invalidPassword");
         loginDeclined = loginPage.getErrorFrm().isEnabled();
         Assert.assertTrue(loginDeclined);
+    }
+
+    @Test
+    public void loginPage_TestToken() {
+        LoginPage login = new LoginPage(driver);
+        System.out.println(login.getToken());
     }
 }
