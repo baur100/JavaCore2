@@ -6,8 +6,8 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import models.CreatePlaylistRequest;
-import io.restassured.response.Response;
 import models.CreatePlaylistResponse;
+import models.DataResponsePlaylists;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,12 +15,11 @@ import static io.restassured.RestAssured.*;
 
 public class PlaylistTests {
     private String token;
+//    @Parameters({"email","password"})
     @BeforeMethod
     public void init(){
-        token = Token.retrieveToken();
+        token = Token.retrieveToken("testpro.user02@testpro.io","te$t$tudent02");
     }
-
-//    private final String TOKEN = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMwMCwiaXNzIjoiaHR0cHM6Ly9rb2VsYXBwLnRlc3Rwcm8uaW8vYXBpL21lIiwiaWF0IjoxNTkwMDI2NzQwLCJleHAiOjE1OTA2MzE1NDAsIm5iZiI6MTU5MDAyNjc0MCwianRpIjoiQ1ZydTBCUTdPVHlydFpmTSJ9.kRvurIf5uDpIiWn0DoJBBUoT1taBu_k3jqDznMlZtDQ";
 
     @Test
     public void playlistTests_CreatePlaylist_PlaylistCreated(){
@@ -30,7 +29,7 @@ public class PlaylistTests {
 
         Response response = given()
                 .baseUri("https://koelapp.testpro.io/")
-                .header("Authorization",token)
+                .header("Authorization","Bearer "+token)
                 .basePath("api/playlist")
                 .contentType(ContentType.JSON)
                 .body(requestBody)
@@ -45,6 +44,24 @@ public class PlaylistTests {
         CreatePlaylistResponse createdPlaylist = jsonPath.getObject("$",CreatePlaylistResponse.class);
         Assert.assertEquals(playlist.name,createdPlaylist.name);
         Assert.assertEquals(createdPlaylist.songs.length,0);
+    }
+
+    @Test
+    public void getAllData_DataReturned(){
+        Response response = given()
+                .baseUri("https://koelapp.testpro.io/")
+                .header("Authorization","Bearer "+token)
+                .basePath("api/data")
+                .when()
+                .get()
+                .then()
+                .statusCode(200)
+                .extract()
+                .response();
+
+        JsonPath jsonPath = response.jsonPath();
+        var data = jsonPath.getObject("$", DataResponsePlaylists.class);
+        System.out.println(data.playlists.length);
     }
 
 }
