@@ -8,11 +8,22 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import models.CreatePlaylistRequest;
 import models.CreatePlaylistResponse;
+import models.DataResponse;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import javax.xml.crypto.Data;
+
 public class PlaylistTests {
-    private final String TOKEN = Token.getToken();
+    private String TOKEN;
+
+    @Parameters({"email", "password"})
+    @BeforeMethod
+    public void init(String login, String pwd) {
+        TOKEN = Token.getToken(login, pwd);
+    }
 
     @Test
     public void playlistTest_CreatePlaylist_PlaylistCreated() {
@@ -36,5 +47,25 @@ public class PlaylistTests {
         CreatePlaylistResponse createdPlaylist = jsonPath.getObject("$", CreatePlaylistResponse.class);
         Assert.assertEquals(playlist.name, createdPlaylist.name);
         Assert.assertEquals(createdPlaylist.songs.length, 0);
+    }
+
+    @Test
+    public void getAllData_DataReturned() {
+        Response response = RestAssured.given()
+                .baseUri("https://koelapp.testpro.io/")
+                .header("Authorization", TOKEN)
+                .basePath("api/data")
+                .when()
+                .get()
+                .then()
+                .statusCode(200)
+                .extract()
+                .response();
+
+        JsonPath jsonPath = response.jsonPath();
+
+        System.out.println(jsonPath.prettify());
+        DataResponse data = jsonPath.getObject("$", DataResponse.class);
+        System.out.println(data.toString());
     }
 }

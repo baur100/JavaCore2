@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API Suite" parallel="classes" thread-count="2">
+    <listeners>
+        <listener class-name="listeners.TestListeners"/>
+    </listeners>
+    <parameter name="email" value="testpro.user02@testpro.io"/>
+    <parameter name="password" value="te$t$tudent02"/>
+    <parameter name="browser" value="CHROME"/>
+    <test name="All tests" preserve-order="true">
+        <classes>
+            <class name = "apiTests.PlaylistTests">
+                <methods>
+                    <exclude name="playlistTest_CreatePlaylist_PlaylistCreated"/>
+                    <include name="getAllData_DataReturned"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
