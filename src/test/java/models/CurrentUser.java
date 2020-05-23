@@ -5,5 +5,5 @@ public class CurrentUser {
     public String name;
     public String email;
     public boolean is_admin;
-    public Preferences preferences;
+    public Preferences[] preferences;
 }
