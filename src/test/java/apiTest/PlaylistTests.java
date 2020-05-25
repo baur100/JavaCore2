@@ -25,12 +25,14 @@ public class PlaylistTests {
     @Test
     public void playlistTests_CreatePlaylist_PlaylistCreated(){
         String[] rules = {};
-        var playlist = new CreatePlaylistRequest("AAAtttAAA",rules);
+        var playlist = new CreatePlaylistRequest("!sh11_token",rules);
         var requestBody = new Gson().toJson(playlist);
+
+        System.out.println(token);
 
         Response response = given()
                 .baseUri("https://koelapp.testpro.io/")
-                .header("Authorization",token)
+                .header("Authorization", "Bearer" + token)
                 .basePath("api/playlist")
                 .contentType(ContentType.JSON)
                 .body(requestBody)
@@ -43,6 +45,7 @@ public class PlaylistTests {
 
         JsonPath jsonPath = response.jsonPath();
         CreatePlaylistResponse createdPlaylist = jsonPath.getObject("$",CreatePlaylistResponse.class);
+
         Assert.assertEquals(playlist.name,createdPlaylist.name);
         Assert.assertEquals(createdPlaylist.songs.length,0);
     }
