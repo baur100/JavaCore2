@@ -27,7 +27,7 @@ public class LoginTests extends BaseTest{
         loginPage.login(login,pwd);
         Assert.assertTrue(loginPage.isError());
     }
-    @Test (retryAnalyzer = RetryAnalyzer.class)
+    @Test (retryAnalyzer = RetryAnalyzer.class, enabled = false)
     public void test_Fails(){
 
         Assert.assertTrue(false);

@@ -2,6 +2,7 @@ package pageObjects;
 
 public class HomePageSelectors {
     public static final String homeButtonXpath = "//*[@class='home active']";
+
     public static final String plusButtonXPath = "//*[contains(@class,'create')]";
 
     public static final String newPlaylistFieldXpath = "//*[@class='create']/*";
@@ -12,5 +13,9 @@ public class HomePageSelectors {
     public static final String createNewPlayListFieldXpath = "(//*[@data-v-f7ac59cc and @placeholder= 'Playlist name'])[2]";
     public static final String saveNewPlayListButtonXpath = "(//*[@data-v-f7ac59cc and @type= 'submit'])[2]";
     public static final String deletePlayListButtonXpath = "//*[@title='Delete this playlist']";
-    public static final String okForDeletePlayListXpath = "//button[@class='ok']";
+    public static final String okForDeletePlayListXpath = "//*[@class='ok']";
+
 }
+
+
+
