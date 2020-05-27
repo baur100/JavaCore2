@@ -88,7 +88,7 @@ public class KoelSimpleTest {
         var loginButton = driver.findElement(By.xpath("//*[@type='submit']"));
         loginButton.click();
 
-        fluentWait.until(x -> x.findElement(By.className("error")));
+        fluentWait.until(x -> x.findElement(By.className("error")).isDisplayed());
         List<WebElement> error = driver.findElements(By.xpath("//*[@class='error']"));
 
         Assert.assertEquals(error.size(), 1, "Element not found");
