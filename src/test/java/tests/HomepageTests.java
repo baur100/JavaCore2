@@ -20,9 +20,7 @@ public class HomepageTests extends BaseTest{
     private static Logger logger = LogManager.getLogger(HomepageTests.class);
     @AfterMethod
     public void tearDown(){
-        Header header= new Header("Authorization","Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9." +
-                "eyJzdWIiOjMwMCwiaXNzIjoiaHR0cHM6Ly9rb2VsYXBwLnRlc3Rwcm8uaW8vYXBpL21lIiwiaWF0IjoxNTkwNDUzNDg2L" +
-                "CJleHAiOjE1OTEwNTgyODYsIm5iZiI6MTU5MDQ1MzQ4NiwianRpIjoiSjQ4SEY4eHh0NVN4TERGNiJ9.gvEOQmgeGOrKpDJu4SDEVgm0TcbQPb9dbyjDnDzrcXk\"\n" );
+        Header header = new Header("Authorization","Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMwMCwiaXNzIjoiaHR0cHM6Ly9rb2VsYXBwLnRlc3Rwcm8uaW8vYXBpL21lIiwiaWF0IjoxNTg5ODU0MDM5LCJleHAiOjE1OTA0NTg4MzksIm5iZiI6MTU4OTg1NDAzOSwianRpIjoiMFFhWEVNYXVEanBjRVNJdSJ9.bZpEG2hGAYhFEpO3sYCa08xl7SQU_Kk7FYQYRXImGOg");
         Response response =
                 given()
                         .baseUri("https://koelapp.testpro.io/")
@@ -30,9 +28,9 @@ public class HomepageTests extends BaseTest{
                         .when()
                         .delete("api/playlist/"+id)
                         .then()
-                        .statusCode(400)
+                        .statusCode(200)
                         .extract()
-                          .response();
+                        .response();
     }
     @Parameters({"email","password","playlist"})
     @Test(retryAnalyzer = RetryAnalyzer.class)
@@ -44,8 +42,7 @@ public class HomepageTests extends BaseTest{
         logger.info("login page opened");
         HomePage homePage = loginPage.login(login,pwd);
         logger.info("logged to app");
-      id= homePage.createNewPlaylist(playlist);
-
+        id = homePage.createNewPlaylist(playlist);
         logger.info("playlist created");
 
         Assert.assertTrue(homePage.isPlaylistCreated(playlist));

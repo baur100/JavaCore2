@@ -3,18 +3,17 @@
 
 <suite name="Api Suite" parallel="classes" thread-count="4" verbose="1">
     <listeners>
-        <listener class-name="listeners.Listeners"/>
+        <listener class-name="listeners.Listeners" />
     </listeners>
 
-    <parameter name="email" value="testpro.user02@testpro.io"/>
-    <parameter name="password" value="te$t$tudent02"/>
-
+    <parameter name="email" value="testpro.user02@testpro.io" />
+    <parameter name="password" value="te$t$tudent02" />
     <test name="All tests" preserve-order="true">
         <classes>
             <class name="apiTest.PlaylistTests">
                 <methods>
-                    <exclude name="playlistTests_CreatePlaylist_PlaylistCreated"/>
-                    <include name="getAllData_DataReturned"/>
+                    <exclude name="playlistTests_CreatePlaylist_PlaylistCreated" />
+                    <include name="getAllData_DataReturned" />
                 </methods>
             </class>
         </classes>

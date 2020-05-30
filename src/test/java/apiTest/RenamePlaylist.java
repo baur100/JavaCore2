@@ -21,36 +21,33 @@ import static io.restassured.RestAssured.given;
 public class RenamePlaylist {
     private int id;
     private String token;
-
     @BeforeMethod
-    public void startUp() {
+    public void startUp(){
         String name = TestData.randomString();
         var createdPlaylist = Data.createPlaylist(name);
         id = createdPlaylist.id;
-        token = Token.retrieveToken("testpro.user02@testpro.io", "te$t$tudent02");
+        token = Token.retrieveToken("testpro.user02@testpro.io","te$t$tudent02");
     }
-
     @AfterMethod
-    public void tearDown() {
+    public void tearDown(){
         Response response = given()
                 .baseUri("https://koelapp.testpro.io/")
-                .header("Authorization", "Bearer" + token)
-                .basePath("api/playlist/" + id)
+                .header("Authorization","Bearer "+token)
+                .basePath("api/playlist/"+id)
                 .when()
                 .delete();
-
     }
 
     @Test
-    public void renamePlaylistRenamed() {
+    public void renamePlaylist_PlaylistRenamed(){
         String newName = TestData.randomString();
         RenamePlaylistRequest renamePlaylistRequest = new RenamePlaylistRequest(newName);
         var requestBody = new Gson().toJson(renamePlaylistRequest);
 
         Response response = given()
                 .baseUri("https://koelapp.testpro.io/")
-                .header("Authorization", "Bearer" + token)
-                .basePath("api/playlist/" + id)
+                .header("Authorization","Bearer "+token)
+                .basePath("api/playlist/"+id)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
                 .when()
@@ -62,19 +59,16 @@ public class RenamePlaylist {
 
         JsonPath jsonPath = response.jsonPath();
         var playlist = jsonPath.getObject("$", RenamePlaylistResponse.class);
-        Assert.assertEquals(playlist.name, newName);
-        Assert.assertEquals(playlist.id, id);
+        Assert.assertEquals(playlist.name,newName);
+        Assert.assertEquals(playlist.id,id);
 
         var data = Data.getData();
         int count = 0;
-        for (Playlist pl : data.playlists) {
-            if (pl.name == (newName)) {
+        for(Playlist pl: data.playlists){
+            if(pl.name.equals(newName)){
                 count++;
             }
         }
-
-        Assert.assertEquals(count, 0);
+        Assert.assertEquals(count,1);
     }
-
 }
-

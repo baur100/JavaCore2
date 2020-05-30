@@ -5,6 +5,4 @@ public class User {
     public String name;
     public String email;
     public boolean is_admin;
-
-
 }

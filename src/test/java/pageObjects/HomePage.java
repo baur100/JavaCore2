@@ -5,7 +5,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends BasePage{
-
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -31,7 +30,7 @@ public class HomePage extends BasePage{
         getPlusButton().click();
         getNewPlaylistNameField().sendKeys(name);
         getNewPlaylistNameField().sendKeys(Keys.ENTER);
-        String str =driver.getCurrentUrl();
+        String str = driver.getCurrentUrl();
         return str.split("/")[5];
     }
     public boolean isPlaylistCreated(String name){
@@ -58,5 +57,4 @@ public class HomePage extends BasePage{
         textField.sendKeys(newName);
         textField.sendKeys(Keys.ENTER);
     }
-
 }

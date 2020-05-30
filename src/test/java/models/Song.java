@@ -9,6 +9,4 @@ public class Song {
     public int disc;
     public int track;
     public double length;
-
-
 }
