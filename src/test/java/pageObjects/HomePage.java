@@ -5,6 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends BasePage{
+
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -26,10 +27,12 @@ public class HomePage extends BasePage{
     private String getPlaylistXpath(String name){
         return "//a[text()='"+name+"']";
     }
-    public void createNewPlaylist(String name) {
+    public String createNewPlaylist(String name) {
         getPlusButton().click();
         getNewPlaylistNameField().sendKeys(name);
         getNewPlaylistNameField().sendKeys(Keys.ENTER);
+        String str =driver.getCurrentUrl();
+        return str.split("/")[5];
     }
     public boolean isPlaylistCreated(String name){
         var list = driver.findElements(By.xpath(getPlaylistXpath(name)));
