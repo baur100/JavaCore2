@@ -16,8 +16,8 @@ public class Token {
         var requestBody = new Gson().toJson(credentials);
 
         Response response = given()
-                .baseUri("https://koelapp.testpro.io/")
-                .basePath("api/me")
+                .baseUri("http://booklibrarywebapidev.azurewebsites.net/")
+                .basePath("api/books")
                 .contentType(ContentType.JSON)
                 .body(requestBody)
                 .when()
@@ -26,6 +26,18 @@ public class Token {
                 .statusCode(200)
                 .extract()
                 .response();
+
+//        Response response = given()
+//                .baseUri("https://koelapp.testpro.io/")
+//                .basePath("api/me")
+//                .contentType(ContentType.JSON)
+//                .body(requestBody)
+//                .when()
+//                .post()
+//                .then()
+//                .statusCode(200)
+//                .extract()
+//                .response();
 
         JsonPath jsonPath = response.jsonPath();
         var responseBody = jsonPath.getObject("$", TokenResponse.class);

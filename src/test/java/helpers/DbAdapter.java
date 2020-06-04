@@ -98,6 +98,9 @@ public class DbAdapter {
                 Playlist playlist =new Playlist(id,name);
                 pls.add(playlist);
             }
+            if (pls.size()==0){
+                return null;
+            }
             returnedPlaylist=pls.get(0);
         } catch (SQLException | ClassNotFoundException err) {
             //Handle errors for JDBC

@@ -25,4 +25,7 @@ public class BasePage {
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(NoSuchElementException.class);
     }
-}
+
+
+
+    }

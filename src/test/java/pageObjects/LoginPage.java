@@ -11,7 +11,10 @@ public class LoginPage extends BasePage{
 
     public LoginPage(WebDriver driver) {
         super(driver);
+
     }
+
+
 
     public void openPage(){
         driver.get(url);
