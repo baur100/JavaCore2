@@ -14,9 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import static io.restassured.RestAssured.*;
 
@@ -102,4 +100,6 @@ public class Hw1Api {
         Assert.assertEquals(count,1);
     }
 
-  }
+
+
+}
